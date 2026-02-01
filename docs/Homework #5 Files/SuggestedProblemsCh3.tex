@@ -1,0 +1,345 @@
+\documentclass{article}
+\usepackage[dvips]{graphicx}
+\usepackage{a4wide}
+\usepackage{amsmath}
+\usepackage{euscript}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsopn}
+
+\theoremstyle{definition}
+\newtheorem*{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+
+\newcommand{\vv}{\ensuremath{\vec{v}}}
+\newcommand{\vu}{\ensuremath{\vec{u}}}
+\newcommand{\vw}{\ensuremath{\vec{w}}}
+\newcommand{\vx}{\ensuremath{\vec{x}}}
+\newcommand{\vy}{\ensuremath{\vec{y}}}
+\newcommand{\vb}{\ensuremath{\vec{b}}}
+\newcommand{\vo}{\ensuremath{\vec{0}}}
+\newcommand{\va}{\ensuremath{\vec{a}}}
+\newcommand{\ve}{\ensuremath{\vec{e}}}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+\begin{center}
+\Large{Math 251W: Foundations of Advanced Mathematics}
+
+\normalsize Solutions to problems from sections 3.2, 3.3, $\&$ 3.4
+\hrule \vspace{0.4cm}
+
+I'm a bit rushed to get these solutions done, so they are not
+proof-read.  Nor are they necessarily good examples of how to write
+a complete proof.  They are intended to be rough solutions for you
+to check your reasoning against.
+
+\vspace{0.75cm}
+\end{center}
+
+
+\noindent Problem 3.2.1  \vspace{0.3cm}
+
+\begin{enumerate}
+\item False
+\item True
+\item True
+\item True
+\item False
+\item False
+\item False
+\item True
+\item True
+\end{enumerate}
+
+\vspace{1cm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\noindent Problem 3.2.2  \vspace{0.3cm}
+
+\begin{enumerate}
+\item Even integers
+\item Composite numbers
+\item Rational numbers, $\Q$
+\end{enumerate}
+
+\vspace{1cm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\noindent Problem 3.2.3  \vspace{0.3cm}
+
+\begin{enumerate}
+\item Set of all fathers
+\item Set of all grandparents
+\item Set of all husbands
+\item Set of all people with siblings
+\item Set of all people except the oldest person alive
+\item Empty set, $\emptyset$
+\end{enumerate}
+
+\vspace{1cm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\noindent Problem 3.2.4  \vspace{0.3cm}
+
+\begin{enumerate}
+\item $S=\{x\in\R|x>0\}$
+\item $S=\{x\in\Z|x=2m+1 \mbox{ for some } m\in\Z\}$
+\item $S=\{x\in\Q|\exists m,n\in\Z \mbox{ such that } n\not=0, \mbox{
+and } x=\frac{m}{5n}\}$
+\item $S=\{x\in\Z|\exists i\in\Z\mbox{ such that } -4\le i\le 4,
+\mbox{ and } x=i^3\}$
+\item $S=\{x\in\Z|x=1+4(n-1) \mbox{ for some } n\in\N\}$.
+\end{enumerate}
+
+\vspace{1cm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\noindent Problem 3.2.9  \vspace{0.3cm}
+
+$A=\{a,b,\{a,b\}\}$ has 3 elements.
+
+\vspace{1cm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\noindent Problem 3.2.12  \vspace{0.3cm}
+
+Given $A=\{x,y,z,w\}$,
+\begin{eqnarray}
+{\cal
+P}(A)&=&\{\{x\},\{y\},\{z\},\{w\},\{x,y\},\{x,z\},\{x,w\},\{y,z\},\{y,w\},\nonumber\\
+&
+&\{z,w\},\{x,y,z\},\{x,y,w\},\{x,z,w\},\{y,z,w\},\{x,y,z,w\},\emptyset\}\nonumber
+\end{eqnarray}
+\vspace{1cm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\noindent Problem 3.2.15  \vspace{0.3cm}
+
+\begin{enumerate}
+\item False
+\item True
+\item True
+\item True
+\item False
+\item True
+\item False
+\item False
+\item True
+
+\end{enumerate}
+
+\vspace{1cm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\noindent Problem 3.3.2  \vspace{0.3cm}
+
+Given $C=\{a,b,c,d,e,f\}$, $D=\{a,c,e\}$, $E=\{d,e,f\}$, and
+$F=\{a,b\}$
+
+\begin{enumerate}
+\item[1] $C-(D\cup E)=\{b\}$
+\item[2] $(C-D)\cup E=\{b,d,e,f\}$
+\item[3] $F-(C-E)=\emptyset$
+\item[4] $F\cap (D\cup E)=\{a\}$
+\item[5] $(F\cap D)\cup E=\{a,d,e,f\}$
+\item[6] $(C-D)\cup (F\cap E)=\{b,d,f\}$
+
+\end{enumerate}
+
+\vspace{1cm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\noindent Problem 3.3.3  \vspace{0.3cm}
+
+Given $X=[0,5)$, $Y=[2,4]$, $Z=(1,3]$, and $W=(3,5)$
+
+\begin{enumerate}
+\item[1] $Y\cup Z=(1,4]$
+\item[2] $Z\cap W=\emptyset$
+\item[3] $Y-W=[2,3]$
+\item[4] $X\times W=\{(x,y)\in\R^2|0\le x<5\mbox{ and } 3<y<5\}$
+\item[5] $(X\cap Y)\cup Z=(1,4]$
+\item[6] $X-(Z\cup W)=[0,1]$
+
+\end{enumerate}
+
+\vspace{1cm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent Problem 3.3.7  \vspace{0.3cm}
+
+\begin{enumerate}
+\item[ii]
+\underline{proposition:} Given sets $A$ and $B$, $(A-B)\cap
+B=\emptyset$
+
+\vspace{.2cm}
+
+\fbox{proof} (Contradiction)
+
+Let $A$ and $B$ be sets.  Suppose $(A-B)\cap B\not=\emptyset$. Thus,
+by definition of intersection, there exists an element $x$ such that
+$x\in (A-B)$ and $x\in B$.  By definition of the difference of sets,
+$x\in (A-B)$ implies $x\in A$ and $x\not\in B$.  However, this
+contradicts $x\in B$.  Thus, there does not exist an element $x\in
+(A-B)\cap B$.  $(A-B)\cap B=\emptyset$.  $\blacksquare$
+
+\end{enumerate}
+\vspace{1cm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\noindent Problem 3.3.8  \vspace{0.3cm}
+
+\begin{enumerate}
+\item[i]
+\underline{proposition:} Given sets $A$, $B$, $C$, and $D$, if
+$A\subseteq B$ and $C\subseteq D$, then $A\times C\subseteq B\times
+D$
+
+\vspace{.2cm}
+
+\fbox{proof} (Direct)
+
+Let $A$, $B$, $C$, and $D$ be sets such that $A\subseteq B$ and
+$C\subseteq D$. Let $(x,y)$ be an arbitrary element of $A\times C$.
+By definition of the cartesian product, since $(x,y)\in A\times C$
+it follows that $x\in A$ and $y\in C$.  Since $A\subseteq B$ and
+$x\in A$, it follows by the definition of subset that $x\in B$.
+Similarly, since $y\in C\subseteq D$, $y\in D$.  Thus, by definition
+of the cartesian product, $(x,y)\in B\times D$.  Thus, since $(x,y)$
+was an arbitrary element of $A\times C$, if follows that for all
+$(x,y)\in A\times C$, $(x,y)$ is also an element of $B\times D$.  By
+definition of subset, $A\times C \subseteq B\times D$.
+$\blacksquare$
+\end{enumerate}
+\vspace{1cm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\noindent Problem 3.3.19  \vspace{0.3cm}
+
+\underline{proposition:} If $A$ and $B$ be are sets such that
+$B\subseteq A$, then $A\times A-B\times B=[(A-B)\times A]\cup
+[A\times (A-B)]$.
+
+\vspace{.3cm}
+
+\fbox{Proof} (Direct)
+
+\vspace{.2cm}
+
+Let $(x,y)$ be an arbitrary element of the set $A\times A-B\times
+B$.  By definition of the difference of sets, $(x,y)\in A\times A$
+and $(x,y)\not\in B\times B$.  By the definition of the cartesian
+product, $(x,y)\in A\times A$ implies $x\in A$ and $y\in A$,
+$(x,y)\not\in B\times B$ implies $x\not\in B$ OR $y\not\in B$. Thus
+we have $x \in A-B$ and $y \in A$, or $x \in A$ and $y\in A-B$.  By
+definition of the cartesian product, this implies $(x,y)\in
+(A-B)\times A$ or $(x,y)\in A\times (A-B)$.  Thus, by the definition
+of the union of sets, $(x,y)\in [(A-B)\times A]\cup [A\times
+(A-B)]$.  Since $(x,y)$ was an arbitrary element of $A\times
+A-B\times B$, it follows that $A\times A-B\times
+B\subseteq[(A-B)\times A]\cup [A\times (A-B)]$.
+
+\vspace{.2cm}
+
+Let $(x,y)$ be an arbitrary element of $[(A-B)\times A]\cup [A\times
+(A-B)]$.  Thus, $(x,y)\in (A-B)\times A$, or $(x,y)\in A\times
+(A-B)$.
+
+\underline{Case 1:}  Suppose $(x,y)\in (A-B)\times A$, thus $x\in
+(A-B)$ and $y\in A$.  $x\in (A-B)$ implies $x\in A$ and $x\not\in
+B$.  Since both $x$ and $y$ are in $A$, it follows that $(x,y)\in
+A\times A$.  Furthermore, since $x\not\in B$, $(x,y)\not\in B\times
+B$.  Thus, $(x,y)\in A\times A-B\times B$.
+
+\underline{Case 2:}  Suppose $(x,y)\in A\times(A-B)$, thus $x\in A$
+and $y\in (A-B)$.  Since $y\in (A-B)$, it follows that $y\in A$ and
+$y\not\in B$.  Since $x$ and $y$ are both in $A$, $(x,y)\in A\times
+A$.  Furthermore, since $y\not\in B$, $(x,y)\not\in B\times B$.
+Thus, $(x,y)\in A\times A-B\times B$.
+
+Since $(x,y)$ was an arbitrary element of $[(A-B)\times A]\cup
+[A\times (A-B)]$, and in either case $(x,y)\in A\times A-B\times B$,
+it follows that $A\times A-B\times B\supseteq[(A-B)\times A]\cup
+[A\times (A-B)]$.
+
+Therefore, since $A\times A-B\times B\subseteq[(A-B)\times A]\cup
+[A\times (A-B)]$ and $A\times A-B\times B\supseteq[(A-B)\times
+A]\cup [A\times (A-B)]$, $A\times A-B\times B=[(A-B)\times A]\cup
+[A\times (A-B)]$. $\blacksquare$
+
+\vspace{1cm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\noindent Problem 3.4.1  \vspace{0.3cm}
+
+
+\begin{enumerate}
+%\item[1] $\bigcup_{k\in\N} B_k=\{0\}\cup \N$ and $\bigcap_{k\in\N}
+%B_k=\{0,1,2\}$
+\item[2] $\bigcup_{k\in\N} B_k=\N$ and $\bigcap_{k\in\N}
+B_k=\emptyset$
+\item[3] $\bigcup_{k\in\N} B_k=(0,7)\cup\{11, 12, \ldots\}$ and $\bigcap_{k\in\N}
+B_k=[3,5]$
+\item[4] $\bigcup_{k\in\N} B_k=[-1,4]\cup[5,6)$ and $\bigcap_{k\in\N}
+B_k=[-1,3]\cup\{5\}$
+\item[5] $\bigcup_{k\in\N} B_k=(-1,1]\cup(2,3)$ and $\bigcap_{k\in\N}
+B_k=(0,1]\cup\{2\}$
+\item[6] $\bigcup_{k\in\N} B_k=[0,1)\cup[7,8)$ and $\bigcap_{k\in\N}
+B_k=[0,\frac{2}{3}]\cup\{7\}$
+
+\end{enumerate}
+
+\vspace{1cm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\noindent Problem 3.4.2  \vspace{0.3cm}
+
+
+\begin{enumerate}
+%\item[3] $B_k=[3-(k-1),3+(k-1)]$
+\item[4] $B_k=(3-\frac{1}{k},6+\frac{2}{k})$
+\item[5] $B_k=[1-\frac{1}{k},k]\cap[2,2+k)$
+\end{enumerate}
+
+\vspace{1cm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\end{document}

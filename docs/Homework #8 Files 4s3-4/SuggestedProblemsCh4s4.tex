@@ -1,0 +1,236 @@
+\documentclass{article}
+\usepackage[dvips]{graphicx}
+\usepackage{a4wide}
+\usepackage{amsmath}
+\usepackage{euscript}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsopn}
+
+\theoremstyle{definition}
+\newtheorem*{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+
+\newcommand{\vv}{\ensuremath{\vec{v}}}
+\newcommand{\vu}{\ensuremath{\vec{u}}}
+\newcommand{\vw}{\ensuremath{\vec{w}}}
+\newcommand{\vx}{\ensuremath{\vec{x}}}
+\newcommand{\vy}{\ensuremath{\vec{y}}}
+\newcommand{\vb}{\ensuremath{\vec{b}}}
+\newcommand{\vo}{\ensuremath{\vec{0}}}
+\newcommand{\va}{\ensuremath{\vec{a}}}
+\newcommand{\ve}{\ensuremath{\vec{e}}}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+\begin{center}
+\Large{Math 251W: Foundations of Advanced Mathematics}
+
+\normalsize Solutions to suggested problems from section 4.4 \hrule
+\vspace{0.4cm}
+
+\end{center}
+
+
+\noindent Problem 4.4.1  \vspace{0.3cm}
+
+\begin{enumerate}
+\item $t$ is injective, but not surjective
+\item $s$ is neither surjective, nor injective
+\item $g$ is bijective
+\item $k$ is neither injective, nor surjective
+\item $Q$ is injective, but not surjective
+\end{enumerate}
+
+\vspace{1cm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\noindent Problem 4.4.2  \vspace{0.3cm}
+
+\begin{enumerate}
+\item injective, but not surjective
+\item bijective
+\item injective, but not surjective
+\item bijective
+\end{enumerate}
+
+\vspace{1cm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\noindent Problem 4.4.3  \vspace{0.3cm}
+
+\begin{enumerate}
+\item[3] Yes, $f|_S$ is necessarily injective
+\item[4] No, $g|_S$ is not necessarily surjective.  Counterexample:
+$A=\{a,b,c,d\}$, $B=\{1,2,3\}$, $S=\{a,b\}$, and
+$g=\{(a,1),(b,2),(c,3),(d,3)\}$.  Thus, $g|_S=\{(a,1),(b,2)\}$ is
+not surjective as there is no element $x\in S$ such that
+$g|_S(x)=3$.
+\item[5] No
+\item[6] \underline{proposition:} If $k:S\rightarrow B$ is
+surjective, then the extension $K:A\rightarrow B$ is also
+surjective.
+
+\vspace{0.2cm}
+
+\fbox{proof}
+
+\vspace{0.2cm}
+
+Let $b$ be an arbitrary element of $B$.  Since $k$ is surjective,
+$\exists s\in S$ such that $k(s)=b$.  Since $S\subseteq A$, $s\in
+A$.  Furthermore, by definition of the extension, $K(s)=k(s)$ for
+all $s\in S$.  Thus, $K(s)=b$.  Therefore, since $b$ was arbitrary
+it follows that for all $b\in B$, $\exists s\in A$ such that
+$K(s)=b$.  Thus, by definition, $K$ is surjective.  $\blacksquare$
+
+\item[7] The projection maps are not injective.
+
+\end{enumerate}
+
+\vspace{1cm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\noindent Problem 4.4.9  \vspace{0.3cm}
+
+\underline{proposition:}  (Thm 4.4.3(ii)) Given $A$ and $B$ are
+non-empty sets and $f:A\rightarrow B$ is a function, $f$ has a left
+inverse iff $f$ is injective.
+
+\vspace{0.2cm}
+
+\fbox{proof}
+
+\vspace{0.15cm}
+
+($\Rightarrow$)  Suppose $f$ has a left inverse $f_L^{-1}$.  Let $x$
+and $y$ be two arbitrary elements of $A$ such that $f(x)=f(y)$.
+Since the left inverse is a function, and functions map equal inputs
+to equal outputs, it follows that $f_L^{-1}(f(x))=f_L^{-1}(f(y))$.
+Furthermore, by definition of left inverse $f_L^{-1}\circ f=1_A$.
+Thus  $$f_L^{-1}(f(x))=(f_L^{-1}\circ f)(x)=1_A(x)=x,$$ and
+$$f_L^{-1}(f(y))=(f_L^{-1}\circ f)(y)=1_A(y)=y.$$  Therefore, $f_L^{-1}(f(x))=f_L^{-1}(f(y))$ implies
+$x=y$.  Since $x$ and $y$ were arbitrary elements of the domain for
+which $f(x)=f(y)$ it follows that $f$ is injective.
+
+\vspace{0.15cm}
+
+($\Leftarrow$)  Suppose $f$ is injective.  By definition of
+injectivity, $\forall y\in f_*(A)$ there exists only one element
+$x\in A$ such that $f(x)=y$.  Let $a$ be a particular element of
+$A$.  Define the function $h:B\rightarrow A$ by
+$h(y)=\left\{\begin{array}{cc} x,\mbox{ where }f(x)=y & \forall y\in
+f_*(A)\\ a & \forall y\in B-f_*(A)\end{array}\right\}$.  Since $f$ is
+injective, this definition of $h$ is well defined. Let $x$ be an
+arbitrary element of $A$, $(h\circ f)(x)=h(f(x))=h(y)$ where $y\in
+f_*(A)$.  Thus, by definition $h(y)=x$.  Since $x$ was arbitrary it
+follows that for all $x\in A$, $(h\circ f)(x)=x$.  By definition of
+the left inverse, this implies $h$ is the left inverse of $f$.
+$\blacksquare$
+
+\vspace{1cm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\noindent Problem 4.4.13  \vspace{0.3cm}
+
+\begin{enumerate}
+%\item[2] \underline{proposition:} Given functions $f:A\rightarrow B$, and $g:B\rightarrow C$, if $g\circ f$ is surjective, then
+%$g$ must be surjective.
+%
+%\vspace{0.2cm}
+%
+%\fbox{proof} (By Contradiction)
+%
+%\vspace{0.2cm}
+%
+%Suppose $g\circ f$ is surjective, but $g$ is not surjective. Thus,
+%there exists an element $y\in C$ for which there is no element $b\in
+%B$ such that $g(b)=y$.  If $g\circ f$ is surjective, then there
+%exists an element $x\in A$ such that $(g\circ f)(x)=g(f(x))=y$. By definition of
+%the function $f$, $f(x)=b$ for some $b\in B$.  Thus,
+%$g(f(x))=g(b)=y$. This contradicts our earlier conclusion that there
+%did not exist any $b\in B$ such that $g(b)=y$.  Thus, if $g\circ f$
+%is surjective, $g$ must be surjective.  $\blacksquare$
+
+\item[4] Let $A=\{a,b,c\}, B=\{1,2,3,4\}, C=\{x,y,z\}$,
+$f:A\rightarrow B$ be the function $f=\{(a,1),(b,2),(c,3)\}$, and
+$g:B\rightarrow C$ be the function $g=\{(1,x),(2,y),(3,z),(4,z)\}$.
+Thus, $g\circ f:A\rightarrow C$ is the function $g\circ f=\{(a,x),
+(b,y),(c,z)]\}$.  $f$ is not surjective, and $g$ is not injective,
+yet $g\circ f$ is bijective.
+
+\end{enumerate}
+
+\vspace{1cm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\noindent Problem 4.4.14  \vspace{0.3cm}
+
+\underline{proposition:} (Thm 4.4.4(ii)) Let $A$ and $B$ be
+non-empty sets, and $f:A\rightarrow B$ be a function, $f$ is
+injective iff $f\circ g=f\circ h$ implies $g=h$ for all function
+$g,h:Y\rightarrow A$.
+
+\vspace{0.2cm}
+
+\fbox{proof}
+
+\vspace{0.2cm}
+
+($\Rightarrow$)  Suppose $f$ is injective, and that
+$g,h:Y\rightarrow A$ are arbitrary functions with the property that
+$f\circ g = f\circ h$.  By theorem 4.4.3(ii), since $f$ is
+injective, $f$ has a left inverse $f_L^{-1}$.  Thus, since $f\circ
+g= f\circ h$, it follows that $f_L^{-1}\circ(f\circ
+g)=f_L^{-1}\circ(f\circ h)$.  By the associativity of composition,
+the definition of left inverse, and the identity law
+$f_L^{-1}\circ(f\circ g)=(f_L^{-1}\circ f)\circ g=1_A\circ g=g$.
+Similarly, $f_L^{-1}\circ(f\circ h )=(f_L^{-1}\circ f)\circ
+h=1_A\circ h=h$. Thus, since $f_L^{-1}\circ(f\circ
+g)=f_L^{-1}\circ(f\circ h)$, $g=h$.  Since $g$ and $h$ were
+arbitrary functions, it follows that for all functions
+$g,h:Y\rightarrow A$, if $f$ has a left inverse and $f\circ g=
+f\circ h$, then $g=h$.
+
+($\Leftarrow$ Proof by Contradiction)  Suppose $f$ is not injective,
+and that for all sets $Y$ and functions $g,h:Y\rightarrow A$, if
+$f\circ g=f\circ h$ then $g=h$.  By definition of injective, if $f$
+is not injective, then there exist two distinct points $x_1$ and
+$x_2$ in $A$ such that $f(x_1)=f(x_2)$.  Let $Y=A$ and let $h=1_A$.
+Define the function $g:A\rightarrow A$ by
+$$g(x)=\left\{\begin{array}{cc} 1_A(x) & \forall x\in
+A-\{x_1,x_2\}\\ x_2 & x=x_1\\
+x_1 & x=x_2\end{array}\right\}.$$ Thus $h\not= g$, yet $f\circ h=f=f\circ
+g$.  This contradicts our assumption that if $f\circ g=f\circ h$
+then $g=h$.  Thus, if for all sets $Y$ and functions
+$g,h:Y\rightarrow A$, $f\circ g=f\circ h$ implies $g=h$, then $f$ is
+injective.  $\blacksquare$
+
+\vspace{1cm}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\end{document}

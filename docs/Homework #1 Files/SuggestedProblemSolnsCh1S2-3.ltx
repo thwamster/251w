@@ -1,0 +1,404 @@
+\documentclass{article}
+\usepackage[dvips]{graphicx}
+\usepackage{a4wide}
+\usepackage{amsmath}
+\usepackage{euscript}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsopn}
+
+\theoremstyle{definition}
+\newtheorem*{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+
+\newcommand{\vv}{\ensuremath{\vec{v}}}
+\newcommand{\vu}{\ensuremath{\vec{u}}}
+\newcommand{\vw}{\ensuremath{\vec{w}}}
+\newcommand{\vx}{\ensuremath{\vec{x}}}
+\newcommand{\vy}{\ensuremath{\vec{y}}}
+\newcommand{\vb}{\ensuremath{\vec{b}}}
+\newcommand{\vo}{\ensuremath{\vec{0}}}
+\newcommand{\va}{\ensuremath{\vec{a}}}
+\newcommand{\ve}{\ensuremath{\vec{e}}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+\begin{center}
+\large{Hints \& Solutions to SUGGESTED PROBLEMS from Sections 1.2 \& 1.3}
+
+\vspace{0.2cm}
+
+Math 251W: Foundations of Advanced Mathematics
+
+\vspace{0.25cm}
+\hrule
+\end{center}
+\begin{center}
+
+\vspace{0.75cm}
+\end{center}
+
+\noindent {\it Note: The following are brief solutions or proofs for
+selected problems.  Remember, the answer is the least important
+part. It's understanding how to get the answer and how to explain
+your process which is important.} \vspace{0.5cm}
+
+\noindent 1.2.1:
+
+\noindent (1) Statement.  It is either a nice day or it is not a
+nice day
+
+\noindent (2) Not a statement.  Command
+
+\noindent (3) Not a statement.  Question
+
+\noindent (4) Statement.  It is either true or false.
+
+\noindent (5) Statement.
+
+\noindent (6) Statement.
+
+\noindent (7) Not a statement.  "Call me on Thursday" is a command
+
+\vspace{0.5cm}
+
+
+\noindent 1.2.4:
+
+\noindent (1) If I am eating spaghetti, then I am happy.
+
+\noindent (2) I am happy if and only if I am watching a movie.
+
+\noindent (3) If I am watching a movie or I am eating spaghetti,
+then I am happy.
+
+\noindent (4) I am watching a movie, or if I am eating spaghetti
+then I am happy.
+
+\noindent (5) If I am watching a movie then I am not happy, and if I
+am eating spaghetti then I am not happy.
+
+\noindent (6) I am happy and not watching a movie, if and only if I
+am watching a movie or eating spaghetti.
+
+\vspace{0.5cm}
+
+\noindent 1.2.7:
+
+\noindent (4) True.  $\neg D$ is False, $\neg C$ is True, thus $\neg
+D \vee \neg C$ is True.
+
+\vspace{0.25cm}
+
+\noindent (5) True.  $D$ is true, and $A$ is true, thus $D\wedge A$
+is true.  $B$ is false and $C$ is false, thus $B\wedge C$ is false.
+Since $D\wedge A$ is true, it follows that $(D\wedge A)\vee (B\wedge
+C)$ is True.
+
+\vspace{0.25cm}
+
+\noindent (6) True.  Since $B$ is false, $A\wedge B$ is false.
+However, since $D$ is true, $D\vee(A\wedge B)$ is true, as is
+$C\vee(D\vee(A\wedge B))$.
+
+\vspace{0.5cm}
+
+
+\noindent 1.2.8:
+
+\noindent  (4) True.  Since $X$ is false, $X\rightarrow \neg W$ is
+true.  Thus, since both $W$ and $X\rightarrow \neg W$ are true,
+$W\rightarrow (X\rightarrow \neg W)$ is true.
+
+\vspace{0.25cm}
+
+\noindent (5) True.  Since $Y$ and $W$ are both true, $Y\rightarrow
+W$ is true, and so is $(Y\rightarrow W)\leftrightarrow W$.  Since
+$X$ is false, $\neg X$ is true.  Thus, $((Y\rightarrow
+W)\leftrightarrow W)\wedge \neg X$ is true.
+
+\vspace{0.25cm}
+
+\noindent  (6) True.  Since $X$ is false and $W$ is true,
+$W\rightarrow X$ is False.  Since $Y$ is true, $Z\vee Y$ is true,
+and thus $\neg(Z\vee Y)$ is false.  Since the biconditional is true
+when both parts are false, the compound statement $(W\rightarrow
+X)\leftrightarrow \neg(Z\vee Y)$ is true.
+
+\vspace{0.5cm}
+
+\noindent 1.2.9:
+
+\noindent Let $F$ be the statement "Flora likes fruit," $C$ be the
+statement "Flora likes carrots," $N$ be the statement "Flora likes
+nuts," and $R$ be the statement "Flora likes rutabagas".  From the
+supposition, $F$ and $N$ are true while $C$ and $R$ are false.
+
+\vspace{0.25cm}
+
+\noindent (1) False.  Since $C$ is False, $F\wedge C$ is false.
+
+\vspace{0.25cm}
+
+\noindent (2) True.  Since $N$ is true, $N\vee R$ is true, and since
+$C$ is false, $\neg C$ is true.  Thus $(N\vee R)\wedge \neg C$ is
+true.
+
+\vspace{0.25cm}
+
+\noindent (3) True.  Since both $F$ and $N$ are true, $F\wedge N$ is
+true.  Thu, $C\vee(F\wedge N)$ is true.
+
+\vspace{0.25cm}
+
+\noindent (4) False.  Since both $C$ and $R$ are false, $C\vee R$ is
+false.  Thus, $(F\vee N)\wedge (C\vee R)$ is false.
+
+\vspace{0.25cm}
+
+\noindent (5) False.  Since both $C$ and $R$ are false, $C\vee R$ is
+false, and thus so to is $F\wedge(C\vee R))$. Thus,
+$R\vee(F\wedge(C\vee R))$ is false.
+
+\vspace{0.5cm}
+
+\noindent 1.2.13:
+
+\noindent You can verify each of these with a truth table.  I've
+shown this work for part (5), but not for the other parts.
+
+\vspace{0.25cm}
+
+\noindent (1) Neither.
+
+\vspace{0.25cm}
+
+\noindent (2) Tautology
+
+\vspace{0.25cm}
+
+\noindent (3) Contradiction.
+
+\vspace{0.25cm}
+
+\noindent (4) Neither
+
+\vspace{0.25cm}
+
+\noindent (5) Tautology
+
+$\begin{array}{c|c|c|ccccccccccc}L&M&N&(L&\rightarrow&(M&\rightarrow&N))&\rightarrow&(M&\rightarrow&(L&\rightarrow&N))\\\hline
+T & T & T & T & T & T & T & T & T & T & T & T & T & T\\
+T & T & F & T & F & T & F & F & T & T & F & T & F & F\\
+T & F & T & T & T & F & T & T & T & F & T & T & T & T\\
+T & F & F & T & T & F & T & F & T & F & T & T & F & F\\
+F & T & T & F & T & T & T & T & T & T & T & F & T & T\\
+F & T & F & F & T & T & F & F & T & T & T & F & T & F\\
+F & F & T & F & T & F & T & T & T & F & T & F & T & T\\
+F & F & F & F & T & F & T & F & T & F & T & F & T & F\end{array}$
+
+\vspace{0.25cm}
+
+\noindent (6) Neither
+
+\vspace{0.25cm}
+
+\noindent (7) Contradiction
+
+\vspace{0.5cm}
+
+
+
+\noindent 1.2.14:
+
+\noindent (1) $B\rightarrow (B\vee \neg B)$ Tautology
+
+\noindent (2) $(B\vee\neg B)\rightarrow B$ Neither
+
+\noindent (3) $(W\wedge \neg W)\rightarrow E$ Tautology
+
+\noindent (4) $(M\rightarrow C)\wedge (\neg C\wedge M)$
+Contradiction
+
+\noindent (5) $(C\vee P)\wedge(P\rightarrow C)$ Neither
+
+\noindent (6) $(G\vee\neg G)\leftrightarrow (B\wedge \neg B)$
+Contradiction
+
+\vspace{0.5cm}
+
+\noindent 1.3.1:
+
+\noindent (2)
+
+$\begin{array}{c|c|ccccccccc}P&Q&(P&\rightarrow&Q)&\wedge&(P&\rightarrow&\neg
+Q)&\rightarrow&\neg P\\\hline
+T & T & T & T & T & F & T & F & F & T & F\\
+T & F & T & F & F & F & T & T & T & T & F\\
+F & T & F & T & T & T & F & T & F & T & T\\
+F & F & F & T & F & T & F & T & T & T & T\\
+  &   & 1 & 6 & 2 & 8 & 3 & 7 & 4 & 9 & 5
+\end{array}$
+
+\vspace{0.25cm}
+
+\newpage
+
+\noindent (3)
+
+$\begin{array}{c|c|c|ccccccccccc}P&Q&R&(P&\rightarrow&Q)&\rightarrow&(P&\wedge&R)&\rightarrow&(Q&\wedge&R)\\\hline
+T & T & T & T & T & T & T & T & T & T & T & T & T & T\\
+T & T & F & T & T & T & T & T & F & F & T & T & F & F\\
+T & F & T & T & F & F & T & T & T & T & F & F & F & T\\
+T & F & F & T & F & F & T & T & F & F & T & F & F & F\\
+F & T & T & F & T & T & T & F & F & T & T & T & T & T\\
+F & T & F & F & T & T & T & F & F & F & T & T & F & F\\
+F & F & T & F & T & F & T & F & F & T & T & F & F & T\\
+F & F & F & F & T & F & T & F & F & F & T & F & F & F\\
+  &   &   & 1 & 7 & 2 & 11& 3 & 8 & 4 & 10 & 5 & 9 & 6
+\end{array}$
+
+\vspace{0.5cm}
+
+
+\noindent 1.3.2:
+
+\noindent (5)
+
+$\begin{array}{c|c|c|ccccccccccc}P&A&B&P&\rightarrow&(A&\vee&B)&\leftrightarrow&(P&\wedge&\neg
+A)&\rightarrow&B\\\hline
+T & T & T & T &  T & T & T & T & T & T & F & F &  T & T\\
+T & T & F & T &  T & T & T & F & T & T & F & F &  T & F\\
+T & F & T & T &  T & F & T & T & T & T & T & T &  T & T\\
+T & F & F & T &  F & F & F & F & T & T & T & T &  F & F\\
+F & T & T & F &  T & T & T & T & T & F & F & F &  T & T\\
+F & T & F & F &  T & T & T & F & T & F & F & F &  T & F\\
+F & F & T & F &  T & F & T & T & T & F & F & T &  T & T\\
+F & F & F & F &  T & F & F & F & T & F & F & T &  T & F\\
+  &   &   & 1 &  8 & 2 & 7 & 3 & 11 & 4 & 9 & 5 &  10 & 6
+\end{array}$
+
+\vspace{0.25cm}
+
+\noindent (6)
+
+$\begin{array}{c|c|c|ccccccccccccc}A&B&Q&(A&\vee&B)&\rightarrow&Q&\leftrightarrow&(A&\rightarrow&Q)&\wedge&(B&\rightarrow&Q)\\\hline
+T & T & T & T & T & T &  T & T & T & T & T & T &  T & T & T & T\\
+T & T & F & T & T & T &  F & F & T & T & F & F &  F & T & F & F\\
+T & F & T & T & T & F &  T & T & T & T & T & T &  T & F & T & T\\
+T & F & F & T & T & F &  F & F & T & T & F & F &  F & F & T & F\\
+F & T & T & F & T & T &  T & T & T & F & T & T &  T & T & T & T\\
+F & T & F & F & T & T &  F & F & T & F & T & F &  F & T & F & F\\
+F & F & T & F & F & F &  T & T & T & F & T & T &  T & F & T & T\\
+F & F & F & F & F & F &  T & F & T & F & T & F &  T & F & T & F\\
+  &   &   & 1 & 8 & 2 &  9 & 3 & 13 & 4 & 10 & 5 & 12 & 6 & 11 & 7
+\end{array}$
+
+\vspace{0.5cm}
+
+\noindent 1.3.4:
+
+\noindent (1) Let $K$ be the statement "you will kiss me," and let
+$J$ be the statement "I will dance a jig."  The question is whether
+$(K\rightarrow J)\wedge J$ implies $K$, which it does not.  You can
+verify it doesn't using a truth table. The failing case is when $K$
+is false, and $J$ is true.  Thus $(K\rightarrow J)\wedge J$ is true
+while $K$ is false.
+
+\vspace{0.25cm}
+
+\noindent (3) Let $P$ be the statement "cars pollute" and $T$ be the
+statement "we are in trouble."  $(P\rightarrow T)\wedge P
+\Rightarrow T$ by modus ponens.
+
+\vspace{0.25cm}
+
+\noindent (4) Let $T$ be the statement "our time is short," $E$ be
+the statement "the end is near," and $D$ be the statement "doom is
+impending."  The question is whether $(T\vee E)\wedge D$ implies
+$E$, which it does not.  Take the case where $T$ is true, $E$ is
+false, and $D$ is true.  Thus, $(T\vee E)\wedge D$ is true, but $E$
+is false.
+
+\vspace{0.5cm}
+
+\newpage
+
+\noindent 1.3.5:
+
+\noindent (2) Let $S$ be the statement "this shirt has stripes," $L$
+be the statement "this shirt has short sleeves," and $B$ be the
+statement "this shirt has a band collar."  Thus the statements in
+question are $S\wedge(L\vee B)$ and $(S\wedge L)\vee B$ which are
+not equivalent.  Take the case when $L$ and $B$ are true but $S$ is
+false.  Thus $S\wedge(L\vee B)$ is false while $(S\wedge L)\vee B$
+is true.
+
+\vspace{0.25cm}
+
+\noindent (5) Let $R$ be the statement "melons are ripe," and $S$ be
+the statement "melons are soft to the touch." $\neg(R\leftrightarrow
+S)$ is not equivalent to $(R\wedge S)\vee (\neg R \vee  \neg S)$.
+Take the case where $R$ and $S$ are true.  Thus
+$\neg(R\leftrightarrow S)$ is false, while $(R\wedge S)\vee (\neg R
+\vee  \neg S)$ is true.  The second statement is a tautology, while
+the first is not.
+
+\vspace{0.5cm}
+
+\noindent 1.3.9:
+
+\noindent (1) Inverse
+
+\vspace{0.25cm}
+
+\noindent (2) None of these
+
+\vspace{0.25cm}
+
+\noindent (3) Converse
+
+\vspace{0.25cm}
+
+\noindent (4) Contrapositive
+
+\vspace{0.25cm}
+
+\noindent (5) None of these
+
+\vspace{0.25cm}
+
+\noindent (6) Inverse
+
+\vspace{0.5cm}
+
+\noindent 1.3.11:
+
+\noindent (1) It is not Monday or it is not snowing.
+
+\vspace{0.25cm}
+
+\noindent (2) This book is not red and it was not written in 1997.
+
+\vspace{0.25cm}
+
+\noindent (3) Susan does not like to eat figs, or she does not like
+to drink prune juice.
+
+\vspace{0.25cm}
+
+\noindent (4) I tell you a joke and you don't smile.
+
+\vspace{0.25cm}
+
+\noindent (5) The play ends on time and the actors are not in good
+spirits, or the play does not end on time and the actors are in good
+spirits.
+
+\vspace{0.25cm}
+
+\noindent (6) You buy the paint and the room does not get painted.
+
+\end{document}

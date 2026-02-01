@@ -1,0 +1,164 @@
+% Program: PortfolioCh1S4-5_S15.ltx
+% Author: Teddy Wachtler
+% *********************************************************************
+
+\documentclass{article}
+\usepackage[dvips]{graphicx}
+\usepackage{a4wide}
+\usepackage{amsmath}
+\usepackage{euscript}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsopn}
+
+\theoremstyle{definition}
+\newtheorem*{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+
+\newcommand{\vv}{\ensuremath{\vec{v}}}
+\newcommand{\vu}{\ensuremath{\vec{u}}}
+\newcommand{\vw}{\ensuremath{\vec{w}}}
+\newcommand{\vx}{\ensuremath{\vec{x}}}
+\newcommand{\vy}{\ensuremath{\vec{y}}}
+\newcommand{\vb}{\ensuremath{\vec{b}}}
+\newcommand{\vo}{\ensuremath{\vec{0}}}
+\newcommand{\va}{\ensuremath{\vec{a}}}
+\newcommand{\ve}{\ensuremath{\vec{e}}}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\begin{center}
+\Large{Math 251W: Foundations of Advanced Mathematics}
+
+\normalsize{Portfolio Assignment 2: \S 1.4-5}
+
+\vspace{0.2cm}
+
+\hfill {\bf Name:} Teddy Wachtler
+
+\vspace{0.25cm}
+\hrule
+\end{center}
+
+\vspace{0.3cm}
+
+\noindent \underline{Problem 1.4.3(2,4)}: Write a derivation for each of the following valid arguments. State whether the premises are consistent or inconsistent.
+
+\begin{itemize}
+\item[(2)] If warthogs are smart, then they are interesting. Warthogs are not interesting or they are sneaky. It is not the case that warthogs are pleasant or not smart. Therefore warthogs are sneaky.
+\end{itemize}
+
+\vspace{0.25cm}
+
+\fbox{Solution}
+\begin{itemize}
+\item[(2)] Let $M$ be the statement "warthogs are smart". Let $I$ be the statement "warthogs are interesting". Let $N$ be the statement "warthogs are sneaky". Let $P$ be the statement "warthogs are pleasant". Thus the given argument can be written symbolically as:
+
+$$\begin{array}{llr}
+ & M \rightarrow I &\\
+ & \neg I \vee N &\\
+ & \neg (P \vee \neg M) &\\
+ \hline
+ & N &
+\end{array}$$
+
+We demonstrate this argument is valid with the following derivation.
+
+$$\begin{array}{llr}
+1 & M \rightarrow I \\
+2 & \neg I \vee N \\
+3 & \neg (P \vee \neg M) \\
+\hline
+4 & \neg P \wedge \neg (\neg M) & 3, \mbox{De Morgan's Law} \\
+5 & \neg (\neg M) & 4, \mbox{Simplification} \\
+6 & M & 5, \mbox{Double Negation} \\
+7 & I & 1, 6, \mbox{Modus Ponens} \\
+8 & N & 2, 7, \mbox{Modus Tollendo Ponens} \\
+\end{array}$$
+
+The premises do not form a contradiction and thus are \emph{consistent.}
+
+\end{itemize}
+
+\vspace{.5cm}
+
+%*****************************************************************
+\noindent \underline{Challenge Problem:} 
+
+A murder has been committed in the Glass Turnip. Inspector Beoit Blanc has collected statements from the 5 suspects. Each has given an alibi. They claim:
+
+\begin{itemize}
+\item[] Anne was driving their mother to the doctor.
+\item[] Brian was returning from the countryside.
+\item[] Clem was driving along the coast.
+\item[] Dante was at the theater.
+\item[] Evie was getting her haircut.
+\item[] Finez was downtown window-shopping
+\end{itemize}
+
+Inspector Blanc has asked you to poke around and see what you can find out. You’ve verified the following statements are true. 
+
+\begin{itemize}
+\item If D and A’s alibis are truthful, then so is C’s
+\item If D was not at the theater, then E was not getting their haircut and C was at the coast.
+\item If A and B were both telling the truth, then C would not have had access to a car and therefore was lying.
+\item If D was at the theater or B returned earlier than they said, then A was accompanying their mother.
+\item It’s not true that if E has a smart new haircut then F wasn’t downtown.
+\end{itemize}
+
+After providing the verified statements to Inspector Blanc, he concludes the following:
+
+\begin{itemize}
+\item B's alibi is not truthful.
+\end{itemize}
+
+Let $A$ be the statement "Anne was driving their mother to the doctor". Let $B$ be the statement "Brian was returning from the countryside". Let $C$ be the statement "Clem was driving along the coast". Let $D$ be the statement "Dante was at the theater". Let $E$ be the statement "Evie was getting her haircut". Let $F$ be the statement "Finez was downtown window-shopping". Thus the given argument can be written symbolically as:
+
+$$\begin{array}{llr}
+& (D \wedge A) \rightarrow C &\\
+& \neg D \rightarrow (\neg E \wedge C) & \\
+& (A \wedge B) \rightarrow \neg C & \\
+& (D \vee \neg B) \rightarrow A & \\
+& \neg (E \rightarrow F) & \\ 
+\hline
+& \neg B &
+\end{array}$$
+
+We demonstrate this argument is valid with the following derivation.
+
+$$\begin{array}{llr}
+1 & (D \wedge A) \rightarrow C \\
+2 & \neg D \rightarrow (\neg E \wedge C) \\
+3 & (A \wedge B) \rightarrow \neg C \\
+4 & (D \vee \neg B) \rightarrow A \\
+5 & \neg (E \rightarrow \neg F) \\
+\hline
+6 & E \wedge \neg (\neg F) & 5, \mbox{By Rule VIII} \\ 
+7 & E & 6, \mbox{Simplification}\\ 
+8 & \neg (\neg D) \vee (\neg E \wedge C) & 2, \mbox{By Rule VIII} \\
+9 & D \vee (\neg E \wedge C) & 8, \mbox{Double Negation} \\ 
+10 & (D \vee \neg E) \wedge (D \vee C) & 9, \mbox{Double Negation} \\
+11 & D \vee \neg E & 10, \mbox{Simplification} \\
+12 & D & 7, 11, \mbox{Modus Tollendo Ponens} \\
+13 & \neg (D \vee \neg B) \vee A & 4, \mbox{By Rule VIII} \\
+14 & (\neg D \wedge \neg (\neg B)) \vee A & 13, \mbox{De Morgan's Law} \\ 
+15 & (\neg D \vee A) \wedge (\neg (\neg B) \vee A) & 14, \mbox{Distributive Law} \\ 
+16 & \neg D \vee A & 15, \mbox{Simplification} \\ 
+17 & A & 12, 16, \mbox{Modus Tollendo Ponens} \\ 
+18 & C & 1, 12, 17, \mbox{Modus Ponens} \\ 
+19 & \neg (A \wedge B) \vee \neg C & 3, \mbox{By Rule VIII} \\ 
+20 & \neg A \vee \neg B \vee \neg C & 19, \mbox{De Morgan's Law} \\ 
+21 & \neg B \vee \neg C & 17, 20, \mbox{Modus Tollendo Ponens} \\ 
+22 & \neg B & 18, 21, \mbox{Modus Tollendo Ponens} \\ 
+\end{array}$$
+
+The premises do form a contradiction and thus are \emph{consistent.} 
+
+\end{document}

@@ -1,0 +1,264 @@
+\documentclass{article}
+\usepackage[dvips]{graphicx}
+\usepackage{a4wide}
+\usepackage{amsmath}
+\usepackage{euscript}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsopn}
+
+\theoremstyle{definition}
+\newtheorem*{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+
+\newcommand{\vv}{\ensuremath{\vec{v}}}
+\newcommand{\vu}{\ensuremath{\vec{u}}}
+\newcommand{\vw}{\ensuremath{\vec{w}}}
+\newcommand{\vx}{\ensuremath{\vec{x}}}
+\newcommand{\vy}{\ensuremath{\vec{y}}}
+\newcommand{\vb}{\ensuremath{\vec{b}}}
+\newcommand{\vo}{\ensuremath{\vec{0}}}
+\newcommand{\va}{\ensuremath{\vec{a}}}
+\newcommand{\ve}{\ensuremath{\vec{e}}}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+\begin{center}
+\Large{Math 251W: Foundations of Advanced Mathematics}
+
+\normalsize Solutions or Hints to problems from sections 2.4 $\&$ 2.5 \hrule
+\vspace{0.75cm}
+\end{center}
+
+
+\noindent Problem 2.4.1  \vspace{0.3cm}
+
+\begin{enumerate}
+\item[1] \underline{proposition:} If an integer is combustible, then
+it is even or prime.
+
+This a proposition of the form $P\rightarrow(A\vee B)$.  Thus, to
+prove this statement, it suffices to prove $(P\wedge\neg
+A)\rightarrow B$ or $(P\wedge\neg B)\rightarrow A$. Choosing the
+first option, the outline of the proof would be as follows:
+
+Assume $x$ is an odd, combustible integer.  From this, somehow show
+$x$ must be prime.
+
+\item[3] \underline{proposition:} For an integer to be putrid, it is
+necessary and sufficient that it is both odd and divisible by 50.
+
+This is an equivalence statement.  Thus we have to prove both that
+if an integer is putrid it is odd and divisible by 50, and that if
+an integer is odd and divisible by 50 it is putrid.
+
+For the first proof, assume $x$ is putrid.  Use this assumption to
+somehow show that $x$ is odd.  Use this assumption to show $x$ is
+also divisible by 50.
+
+For the second proof, assume $x$ is odd and divisible by 50.  Use
+these two assumptions to prove that $x$ is putrid.
+\end{enumerate}
+
+\vspace{1cm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\noindent Problem 2.4.9  \vspace{0.3cm}
+
+\begin{enumerate}
+\item[3] \underline{proposition:} Given real numbers $x$ and $y$,
+$|x-y|=|y-x|$.
+
+\vspace{.2cm}
+
+\fbox{proof} (Direct, Cases)
+
+Let $x$ and $y$ be real numbers.  There are two cases to consider:
+(i) when $x\ge y$, and (ii) when $x<y$.
+
+\underline{Case (i):}  Suppose $x\ge y$.  Thus, $x-y\ge 0$.  By
+definition of absolute value, this implies $|x-y|=x-y$. Furthermore,
+since $x-y\ge 0$, $-(x-y)=y-x<0$.  Again, by definition of absolute
+value, this implies $|y-x|=-(y-x)=x-y$.  Thus, if $x\ge y$,
+$|x-y|=|y-x|$.
+
+\underline{Case (ii):} Suppose $x<y$.  It follows that $x-y<0$ and
+$y-x=-(x-y)>0$.  By definition of absolute value, $|x-y|=-(x-y)=y-x$
+and $|y-x|=y-x$.  Thus, if $x<y$, then $|x-y|=|y-x|$.
+
+Since in all cases we have $|x-y|=|y-x|$, it follows that
+$|x-y|=|y-x|$ for all real numbers $x$ and $y$.  $\blacksquare$
+\end{enumerate}
+
+\vspace{1cm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\noindent Problem 2.4.11  \vspace{0.3cm}
+
+\begin{enumerate}
+\item[2] \underline{proposition:} Given real numbers $x$ and $y$,
+$\lfloor x+y \rfloor=\lfloor x\rfloor + \lfloor y \rfloor$ or
+$\lfloor x+y \rfloor=\lfloor x\rfloor + \lfloor y \rfloor + 1$.
+
+\vspace{0.4cm}
+
+\fbox{proof} (Direct Proof)
+
+\vspace{0.2cm}
+
+Let $x$ and $y$ be real numbers.  Let $s=x-\lfloor x\rfloor$ and
+$t=\lfloor y\rfloor$.  By definition of the floor function, $s$ and
+$t$ are real numbers with the property $0\le s<1$ and $0\le t<1$.
+Thus, $0=0+0\le s+t < 1+1=2$.  We will consider the two possible
+cases: (i) $0\le s+t<1$, and (ii) $1\le s+t<2$.
+
+\underline{Case (i):}  Suppose $0\le s+t<1$.  By our definition of
+$s$ and $t$, $x=\lfloor x\rfloor +s$, and $y=\lfloor y\rfloor +t$.
+Thus, $x+y=\lfloor x\rfloor +s + \lfloor y\rfloor +t$.  Let $r=s+t$,
+since $0\le s+t<1$ it follows that $x+y=\lfloor x\rfloor +\lfloor
+y\rfloor +r$, where $\lfloor x\rfloor$ and $\lfloor y\rfloor$ are
+integers, and $r$ is a real number such that $0\le r<1$.  By
+definition of the floor function if follows that $\lfloor
+x+y\rfloor=\lfloor\lfloor x\rfloor + \lfloor y\rfloor
++r\rfloor=\lfloor x\rfloor + \lfloor y\rfloor$.
+
+\underline{Case (ii):}  Suppose $1\le s+t<2$.  By our definition of
+$s$ and $t$, $x=\lfloor x\rfloor +s$, and $y=\lfloor y\rfloor +t$.
+Thus, $x+y=\lfloor x\rfloor +s + \lfloor y\rfloor +t$.  Let
+$r=s+t-1$, since $1\le s+t<2$ it follows that $x+y=\lfloor x\rfloor
++\lfloor y\rfloor 1+r$, where $\lfloor x\rfloor$ and $\lfloor
+y\rfloor$ are integers, and $r$ is a real number such that $0\le
+r<1$.  By definition of the floor function if follows that $\lfloor
+x+y\rfloor=\lfloor\lfloor x\rfloor + \lfloor y\rfloor
++1+r\rfloor=\lfloor x\rfloor + \lfloor y\rfloor+1$.
+
+
+Thus, for real numbers $x$ and $y$, $\lfloor x+y \rfloor=\lfloor
+x\rfloor + \lfloor y \rfloor$ or $\lfloor x+y \rfloor=\lfloor
+x\rfloor + \lfloor y \rfloor + 1. \blacksquare$
+\end{enumerate}
+
+\vspace{1cm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\noindent Problem 2.5.1  \vspace{0.3cm}
+
+converting the statements to statements with explicit quantifiers,
+we find:
+
+\begin{enumerate}
+\item For all 5x5 matrices, if the matrix has positive determinant,
+then the matrix is bouncy.
+\item There exists an integer $x$ such that $x$ is crusty and $x>7$.
+\item For all integers $k$, there exists an integer $w$ such that
+$w$ is opulent and $k|w$.
+\item For all $m$ in the set of ribbed integers, there exists a 2x2
+matrix $P$ such that $P$ is fibrous and $\det(P)>m$.
+\item There exists a 2x2 matrix $M$ for all subtle integers $x$ such
+that $x|tr(M)$.
+\end{enumerate}
+
+\vspace{1cm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\noindent Problem 2.5.4  \vspace{0.3cm}
+
+\begin{enumerate}
+\item[3] \underline{proposition:} For each integer $b$, there exists
+an integer $a$ such that $a|b$.
+
+\vspace{.2cm}
+
+\fbox{proof} (Direct Constructive)
+
+Let $b$ be an arbitrary integer, and set $a=b$.  Thus, $a*1=b$,
+which by definition of divisor implies $a|b$.  Thus, since $b$ was
+arbitrary, it follows that for all integers $b$, there exists and
+integer $a$ such that $a|b$. $\blacksquare$
+
+\item[4] \underline{proposition:} There exists an integer $a$ such
+that for all integers $b$, $a|b$.
+
+\vspace{.2cm}
+
+\fbox{proof} (Direct Constructive)
+
+Let $a$ be the integer 1.  Let $b$ be any arbitrary integer.  Since
+$1*b=b$, it follows by the definition of divisor that $1|b$.  Thus,
+since $b$ was arbitrary, it follows that $a=1$ is a divisor of all
+integers.  Thus, there exists and integer $a$ for all integers $b$,
+such that $a|b$.  $\blacksquare$
+
+\end{enumerate}
+
+\vspace{1cm}
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\noindent Problem 2.5.5  \vspace{0.3cm}
+
+\begin{enumerate}
+\item
+\underline{proposition:} For each real number $x$, there exists a
+real number $y$ such that $e^{x}-y>0$.
+
+\vspace{0.2cm}
+
+\fbox{proof} (Direct Constructive)
+
+\vspace{0.2cm}
+
+Let $x$ be an arbitrary real number.  Let $y=-e^{x}$.  Since the
+exponential function maps real numbers to real numbers, clearly $y$
+is a real number.  Furthermore,
+$e^{x}-y=e^{x}+e^{x}=2e^{x}$.  Since $\forall x\in\R$,
+$e^{x}>0$, it follows that $2e^{x}>0$.  Thus, since $x$ was an
+arbitrary real number, for all real numbers $x$ there exists a real
+number $y$ such that $e^{x}-y>0$. $\blacksquare$
+
+\item
+\underline{proposition:} There exists a real number $y$ such that
+for all real numbers $x$, $e^{x}-y>0$.
+
+\vspace{0.2cm}
+
+\fbox{proof} (Direct Constructive)
+
+\vspace{0.2cm}
+
+Let $y=0$ and let $x$ be an arbitrary real number. Thus,
+$e^{x}-y=e^{x}-0=e^{x}$. Since $\forall x\in\R$, $e^{x}$ is
+positive, it follows that $e^{x}>0$. Thus, since $x$ was an
+arbitrary real number, there exists a real number $y$ for all real
+numbers $x$ such that $e^{x}-y>0$. $\blacksquare$
+
+\end{enumerate}
+
+\vspace{1cm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\end{document}

@@ -1,0 +1,125 @@
+\documentclass{article}
+\usepackage{xypic}
+\usepackage{graphicx}
+\usepackage{amsmath, amsthm, amssymb}
+\usepackage{url}
+\usepackage[usenames,dvipsnames]{color}
+\setlength{\textheight}{22.5cm} \setlength{\textwidth}{16cm}
+\setlength{\topmargin}{-1cm} \setlength{\oddsidemargin}{0cm}
+\setlength{\evensidemargin}{0cm}
+\pagestyle{empty}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+
+\newcommand{\tcG}{\textcolor{Green}}
+\newcommand{\tcR}{\textcolor{Red}}
+\newcommand{\tcB}{\textcolor{Blue}}
+\newcommand{\tcP}{\textcolor{Purple}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+\newpage
+\hfill\small{Math 251W: Foundations of Advanced Mathematics, McNicholas}
+\vspace{0.5cm}
+\hrule
+\vspace{0.5cm}
+\large{\fbox{Class Examples}
+\normalsize
+\begin{itemize}
+\item Use a Truth Table to examine the truth values of the converse, inverse, and contrapositive of $P\rightarrow Q.$
+\bigskip
+\begin{itemize}
+    \item[]$P\rightarrow Q$
+    \item[]$Q\rightarrow P$
+    \item[]$\neg P\rightarrow \neg Q$
+    \item[]$\neg Q\rightarrow \neg P$
+\end{itemize}
+
+
+\end{itemize}
+
+\newpage
+
+\large{\fbox{Common Proof Structure / Techniques}
+\normalsize 
+
+\begin{enumerate}
+    \item Proof by contradiction 
+    \item []\underline{prop:} $R$ 
+    \item[] \fbox{proof}
+
+    \vfill
+
+    \item Proving for all statements 
+    \item[]\underline{prop:} $(\forall x\in U)P(x)$
+\item[] \fbox{proof}
+    \vfill
+
+\item[]\hfill \textcolor{Red}{Example: \underline{prop:} There is an integer $x$ whose square is $3$ more than $5x+\frac{x}{2}.$}
+    \item Proving existence  and uniqueness statements 
+    \item[]\underline{prop:} $(\exists x\in U)P(x)$
+\item[] \fbox{proof}
+    \vfill
+    \vfill
+    \item Proving uniqueness
+    \item[]\underline{prop:} $(!x\in U)P(x)$
+\item[] \fbox{proof}
+    \vfill
+    \vfill
+
+\newpage
+\normalsize \hfill \textcolor{Red}{Example: \underline{prop:} If $n^2$ is odd, then $n$ is odd.}
+\item Proving If...Then... Statements 
+\item[]\underline{prop:} $P\rightarrow Q$
+    \begin{itemize}
+    \item \fbox{proof}(\underline{Direct Proof})
+    \vfill
+    \item \fbox{proof}(\underline{Contrapositive})
+    \vfill
+    \item \fbox{proof}(\underline{Contradictio})
+    \vfill
+    
+    \end{itemize}
+
+
+\newpage
+
+    \item Proofs involving cases
+        \begin{itemize}
+        \item Equivalence statements
+        \item[] \underline{prop:} $P\Leftrightarrow Q$ 
+        \item[]\fbox{proof}
+        \vfill
+        \item Chain of equivalences
+        \item[]\underline{prop:} $P\Leftrightarrow Q\Leftrightarrow R\Leftrightarrow S$ 
+        \item[]\fbox{proof} 
+        \vfill
+        \item And's
+            \begin{itemize}
+            \item[] \underline{prop:}$(A\wedge B)\Rightarrow Q$ 
+            \item[]\fbox{proof}
+            \vfill
+            \item[]\underline{prop:} $P\Rightarrow(A\wedge B)$
+            \item[]\fbox{proof}
+            \vfill
+            \end{itemize}
+        \item OR's
+            \begin{itemize}
+            \item[] \underline{prop:}$(A\vee B)\Rightarrow Q$ 
+            \item[]\fbox{proof}
+            \vfill
+            \item[]\underline{prop:} $P\Rightarrow (A\vee B)$ \hfill \underline{prop:} $P\Rightarrow (A\vee B)$ 
+            \item[]\fbox{proof}\hfill \fbox{proof}\hspace{.75in}
+            \vfill
+            \end{itemize}
+            \end{itemize}
+\end{enumerate}
+
+\end{document}

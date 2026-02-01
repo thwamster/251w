@@ -1,0 +1,124 @@
+\documentclass{article}
+\usepackage[dvips]{graphicx}
+\usepackage{a4wide}
+\usepackage{amsmath}
+\usepackage{euscript}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsopn}
+
+\theoremstyle{definition}
+\newtheorem*{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+
+\newcommand{\vv}{\ensuremath{\vec{v}}}
+\newcommand{\vu}{\ensuremath{\vec{u}}}
+\newcommand{\vw}{\ensuremath{\vec{w}}}
+\newcommand{\vx}{\ensuremath{\vec{x}}}
+\newcommand{\vy}{\ensuremath{\vec{y}}}
+\newcommand{\vb}{\ensuremath{\vec{b}}}
+\newcommand{\vo}{\ensuremath{\vec{0}}}
+\newcommand{\va}{\ensuremath{\vec{a}}}
+\newcommand{\ve}{\ensuremath{\vec{e}}}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+\begin{center}
+\Large{Math 251W: Foundations of Advanced Mathematics}
+
+\normalsize Solutions to some of the suggested problems from chapter 6\hrule
+\vspace{0.4cm}
+
+
+\end{center}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\noindent Problem 6.3.6  \vspace{0.3cm}
+
+\underline{proposition:} $\left(1+\frac{1}{n}\right)^n<n$ for all $n\in \N$ such that $n\ge 3$
+
+\vspace{0.2cm}
+
+\fbox{proof:} (Induction)
+
+We start by verifying the base case, $n=3$.  $$(1+\frac{1}{3})^3=\frac{4^3}{3^3}=\frac{64}{27}$$ which is indeed less than $3$.
+
+Induction Hypothesis: Suppose $\left(1+\frac{1}{n}\right)^n<n$ for some $n\in \N$.  Consider $\left(1+\frac{1}{n+1}\right)^{n+1}.$  $$\left(1+\frac{1}{n+1}\right)^{n+1}=\left(1+\frac{1}{n+1}\right)^{n}\left(1+\frac{1}{n+1}\right)<\left(1+\frac{1}{n}\right)^{n}\left(1+\frac{1}{n+1}\right)<n(1+\frac{1}{n+1})=n+\frac{n}{n+1}<n+1.$$
+Thus, if $\left(1+\frac{1}{n}\right)^n$ is less than $n$, it follows that $\left(1+\frac{1}{n+1}\right)^{n+1}$ is less than $n+1$.  Therefore, by the principle of mathematical induction, $\left(1+\frac{1}{n}\right)^n<n$ for all $n\in \N$ such that $n\ge 3$. $\blacksquare$
+
+
+
+
+\vspace{1cm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent Problem 6.3.7  \vspace{0.3cm}
+
+\underline{proposition:} $n^3+1>n^2+n$ for all $n\in \N$ such that $n\ge 2$
+
+\vspace{0.2cm}
+
+\fbox{proof:} (Induction)
+
+Base Case: $2^3+1=9>6=2^2+2$.
+
+Induction Hypothesis: Suppose $n^3+1>n^2+n$ for some $n\ge 2$  in $\N$.  Consider $(n+1)^3+1=n^3+3n^2+3n+1$.  By the associative property of natural number addition, this is equal to $3n^2+3n+(n^3+1)$.  By our induction hypothesis, we have $(n+1)^3+1=3n^2+3n+(n^3+1)>3n^2+3n+n^2+n.$  Since $n\ge 2$ it follows $(n+1)^3+1>3n^2+3n+n^2+2$ which is greater than $3n+n^2+2=(n^2+2n+1)+(n+1)=(n+1)^2+(n+1)$ (by properties of addition and multiplication of natural numbers).  Thus, if $n^3+1>n^2+n$ for some $n\ge 2$ in $\N$, we've shown $(n+1)^3+1>(n+1)^2+(n+1)$.  Therefore, by the principle of mathematical induction, $n^3+1>n^2+n$ for all $n\ge 2$ in $\N.$  $\blacksquare$
+\vspace{1cm}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent Problem 6.3.8  \vspace{0.3cm}
+
+\underline{proposition:} $7n<2^n$ for all $n\in \N$ such that $n\ge 6$
+
+\vspace{0.2cm}
+
+\fbox{proof:} (Induction)
+
+Base Case: $7*6=42<64=2^6$.
+
+Induction Hypothesis: Suppose $7n<2^n$ for some $n\ge 6$  in $\N$.  Consider $7(n+1)$  By the distributive property of integer addition and multiplicaiton, this is equal to $7n+7$.  By our induction hypothesis, we have $7n<2^n$.  Thus $7(n+1)=7n+7<2^n+7$.  Furthermore, for all $n\ge 6$, $7<2^n$.  Thus we have $7(n+1)<2^n+7<2^n+2^n$.  Applying the distributive property, as well as rules of exponentiation, we have $7(n+1)<2^n+2^n=2(2^n)=2^{n+1}.$  Thus, if $7n<2^n$ for some $n\ge 6$ in $\N$, we've shown $7(n+1)<2^{n+1}$.  Therefore, by the principle of mathematical induction, $7n<2^n$ for all $n\in \N$ such that $n\ge 6.$  $\blacksquare$
+\vspace{1cm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent Problem 6.3.10  \vspace{0.3cm}
+
+\underline{proposition:} For all $n\in \N$,  $$\sum_{i=1}^n\frac{i}{2^i}=2-\frac{n+2}{2^n}.$$
+\vspace{0.2cm}
+
+\fbox{proof:} (Induction)
+
+Base Case: $$\sum_{i=1}^1\frac{i}{2^i}=\frac{1}{2}=2-\frac{3}{2}.$$
+
+Induction Hypothesis: Suppose $$\sum_{i=1}^n\frac{i}{2^i}=2-\frac{n+2}{2^n}$$ for some $n\in \N.$ Consider $\sum_{i=1}^{n+1}\frac{i}{2^i}$.  By properties of finite sums, $$\sum_{i=1}^{n+1}\frac{i}{2^i}=(\sum_{i=1}^n\frac{i}{2^i})+\frac{n+1}{2^{n+1}}.$$  By our induction hypothesis, this is equal to $2-\frac{n+2}{2^n}+\frac{n+1}{2^{n+1}}=2+\frac{-2(n+2)+(n+1)}{2^{n+1}}=2-\frac{(n+1)+2}{2^{n+1}}.$  Thus, if $\sum_{i=1}^n\frac{i}{2^i}=2-\frac{n+2}{2^n}$ for some $n\in\N$, we've shown $\sum_{i=1}^{n+1}\frac{i}{2^i}=2-\frac{(n+1)+2}{2^{n+1}}$.  Therefore, by the principle of mathematical induction, $\sum_{i=1}^n\frac{i}{2^i}=2-\frac{n+2}{2^n}$ for all $n\in\N.$  $\blacksquare$
+\vspace{1cm}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\noindent Problem 6.4.1  \vspace{0.3cm}
+
+\underline{proposition:} Given the sequence $r_1=1$ and $r_{n+1}=4r_n+7$ fora ll $n\in \N$, $$r_n=\frac{1}{3}(10\cdot 4^{n-1}-7)$$ for all $n\in\N.$
+\vspace{0.2cm}
+
+\fbox{proof:} (Induction)
+
+Base Case: $$r_1=1=\frac{1}{3}(10\cdot 4^0-7)$$
+
+Induction Hypothesis: Suppose $r_n=\frac{1}{3}(10\cdot 4^{n-1}-7)$ for some $n\in\N.$ By the recursive definition of our sequence and our induction hypothesis,  $$r_{n+1}=4r_n+7=4\left(\frac{1}{3}(10\cdot 4^{n-1}-7)\right)+7.$$  $\blacksquare$
+\vspace{1cm}
+
+\end{document}

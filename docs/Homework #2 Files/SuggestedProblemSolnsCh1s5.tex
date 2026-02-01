@@ -1,0 +1,146 @@
+\documentclass{article}
+\usepackage[dvips]{graphicx}
+\usepackage{a4wide}
+\usepackage{amsmath}
+\usepackage{euscript}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsopn}
+
+\theoremstyle{definition}
+\newtheorem*{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+
+\newcommand{\vv}{\ensuremath{\vec{v}}}
+\newcommand{\vu}{\ensuremath{\vec{u}}}
+\newcommand{\vw}{\ensuremath{\vec{w}}}
+\newcommand{\vx}{\ensuremath{\vec{x}}}
+\newcommand{\vy}{\ensuremath{\vec{y}}}
+\newcommand{\vb}{\ensuremath{\vec{b}}}
+\newcommand{\vo}{\ensuremath{\vec{0}}}
+\newcommand{\va}{\ensuremath{\vec{a}}}
+\newcommand{\ve}{\ensuremath{\vec{e}}}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+\begin{center}
+\Large{Math 251W: Foundations of Advanced Mathematics}
+
+\normalsize \normalsize Hints \& Solutions to SUGGESTED PROBLEMS from Section
+1.5
+\vspace{0.25cm}
+\hrule
+ \vspace{0.75cm}
+\end{center}
+
+\noindent {\it Note: The following are brief solutions or proofs for
+selected problems.  Remember, the answer is the least important
+part. It's understanding how to get the answer and how to explain
+your process which is important.} \vspace{0.5cm}
+
+
+
+
+\noindent \fbox{1.5.2}
+
+\begin{enumerate}
+\item There exists a car x for all cars y such that x is as fast as
+y.
+\item For all cars x, there exists a car y, such that x is as
+expensive as y.
+\item There exists a car y for all cars x, such that car x is as
+fast as car y or car x is as old as car y.
+\item For all cars y, there exists a car x, such that if car x is
+not as expensive as car y, then car x is as fast as car y.
+\end{enumerate}
+
+\vspace{0.6cm}
+
+
+
+\noindent \fbox{1.5.4}
+
+\begin{enumerate}
+\item $(\exists q)(\forall p)A(p,q)$
+\item $(\forall q)(\exists p)B(p,q)$
+\item $(\exists q)(\forall p)A(p,q)\wedge\neg B(p,q)$
+\item $(\forall q)(\exists p)C(p,q)\wedge \neg A(p,q)$
+\end{enumerate}
+
+\vspace{0.6cm}
+
+\noindent \fbox{1.5.6}
+
+\begin{enumerate}
+\item There is a boy who is not good.
+\item Every bat weighs less than 50 lbs.
+\item There is a real number $x$ such that $x^2-2x\le0$.
+\item There is a parent who doesn't have to change diapers.
+\item There is a flying saucer which isn't aiming to conquer any
+galaxy.
+\item For all integers $n$, $n^2$ is not a perfect number.
+\item For all houses in Kansas, there exists a person who can enter
+the house without going blind.
+\item There exists a house which does not have any white doors.
+\item Every person in New York City doesn't own at least one book
+published in 1990.
+\end{enumerate}
+
+\vspace{0.6cm}
+
+\noindent \fbox{1.5.7}\vspace{0.2cm}
+
+The symbol $\Z$ represents the integers and the symbol $\R$
+represents the real numbers.  Let $\Z^+$ represent the set of
+positive integers and $\R^+$ represent the set of positive real
+numbers.  Let $P(Q,x)$ be the statement $\ln(Q-x)>5$, $T(x,k)$ be
+the statement $x\le k$, and $S(Q)$ be the statement "$Q$ is
+cacophonous."  Thus, the given statement can be written:
+$$(\exists Q \in \Z)(\forall x \in \R^+)(\exists k
+\in
+\Z^+)(P(Q,x)\wedge(T(x,k)\rightarrow S(Q)).$$
+
+Negating this statement we find:
+$$\neg[(\exists Q \in \Z)(\forall x \in \R^+)(\exists k \in
+\Z^+)(P(Q,x)\wedge(T(x,k)\rightarrow S(Q))]$$$$\Leftrightarrow (\forall
+Q \in \Z)(\exists x \in \R^+)(\forall k \in \Z^+)(\neg
+P(Q,x)\vee(T(x,k)\wedge\neg S(Q)).$$
+
+Translating this negation back into words, we have: for all integers
+$Q$, there exists a real number $x>0$ for all positive integers $k$,
+such that $\ln(Q-x)\le 5$, or $x\le k$ and $Q$ is not cacophonous.
+
+\vspace{0.6cm}
+
+\noindent \fbox{1.5.10}\vspace{0.2cm}
+
+The flaw occurs in line (5).  When you use existential
+instantiation, you have to use a new variable than those already
+defined.  Thus, we can't use existential instantiation to conclude
+$M(a)$, but rather $M(b)$.  This is not the case with universal
+instantiation however.  Since the variable in universal
+instantiation is arbitrary, you can chose to use a variable already
+used to represent an element of $U$.
+
+The argument in this problem is invalid.  You can't conclude
+$(\exists x \in U)[M(x)\wedge Q(x)]$ from $(\exists x \in
+U)[P(x)\wedge Q(x)]$ and $(\exists x \in U)[M(x)]$.  These two
+predicate logic statements say that there is some $x$ in $U$ such
+that $P(x)\wedge Q(x)$ is true, and some $x$ in $U$ such that $M(x)$
+is true.  There is no reason the same $x$ should necessarily work in
+both cases.
+
+\vspace{0.6cm}
+
+
+
+
+\end{document}

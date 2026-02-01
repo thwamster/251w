@@ -1,0 +1,184 @@
+% Program: PortfolioCh1S4-5_S15.ltx
+% Author: Erin McNicholas
+%
+% Description: Portfolio Assignment 2: Sections 1.4 and 1.5
+%
+% Note: Comments made after a % sign are not read by the compiler.
+%       are notational comments in the code.
+% *********************************************************************
+
+% *********************************************************************
+%     Header Commands: These are commands that format the document and
+%         define new command shortcuts.  You can use the \newcommand
+%         function to define shortcuts for commonly used commands.
+%         If you are just learning LaTeX, you should not need to
+%         modify this portion of the code
+% *********************************************************************
+
+
+\documentclass{article}
+\usepackage[dvips]{graphicx}
+\usepackage{a4wide}
+\usepackage{amsmath}
+\usepackage{euscript}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsopn}
+
+\theoremstyle{definition}
+\newtheorem*{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+
+\newcommand{\vv}{\ensuremath{\vec{v}}}
+\newcommand{\vu}{\ensuremath{\vec{u}}}
+\newcommand{\vw}{\ensuremath{\vec{w}}}
+\newcommand{\vx}{\ensuremath{\vec{x}}}
+\newcommand{\vy}{\ensuremath{\vec{y}}}
+\newcommand{\vb}{\ensuremath{\vec{b}}}
+\newcommand{\vo}{\ensuremath{\vec{0}}}
+\newcommand{\va}{\ensuremath{\vec{a}}}
+\newcommand{\ve}{\ensuremath{\vec{e}}}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% *********************************************************************
+%     \begin{document} starts the portion of the code that will
+%         be translated into text.  This is the portion of the code
+%         you will modify to insert your answers in
+% *********************************************************************
+\begin{document}
+\begin{center}
+\Large{Math 251W: Foundations of Advanced Mathematics}
+
+\normalsize{Portfolio Assignment 2: \S 1.4-5}
+
+\vspace{0.2cm}
+
+\hfill {\bf Name:} Your name here
+
+\vspace{0.25cm}
+\hrule
+\end{center}
+
+\vspace{0.3cm}
+
+\noindent \underline{Problem 1.4.3(2,4,5)}:  Write a derivation for each of the following valid arguments.  State whether the premises are consistent or inconsistent.
+
+\begin{itemize}
+\item[(2)] If warthogs are smart, then they are interesting.  Warthogs are not interesting or they are sneaky.  It is not the case that warthogs are pleasant or not smart.  Therefore warthogs are sneaky.
+\item[(4)] If music soothes the soul then souls have ears.  Music soothes the soul or musicians are calm.  It is not the case that souls have ears or musicians are calm.  Therefore musicians have souls.
+\item[(5)] Computers are useful and fun, and computers are time consuming.  If computers are hard to use, then they are not fun.  If computers are not well designed, then they are hard to use.  Therefore computers are well designed.
+\end{itemize}
+\vspace{0.25cm}
+
+\fbox{Solution}
+\begin{itemize}
+\item[(2)]
+\item[(4)]
+\item[(5)] Let $U$ be the statement "computers are useful," $F$ be the
+statement "computers are fun," $T$ be the statement "computers are
+time consuming," $H$ be the statement "computers are hard to use,"
+and $D$ be the statement "computers are well designed." Thus the
+given argument can be written symbolically as:
+
+$$\begin{array}{llr}  & (U\wedge F)\wedge T &\\
+ & H\rightarrow \neg F&\\
+ & \neg D\rightarrow H &\\\hline
+ & D &
+\end{array}$$
+
+We demonstrate this argument is valid with the following derivation.
+
+$$\begin{array}{llr}1  & (U\wedge F)\wedge T &\\
+2 & H\rightarrow \neg F&\\
+3 & \neg D\rightarrow H &\\\hline 4 & \neg D \rightarrow \neg F & 2,
+3, \mbox{hypothetical syllogism}\\
+5 & U\wedge F & 1, \mbox{simplificaiton}\\
+6 & F & 5, \mbox{simplification}\\
+7 & \neg(\neg D) & 6, 4, \mbox{modus tollens}\\
+8 & D & 7, \mbox{double negation}
+\end{array}$$
+
+The premises do not form a contradiction and thus are \emph{consistent.}
+\end{itemize}
+
+\vspace{.5cm}
+
+%*****************************************************************
+
+\noindent \underline{Problem 1.5.11}: Write a derivation for each of the following arguments.
+\begin{itemize}
+\item[(3)] $$\begin{array}{llr}  & (\forall x\in \Z)[(A(x)\rightarrow R(x))\vee T(x)] &\\
+ & (\exists x \in \Z)[T(x)\rightarrow P(x)]&\\
+ & (\forall x \in \Z)[A(x)\wedge \neg P(x)] & \\\hline
+ & (\exists x \in \Z)[R(x)] &
+\end{array}$$
+
+\item[(4)] $$\begin{array}{llr}  & (\forall x\in W)(\exists y \in W)[E(x)\rightarrow (M(x)\vee N(y))] &\\
+ & \neg(\forall x \in W)[M(x)]&\\
+ & (\forall x \in W)[E(x)] & \\\hline
+ & (\exists x \in W)[N(x)] &
+\end{array}$$
+\end{itemize}
+
+\vspace{0.25cm}
+\fbox{Solution}
+\begin{itemize}
+\item[(3)] 
+\item[(4)]
+\end{itemize}
+
+\vspace{.5cm}
+
+%*****************************************************************
+
+
+\noindent \underline{Problem 1.5.N}: Negate the following statements by first writing them symbolically as quantified predicates, negating the symbolic expression, and then translating back to English.
+\begin{itemize}
+
+\item[(1)] Everything was beautiful and nothing hurt.
+\item[(2)] All happy families are alike; each unhappy family is unhappy in its own way.
+\item[(3)] A single man in possession of a good fortune, must be in want of a wife.
+
+\end{itemize}
+
+\vspace{0.25cm}
+\fbox{Solution}
+\begin{itemize}
+\item[(1)] Let $E$ be the set of everything, $B(x)$ be the predicate ``x was beautiful'' and $H(x)$ be the predicate ``x hurts''.  Then the statement is $$(\forall x\in E)(B(x)\wedge\neg H(x)).$$  Thus, the negation is $$\neg[(\forall x\in E)(B(x)\wedge\neg H(x))]\Leftrightarrow (\exists x\in E)(\neg B(x) \vee H(x)).$$  In English, we have `` there exists a thing which was not beautiful or which hurt.''
+\item[(2)]
+\item[(3)]
+\end{itemize}
+
+\vspace{.5cm}
+
+%*****************************************************************
+\noindent \underline{Challenge Problem:}  
+A murder has been committed in the Glass Turnip.  Inspector Beoit Blanc has collected statements from the 5 suspects. Each has given an alibi. They claim:
+\begin{itemize}
+    \item[] Anne was driving their mother to the doctor.
+    \item[] Brian was returning from the countryside.
+    \item[] Clem was driving along the coast.
+    \item[] Dante was at the theater.
+    \item[] Evie was getting her haircut.
+    \item[] Finez was downtown window-shopping
+\end{itemize}
+
+Inspector Blanc has asked you to poke around and see what you can find out.  You’ve verified the following statements are true. 
+\begin{itemize}
+    \item If D and A’s alibis are truthful, then so is C’s
+    \item If D was not at the theater, then E was not getting their haircut and C was at the coast.
+    \item If A and B were both telling the truth, then C would not have had access to a car and therefore was lying.
+    \item If D was at the theater or B returned earlier than they said, then A was accompanying their mother.
+    \item It’s not true that if E has a smart new haircut then F wasn’t downtown.
+    \end{itemize}
+Write a derivation to solve the mystery!
+
+
+\end{document}
