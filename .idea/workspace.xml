@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d09adc2d-53d1-4d14-9e2f-40dab1e98f5c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/251w.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Class Examples &amp; Handouts/Axioms.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Class Examples &amp; Handouts/Class Examples.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Class Examples &amp; Handouts/Image Preimage in Proofs.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Class Examples &amp; Handouts/ImplicationsEquivalences.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Class Examples &amp; Handouts/Proofs_Overview.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Homework #1 Files/Homework1Ch1s1-2.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Homework #1 Files/SuggestedProblemSolnsCh1S2-3.ltx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Homework #10 Files 5s2s3/Homework10Ch5s2s3.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Homework #10 Files 5s2s3/SuggestedProblemsCh5s2.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Homework #11 Files Ch7_Ch6.1/Ch6ProblemHints.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Homework #11 Files Ch7_Ch6.1/Homework11Ch7_Ch6s1.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Homework #11 Files Ch7_Ch6.1/SuggestedProblemsCh7.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Homework #12 Files Ch6s3-4/Homework12Ch6s3s4.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Homework #12 Files Ch6s3-4/SuggestedProblemsCh6.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Homework #2 Files/Homework2Ch1s4-5.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Homework #2 Files/SuggestedProblemSolnsCh1s4.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Homework #2 Files/SuggestedProblemSolnsCh1s5.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Homework #3 Files/Homework3Ch2s1-3.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Homework #3 Files/SuggestedProblemSolnsCh2s1-3.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Homework #4 Files/Homework4Ch2s4-5.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Homework #4 Files/SuggestedProblemSolnsCh2s4-5.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Homework #5 Files/Homework5Ch3s1-3.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Homework #5 Files/SuggestedProblemsCh3.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Homework #6 Files/Homework6Ch3s3-4.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Homework #7 Files 4s1-2/Homework7Ch4s1-2FunctionsImagePreImage.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Homework #7 Files 4s1-2/SuggestedProblemsCh4s1.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Homework #7 Files 4s1-2/SuggestedProblemsCh4s2.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Homework #8 Files 4s3-4/Homework8Ch4s3-4FunctionsCompositionBijectionInverses.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Homework #8 Files 4s3-4/SuggestedProblemsCh4s3.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Homework #8 Files 4s3-4/SuggestedProblemsCh4s4.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Homework #9 Files 5s1s3/Homework9Ch5s1s3RelationsRelationClasses.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Homework #9 Files 5s1s3/SuggestProblemsCh5s3.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Homework #9 Files 5s1s3/SuggestedProblemsCh5s1.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/group/Homework1Ch1s1-2.group.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/group/Homework2Ch1s4-5.group.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/group/Homework3Ch2s1-3.group.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/individual/Homework1Ch1s1-2.individual.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/individual/Homework2Ch1s4-5.individual.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/individual/Homework3Ch2s1-3.individual.tex" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 4
+}]]></component>
+  <component name="ProjectId" id="395Zs7g4XaheQ2iFhAuLHFfd8z1" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "LaTeX.Homework2Ch1s4-5.individual.executor": "Run",
+    "LaTeX.Homework3Ch2s1-3.individual.executor": "Run",
+    "LaTeX.main.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "settings.editor.selected.configurable": "com.firsttimeinforever.intellij.pdf.viewer.settings.PdfViewerConfigurable"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-26cb7f24e5b0-intellij.indexing.shared.core-IU-253.29346.138" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d09adc2d-53d1-4d14-9e2f-40dab1e98f5c" name="Changes" comment="" />
+      <created>1769988096263</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1769988096263</updated>
+    </task>
+    <servers />
+  </component>
+</project>
