@@ -13,293 +13,296 @@
 
 
 \begin{document}
-\hfill\small{Math 251W: Foundations of Advanced Mathematics, McNicholas}
-\vspace{0.5cm}
-\hrule
-\vspace{0.5cm}
+    \hfill\small{Math 251W: Foundations of Advanced Mathematics, McNicholas}
+    \vspace{0.5cm}
+    \hrule
+    \vspace{0.5cm}
 
-\centerline{\large{Math Symbols}}
-\vspace{0.25cm}
-\begin{center}
-\begin{tabular}{lll}
-$\wedge$ Conjunction & $\vee$ Disjunction & $\neg$ Negation\\
-$\rightarrow$ Conditional & $\leftrightarrow$ Biconditional & \\
-$\Rightarrow$ Implication & $\Leftrightarrow$ Equivalence & \\
-$\forall$ For all & $\exists$ There exists & $\in$ in\\
-$\therefore$ Therefore & $\blacksquare$ QED & \\
-\end{tabular}
-\end{center}
-\vspace{.25cm}
+    \centerline{\large{Math Symbols}}
+    \vspace{0.25cm}
+    \begin{center}
+        \begin{tabular}{lll}
+            $\wedge$ Conjunction      & $\vee$ Disjunction              & $\neg$ Negation \\
+            $\rightarrow$ Conditional & $\leftrightarrow$ Biconditional &                 \\
+            $\Rightarrow$ Implication & $\Leftrightarrow$ Equivalence   &                 \\
+            $\forall$ For all         & $\exists$ There exists          & $\in$ in        \\
+            $\therefore$ Therefore    & $\blacksquare$ QED              &                 \\
+        \end{tabular}
+    \end{center}
+    \vspace{.25cm}
 
-\hrule
-\vspace{.25cm}
+    \hrule
+    \vspace{.25cm}
 
-\centerline{\large{Rules of Valid Argumentation Involving Implication}}
+    \centerline{\large{Rules of Valid Argumentation Involving Implication}}
 
-\vspace{.25cm}
+    \vspace{.25cm}
 
-\emph{See Fact 1.3.1 of Bloch.}
-Let $P, Q, R,$ and $S$ be statements,
-
-
-\begin{tabular}{|c|l|p{3in}|}\hline
-i & $(P\rightarrow Q)\wedge P\Rightarrow Q$ & Modus Ponens (Mode that affirms), used in Direct Proof\\ \hline
-ii & $(P\rightarrow Q)\wedge \neg Q\Rightarrow \neg P$ &  Modus Tollens (Mode that denies), used in Proof by Contrapositive\\ \hline
-iii & $(P\wedge Q)\Rightarrow P$ & Simplification\\\hline
-iv & $(P\wedge Q)\Rightarrow Q$ & Simplification\\\hline
-v & $P\Rightarrow P\vee Q$ & Addition\\\hline
-vii & $(P\vee Q)\wedge\neg P\Rightarrow Q$ & Modus Tollendo Ponens (also called Disjunctive Syllogism.  Mode which, by taking away, affirms)\\\hline
-ix & $P\leftrightarrow Q\Rightarrow P\rightarrow Q$ & Biconditional-Conditional\\\hline
-x & $P\leftrightarrow Q\Rightarrow Q\rightarrow P$ &  Biconditional-Conditional\\\hline
-xi & $(P\rightarrow Q)\wedge(Q\rightarrow P)\Rightarrow P\leftrightarrow Q$ & Conditional-Biconditional\\\hline
-xii & $(P\rightarrow Q)\wedge (Q\rightarrow R)\Rightarrow P\rightarrow R$ & Hypothetical Syllogism\\\hline
-xiii & $(P\rightarrow Q)\wedge (R\rightarrow S)\wedge(P\vee R)\Rightarrow (Q\vee S)$ & Constructive Dilemma\\\hline
-\end{tabular}
-
-\vspace{.25cm}
-
-\centerline{\large{Rules of Valid Argumentation involving Equivalence}}
-
-\vspace{.25cm}
-
-\emph{See Fact 1.3.2 of Bloch.}
-Let $P, Q,$ and $R$ be statements,
+    \emph{See Fact 1.3.1 of Bloch.}
+    Let $P, Q, R,$ and $S$ be statements,
 
 
-\begin{tabular}{|c|l|p{3in}|}\hline
-i & $\neg(\neg P)\Leftrightarrow P$ & Double negation, used in Proof by Contradiction\\ \hline
-ii & $P\vee Q\Leftrightarrow Q\vee P$ & Commutative Law\\\hline
-iii & $P\wedge Q\Leftrightarrow Q\wedge P$ & Commutative Law\\\hline
-iv & $(P\vee Q)\vee R\Leftrightarrow P\vee(Q\vee R)$ & Associative Law\\\hline
-v & $(P\wedge Q)\wedge R\Leftrightarrow P\wedge(Q\wedge R)$ & Associative Law\\\hline
-vi & $P\wedge(Q\vee R)\Leftrightarrow (P\wedge Q)\vee(P\wedge R)$ & Distributive Law\\\hline
-vii & $P\vee (Q\wedge R)\Leftrightarrow (P\vee Q)\wedge(P\vee R)$ & Distributive Law\\\hline
-viii & $P\rightarrow Q\Leftrightarrow \neg P\vee Q$ &\\\hline
-ix & $P\rightarrow Q\Leftrightarrow \neg Q\rightarrow \neg P$ & Contrapositive, used in proofs by Contrapositive\\\hline
-x & $P\leftrightarrow Q\Leftrightarrow Q\leftrightarrow P$ & \\\hline
-xi & $P\leftrightarrow Q\Leftrightarrow (P\rightarrow Q)\wedge (Q\rightarrow P)$ & \\\hline
-xii & $\neg(P\wedge Q)\Leftrightarrow \neg P\vee\neg Q$ & De Morgan's Law\\\hline
-xiii & $\neg(P\vee Q)\Leftrightarrow \neg P\wedge\neg Q$ & De Morgan's Law\\\hline
-xiv & $\neg(P\rightarrow Q)\Leftrightarrow P\wedge \neg Q$ & \\\hline
-xv & $\neg(P\leftrightarrow Q)\Leftrightarrow (P\wedge \neg Q)\vee(\neg P\wedge Q)$ & \\\hline
-\end{tabular}
+    \begin{tabular}{|c|l|p{3in}|}
+        \hline
+        i    & $(P\rightarrow Q)\wedge P\Rightarrow Q$                                       & Modus Ponens (Mode that affirms), used in Direct Proof                                         \\ \hline
+        ii   & $(P\rightarrow Q)\wedge \neg Q\Rightarrow \neg P$                             & Modus Tollens (Mode that denies), used in Proof by Contrapositive                              \\ \hline
+        iii  & $(P\wedge Q)\Rightarrow P$                                                    & Simplification                                                                                 \\\hline
+        iv   & $(P\wedge Q)\Rightarrow Q$                                                    & Simplification                                                                                 \\\hline
+        v    & $P\Rightarrow P\vee Q$                                                        & Addition                                                                                       \\\hline
+        vii  & $(P\vee Q)\wedge\neg P\Rightarrow Q$                                          & Modus Tollendo Ponens (also called Disjunctive Syllogism. Mode which, by taking away, affirms) \\\hline
+        ix   & $P\leftrightarrow Q\Rightarrow P\rightarrow Q$                                & Biconditional-Conditional                                                                      \\\hline
+        x    & $P\leftrightarrow Q\Rightarrow Q\rightarrow P$                                & Biconditional-Conditional                                                                      \\\hline
+        xi   & $(P\rightarrow Q)\wedge(Q\rightarrow P)\Rightarrow P\leftrightarrow Q$        & Conditional-Biconditional                                                                      \\\hline
+        xii  & $(P\rightarrow Q)\wedge (Q\rightarrow R)\Rightarrow P\rightarrow R$           & Hypothetical Syllogism                                                                         \\\hline
+        xiii & $(P\rightarrow Q)\wedge (R\rightarrow S)\wedge(P\vee R)\Rightarrow (Q\vee S)$ & Constructive Dilemma\\\hline
+    \end{tabular}
 
-\vspace{.25cm}
+    \vspace{.25cm}
 
-\centerline{\large{Rules of Valid Argumentation involving Quantifiers}}
+    \centerline{\large{Rules of Valid Argumentation involving Equivalence}}
 
-\vspace{.25cm}
+    \vspace{.25cm}
 
-\emph{See Fact \S 1.5 (pg 49) of Bloch.}
-Let $P(x)$ be a predicate,
+    \emph{See Fact 1.3.2 of Bloch.}
+    Let $P, Q,$ and $R$ be statements,
 
 
-\begin{tabular}{|p{4in}|l|}\hline
-$[(\forall x\in U)P(x)]\Rightarrow P(a)$ where $a$ is arbitrary, \newline we can chose it to be whatever we want & Universal Instantiation\\ \hline
-$[(\exists x\in U)P(x)]\Rightarrow P(b)$ where $b$ is some particular element of $U$, \newline it can not have appeared before & Existential Instantiation \\ \hline
-$P(c)$ where $c$ is an arbitrary element of $U$ $\Rightarrow [(\forall x\in U)P(x)]$ & Universal Generalization \\ \hline
-$P(d)$ where $d$ is some particular element of $U$ $\Rightarrow [(\exists x\in U)P(x)]$ & Existential Generalization \\ \hline
-\end{tabular}
+    \begin{tabular}{|c|l|p{3in}|}
+        \hline
+        i    & $\neg(\neg P)\Leftrightarrow P$                                                & Double negation, used in Proof by Contradiction  \\ \hline
+        ii   & $P\vee Q\Leftrightarrow Q\vee P$                                               & Commutative Law                                  \\\hline
+        iii  & $P\wedge Q\Leftrightarrow Q\wedge P$                                           & Commutative Law                                  \\\hline
+        iv   & $(P\vee Q)\vee R\Leftrightarrow P\vee(Q\vee R)$                                & Associative Law                                  \\\hline
+        v    & $(P\wedge Q)\wedge R\Leftrightarrow P\wedge(Q\wedge R)$                        & Associative Law                                  \\\hline
+        vi   & $P\wedge(Q\vee R)\Leftrightarrow (P\wedge Q)\vee(P\wedge R)$                   & Distributive Law                                 \\\hline
+        vii  & $P\vee (Q\wedge R)\Leftrightarrow (P\vee Q)\wedge(P\vee R)$                    & Distributive Law                                 \\\hline
+        viii & $P\rightarrow Q\Leftrightarrow \neg P\vee Q$                                   &                                                  \\\hline
+        ix   & $P\rightarrow Q\Leftrightarrow \neg Q\rightarrow \neg P$                       & Contrapositive, used in proofs by Contrapositive \\\hline
+        x    & $P\leftrightarrow Q\Leftrightarrow Q\leftrightarrow P$                         &                                                  \\\hline
+        xi   & $P\leftrightarrow Q\Leftrightarrow (P\rightarrow Q)\wedge (Q\rightarrow P)$    &                                                  \\\hline
+        xii  & $\neg(P\wedge Q)\Leftrightarrow \neg P\vee\neg Q$                              & De Morgan's Law                                  \\\hline
+        xiii & $\neg(P\vee Q)\Leftrightarrow \neg P\wedge\neg Q$                              & De Morgan's Law                                  \\\hline
+        xiv  & $\neg(P\rightarrow Q)\Leftrightarrow P\wedge \neg Q$                           &                                                  \\\hline
+        xv   & $\neg(P\leftrightarrow Q)\Leftrightarrow (P\wedge \neg Q)\vee(\neg P\wedge Q)$ & \\\hline
+    \end{tabular}
+
+    \vspace{.25cm}
+
+    \centerline{\large{Rules of Valid Argumentation involving Quantifiers}}
+
+    \vspace{.25cm}
+
+    \emph{See Fact \S 1.5 (pg 49) of Bloch.}
+    Let $P(x)$ be a predicate,
 
 
-\newpage
-
-\begin{multicols}{2}
-
-\begin{itemize}
-    \item Modus Ponens
-    
-$\begin{array}{l}
-P\rightarrow Q\\
-P\\\hline
-Q
-\end{array}$
-\item[]
-\item[]
-
-    \item Modus Tollens
-    
-$\begin{array}{l}
-P\rightarrow Q\\
-\neg Q\\\hline
-\neg P
-\end{array}$
-\item[]
-\item[]
-
-    \item Double Negation
-
-$\begin{array}{l}
-\neg \neg P\\\hline
- P
-\end{array}$
-\item[]
-\item[]
-
-    \item Double Negation
-
-$\begin{array}{l}
- P\\\hline
-\neg \neg P
-\end{array}$
-\item[]
-\item[]
-
-    \item Simplification
-
-$\begin{array}{l}
-P\wedge Q\\\hline
-P
-\end{array}$
-\item[]
-\item[]
+    \begin{tabular}{|p{4in}|l|}
+        \hline
+        $[(\forall x\in U)P(x)]\Rightarrow P(a)$ where $a$ is arbitrary, \newline we can chose it to be whatever we want & Universal Instantiation\\ \hline
+        $[(\exists x\in U)P(x)]\Rightarrow P(b)$ where $b$ is some particular element of $U$, \newline it can not have appeared before & Existential Instantiation \\ \hline
+        $P(c)$ where $c$ is an arbitrary element of $U$ $\Rightarrow [(\forall x\in U)P(x)]$ & Universal Generalization \\ \hline
+        $P(d)$ where $d$ is some particular element of $U$ $\Rightarrow [(\exists x\in U)P(x)]$ & Existential Generalization \\ \hline
+    \end{tabular}
 
 
-    \item Simplification
+    \newpage
 
-$\begin{array}{l}
-P\wedge Q\\\hline
-Q
-\end{array}$
-\item[]
-\item[]
+    \begin{multicols}{2}
 
-    \item Adjunction
+        \begin{itemize}
+            \item Modus Ponens
 
-$\begin{array}{l}
-P\\
-Q\\\hline
-P\wedge Q
-\end{array}$
-\item[]
-\item[]
+            $\begin{array}{l}
+                 P\rightarrow Q\\
+                 P\\\hline
+                 Q
+            \end{array}$
+            \item[]
+            \item[]
 
-    \item Addition
+            \item Modus Tollens
 
-$\begin{array}{l}
-P\\\hline
-P\vee Q
-\end{array}$
-\item[]
-\item[]
+            $\begin{array}{l}
+                 P\rightarrow Q\\
+                 \neg Q\\\hline
+                 \neg P
+            \end{array}$
+            \item[]
+            \item[]
 
-    \item Addition
+            \item Double Negation
 
-$\begin{array}{l}
-Q\\\hline
-P\vee Q
-\end{array}$
-\item[]
-\item[]
+            $\begin{array}{l}
+                 \neg \neg P\\\hline
+                 P
+            \end{array}$
+            \item[]
+            \item[]
 
-    \item Modus Tollendo Ponens
+            \item Double Negation
 
-$\begin{array}{l}
-P\vee Q\\
-\neg P\\\hline
-Q
-\end{array}$
-\item[]
-\item[]
+            $\begin{array}{l}
+                 P\\\hline
+                 \neg \neg P
+            \end{array}$
+            \item[]
+            \item[]
 
-    \item Modus Tollendo Ponens
+            \item Simplification
 
-$\begin{array}{l}
-P\vee Q\\
-\neg Q\\\hline
-P
-\end{array}$
+            $\begin{array}{l}
+                 P\wedge Q\\\hline
+                 P
+            \end{array}$
+            \item[]
+            \item[]
 
-\item[]
-\item[]
 
-    \item Biconditional-Conditional
+            \item Simplification
 
-$\begin{array}{l}
-P\leftrightarrow Q\\\hline
-P\rightarrow Q
-\end{array}$
-\item[]
-\item[]
+            $\begin{array}{l}
+                 P\wedge Q\\\hline
+                 Q
+            \end{array}$
+            \item[]
+            \item[]
 
-    \item Biconditional-Conditional
+            \item Adjunction
 
-$\begin{array}{l}
-P\leftrightarrow Q\\\hline
-Q\rightarrow P
-\end{array}$
-\item[]
-\item[]
+            $\begin{array}{l}
+                 P\\
+                 Q\\\hline
+                 P\wedge Q
+            \end{array}$
+            \item[]
+            \item[]
 
-    \item Conditional-Biconditional
+            \item Addition
 
-$\begin{array}{l}
-P\rightarrow Q\\
-Q\rightarrow P\\\hline
-P\leftrightarrow Q
-\end{array}$
-\item[]
-\item[]
+            $\begin{array}{l}
+                 P\\\hline
+                 P\vee Q
+            \end{array}$
+            \item[]
+            \item[]
 
-    \item Hypothetical Syllogism
+            \item Addition
 
-$\begin{array}{l}
-P\rightarrow Q\\
-Q\rightarrow R\\\hline
-P\rightarrow R
-\end{array}$
-\item[]
-\item[]
+            $\begin{array}{l}
+                 Q\\\hline
+                 P\vee Q
+            \end{array}$
+            \item[]
+            \item[]
 
-    \item Constructive Dilemma
+            \item Modus Tollendo Ponens
 
-$\begin{array}{l}
-P\rightarrow Q\\
-R\rightarrow S\\
-P\vee R\\\hline
-Q\vee S
-\end{array}$
-\item[]
-\item[]
+            $\begin{array}{l}
+                 P\vee Q\\
+                 \neg P\\\hline
+                 Q
+            \end{array}$
+            \item[]
+            \item[]
+
+            \item Modus Tollendo Ponens
+
+            $\begin{array}{l}
+                 P\vee Q\\
+                 \neg Q\\\hline
+                 P
+            \end{array}$
+
+            \item[]
+            \item[]
+
+            \item Biconditional-Conditional
+
+            $\begin{array}{l}
+                 P\leftrightarrow Q\\\hline
+                 P\rightarrow Q
+            \end{array}$
+            \item[]
+            \item[]
+
+            \item Biconditional-Conditional
+
+            $\begin{array}{l}
+                 P\leftrightarrow Q\\\hline
+                 Q\rightarrow P
+            \end{array}$
+            \item[]
+            \item[]
+
+            \item Conditional-Biconditional
+
+            $\begin{array}{l}
+                 P\rightarrow Q\\
+                 Q\rightarrow P\\\hline
+                 P\leftrightarrow Q
+            \end{array}$
+            \item[]
+            \item[]
+
+            \item Hypothetical Syllogism
+
+            $\begin{array}{l}
+                 P\rightarrow Q\\
+                 Q\rightarrow R\\\hline
+                 P\rightarrow R
+            \end{array}$
+            \item[]
+            \item[]
+
+            \item Constructive Dilemma
+
+            $\begin{array}{l}
+                 P\rightarrow Q\\
+                 R\rightarrow S\\
+                 P\vee R\\\hline
+                 Q\vee S
+            \end{array}$
+            \item[]
+            \item[]
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
-    \item Universal Instantiation
+            \item Universal Instantiation
 
-$\begin{array}{l}
-(\forall x\in U)P(x)\\\hline
-P(a)\mbox{  $a$ is arbitrary}
-\end{array}$
-\item[]
-\item[]
+            $\begin{array}{l}
+                 (\forall x\in U)P(x)\\\hline
+                    P(a)\mbox{  $a$ is arbitrary}
+            \end{array}$
+            \item[]
+            \item[]
 
-    \item Existential Instantiation
+            \item Existential Instantiation
 
-$\begin{array}{l}
-(\exists x\in U)P(x)\\\hline
-P(b)\mbox{  $b$ is particular}
-\end{array}$
-\item[]
-\item[]
+            $\begin{array}{l}
+                 (\exists x\in U)P(x)\\\hline
+                    P(b)\mbox{  $b$ is particular}
+            \end{array}$
+            \item[]
+            \item[]
 
-    \item Universal Generalization
+            \item Universal Generalization
 
-$\begin{array}{l}
-P(a)\mbox{ $a$ is arbitrary}\\\hline
-(\forall x\in U)P(x)
-\end{array}$
-\item[]
-\item[]
+            $\begin{array}{l}
+                 P(a)\mbox{ $a$ is arbitrary}\\\hline
+                 (\forall x\in U)P(x)
+            \end{array}$
+            \item[]
+            \item[]
 
 
-    \item Existential Generalization
+            \item Existential Generalization
 
-$\begin{array}{l}
-P(b)\mbox{  $b$ is particular}
-\\\hline
-(\exists x\in U)P(x)
-\end{array}$
-\item[]
-\item[]
+            $\begin{array}{l}
+                 P(b)\mbox{  $b$ is particular}
+                 \\\hline
+                 (\exists x\in U)P(x)
+            \end{array}$
+            \item[]
+            \item[]
 
-\end{itemize}
-\end{multicols}
+        \end{itemize}
+    \end{multicols}
 \end{document} 

@@ -31,127 +31,125 @@
 
 
 \begin{document}
-\begin{center}
-\Large{Math 251W: Foundations of Advanced Mathematics}
+    \begin{center}
+        \Large{Math 251W: Foundations of Advanced Mathematics}
 
-\normalsize Solutions to problems from section  5.2 \hrule
-\vspace{0.4cm}
+        \normalsize Solutions to problems from section 5.2 \hrule
+        \vspace{0.4cm}
 
-\end{center}
-
-
+    \end{center}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\noindent Problem 5.2.2  \vspace{0.3cm}
+    \noindent Problem 5.2.2  \vspace{0.3cm}
 
-\begin{itemize}
-	\item[1.] $x=[5]$
-	\item[2.] $x=[9]$
-	\item[3.] No solutions.  One way to see this is to imagine a solution exists.  Then by definition of modular congruence there is a value for x such that $15|(6x-4)$.  Of course if $15|(6x-4)$ then $3|(6x-4)$.  But since $3|6x$ for all values of $x$, this would suggest that $3$ also divides $4$ which is not true.
-	\item[4.] $x=[2]$
-	\item[5.] $x=[-1]=[4]$
-\end{itemize}
+    \begin{itemize}
+        \item[1.] $x=[5]$
+        \item[2.] $x=[9]$
+        \item[3.] No solutions. One way to see this is to imagine a solution exists. Then by definition of modular congruence there is a value for x such that $15|(6x-4)$. Of course if $15|(6x-4)$ then $3|(6x-4)$. But since $3|6x$ for all values of $x$, this would suggest that $3$ also divides $4$ which is not true.
+        \item[4.] $x=[2]$
+        \item[5.] $x=[-1]=[4]$
+    \end{itemize}
 
-\vspace{1cm}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\noindent Problem 5.2.3  \vspace{0.3cm}
-
-There are many possible answers.  One is $n=4$, $a=1$ and $b=3$.  Thus $$a^2=1=9=b^2\pmod{4}.$$
-\vspace{1cm}
+    \vspace{1cm}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+    \noindent Problem 5.2.3  \vspace{0.3cm}
 
-
-
-\noindent Problem 5.2.6  \vspace{0.3cm}
-
-
-\begin{enumerate}
-
-\item[1]
-
-\underline{proposition:} Let $a,b,c\in \Z$ and let $n\in \N$.  Then
-$a+c\equiv b+c \mod n$ implies $a\equiv b \mod n$.
-
-\vspace{.2cm}
-
-\fbox{proof} (Direct) \vspace{.15cm}
-
-By definition of modular equivalence, $a+c\equiv b+c \mod n$ implies
-$n|((a+c)-(b+c))$.  But $(a+c)-(b+c)=a-b$, thus this implies
-$n|(a-b)$.  By the definition of modular equivalence, if $n|(a-b)$
-then $a\equiv b \mod n$.  $\blacksquare$
-
-\vspace{.2cm}
-
-\item[2]
-
-\underline{proposition:} Let $a,b,c\in \Z$ and let $n\in \N$.  Then
-$ac\equiv bc \mod n$ implies $a\equiv b \mod n$.
-
-\vspace{.2cm}
-
-\fbox{counterexample} \vspace{.15cm}
-
-Let $a=7$, $b=4$, $c=2$, and $n=6$.  $$7\cdot 2\equiv 4\cdot 2 \mod
-6\qquad \mbox{but}\qquad 7\not\equiv 4\mod 6$$
-
-\end{enumerate}
-
-\vspace{1cm}
-
-\newpage
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\noindent Problem 5.2.7  \vspace{0.3cm}
-
-\underline{proposition:} For all $n\in\N$, if $(n-1)!=-1\pmod{n}$ then $n$ is prime.
-
-\vspace{.2cm}
-
-\fbox{proof} (Contradiction) \vspace{.15cm}
-
-Let $n$ be an arbitrary natural number.  Suppose by way of contradiction that $(n-1)!=-1\pmod{n}$ and $n$ is composite. By definition of modular equivalence, $n|((n-1)!-(-1))$.  By definition of divides, there exists an integer $l$ such that $nl=(n-1)!+1.$
-
-By definition of composite, there exists an integer $m$ such that $1<m<n$ and $m|n.$  By definition of divides, there exists an integer $t$ such that $mt=n.$  Since $m$ is greater than $1$ and less than $n$, it is contained in the set $\{1,2,\ldots,n-1\}$, and thus is a factor in the product $(n-1)!=(n-1)\cdot(n-2)\cdots2\cdot 1$.  Thus, $(n-1)!=m\cdot k$ where $k$ is the product of all the integers  in the set $\{1,2,\ldots,n-1\}-\{m\}$.  By the closure of integers under multiplicaiton, $k$ is an integer.
-
-Thus, by substitution, $nl=(n-1)!+1$ implies $(mt)l=mk+1$.  Subtracting $mk$ from both sides of this equation, and using the associative and distributive properties of integer multiplicaiton and addition, we have $m(tl-k)=1$.  By the closure property of integer multiplicaiton and addition $(tl-k)$ is an integer, and thus by definition of divides $m|1$.  However, the only integer divisors of $1$ are $1$ and $-1$, and by assumption, $m>1$.  Thus we have a contradiction.
-
-Therefore, if $(n-1)!=-1\pmod{n}$ then $n$ is prime. $\blacksquare$
-
-
-\vspace{1cm}
+    There are many possible answers. One is $n=4$, $a=1$ and $b=3$. Thus $$a^2=1=9=b^2\pmod{4}.$$
+    \vspace{1cm}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\noindent Problem 5.2.11 \vspace{0.3cm}
-
-Note: the relationship described in this proposition is the model used by several divisibility tests.
-
-\vspace{.2cm}
-
-\underline{proposition:} $\sum_{i=1}^ma_i10^{i-1}=\sum_{i=1}^ma_i\pmod{9}$
-
-\vspace{.2cm}
-
-\fbox{proof}(Direct) \vspace{.15cm}
-
-Consider the sum $\sum_{i=1}^ma_i10^{i-1}\pmod{9}$.  By properties of modular equivalence, if $c=d\pmod{9}$ then $ac=ad\pmod{9}$.  Thus, since $10=1\pmod{9}$ we have $$\sum_{i=1}^ma_i10^{i-1}=\sum_{i=1}^ma_i1^{i-1}=\sum_{i=1}^ma_i1=\sum_{i=1}^ma_i\pmod{9} \qquad \blacksquare$$
 
 
+    \noindent Problem 5.2.6  \vspace{0.3cm}
 
-\vspace{1cm}
+
+    \begin{enumerate}
+
+        \item[1]
+
+        \underline{proposition:} Let $a,b,c\in \Z$ and let $n\in \N$. Then
+        $a+c\equiv b+c \mod n$ implies $a\equiv b \mod n$.
+
+        \vspace{.2cm}
+
+        \fbox{proof} (Direct) \vspace{.15cm}
+
+        By definition of modular equivalence, $a+c\equiv b+c \mod n$ implies
+        $n|((a+c)-(b+c))$. But $(a+c)-(b+c)=a-b$, thus this implies
+        $n|(a-b)$. By the definition of modular equivalence, if $n|(a-b)$
+        then $a\equiv b \mod n$.  $\blacksquare$
+
+        \vspace{.2cm}
+
+        \item[2]
+
+        \underline{proposition:} Let $a,b,c\in \Z$ and let $n\in \N$. Then
+        $ac\equiv bc \mod n$ implies $a\equiv b \mod n$.
+
+        \vspace{.2cm}
+
+        \fbox{counterexample} \vspace{.15cm}
+
+        Let $a=7$, $b=4$, $c=2$, and $n=6$.  $$7\cdot 2\equiv 4\cdot 2 \mod
+        6\qquad \mbox{but}\qquad 7\not\equiv 4\mod 6$$
+
+    \end{enumerate}
+
+    \vspace{1cm}
+
+    \newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+    \noindent Problem 5.2.7  \vspace{0.3cm}
+
+    \underline{proposition:} For all $n\in\N$, if $(n-1)!=-1\pmod{n}$ then $n$ is prime.
+
+    \vspace{.2cm}
+
+    \fbox{proof} (Contradiction) \vspace{.15cm}
+
+    Let $n$ be an arbitrary natural number. Suppose by way of contradiction that $(n-1)!=-1\pmod{n}$ and $n$ is composite. By definition of modular equivalence, $n|((n-1)!-(-1))$. By definition of divides, there exists an integer $l$ such that $nl=(n-1)!+1.$
+
+    By definition of composite, there exists an integer $m$ such that $1<m<n$ and $m|n.$  By definition of divides, there exists an integer $t$ such that $mt=n.$  Since $m$ is greater than $1$ and less than $n$, it is contained in the set $\{1,2,\ldots,n-1\}$, and thus is a factor in the product $(n-1)!=(n-1)\cdot(n-2)\cdots2\cdot 1$. Thus, $(n-1)!=m\cdot k$ where $k$ is the product of all the integers in the set $\{1,2,\ldots,n-1\}-\{m\}$. By the closure of integers under multiplicaiton, $k$ is an integer.
+
+    Thus, by substitution, $nl=(n-1)!+1$ implies $(mt)l=mk+1$. Subtracting $mk$ from both sides of this equation, and using the associative and distributive properties of integer multiplicaiton and addition, we have $m(tl-k)=1$. By the closure property of integer multiplicaiton and addition $(tl-k)$ is an integer, and thus by definition of divides $m|1$. However, the only integer divisors of $1$ are $1$ and $-1$, and by assumption, $m>1$. Thus we have a contradiction.
+
+    Therefore, if $(n-1)!=-1\pmod{n}$ then $n$ is prime. $\blacksquare$
+
+
+    \vspace{1cm}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+    \noindent Problem 5.2.11 \vspace{0.3cm}
+
+    Note: the relationship described in this proposition is the model used by several divisibility tests.
+
+    \vspace{.2cm}
+
+    \underline{proposition:} $\sum_{i=1}^ma_i10^{i-1}=\sum_{i=1}^ma_i\pmod{9}$
+
+    \vspace{.2cm}
+
+    \fbox{proof}(Direct) \vspace{.15cm}
+
+    Consider the sum $\sum_{i=1}^ma_i10^{i-1}\pmod{9}$. By properties of modular equivalence, if $c=d\pmod{9}$ then $ac=ad\pmod{9}$. Thus, since $10=1\pmod{9}$ we have $$\sum_{i=1}^ma_i10^{i-1}=\sum_{i=1}^ma_i1^{i-1}=\sum_{i=1}^ma_i1=\sum_{i=1}^ma_i\pmod{9} \qquad \blacksquare$$
+
+
+
+    \vspace{1cm}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

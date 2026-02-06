@@ -24,131 +24,131 @@
 
 \begin{document}
 
-\newpage
-\hfill\tiny{Math 251W: Foundations of Advanced Mathematics, McNicholas}
+    \newpage
+    \hfill\tiny{Math 251W: Foundations of Advanced Mathematics, McNicholas}
 
-\vspace{0.3cm}
-\centerline{\Large{Types of Proofs/What We Need to Prove}}
-\vspace{0.3cm}
-\hrule
-\vspace{0.3cm}
-\vspace{.5cm}
+    \vspace{0.3cm}
+    \centerline{\Large{Types of Proofs/What We Need to Prove}}
+    \vspace{0.3cm}
+    \hrule
+    \vspace{0.3cm}
+    \vspace{.5cm}
 
-\normalsize
-\fbox{Steps to Writing a Proof}
-\begin{enumerate}
-\item Fully understand the proposition 
-\begin{itemize}
-    \item Simplify any negations
-    \item Review relevant definitions
-    \item Identify the structure of the statement (convert to symbolic notation, recognize hidden quantifiers, etc.)
-\end{itemize}
-\item Determine the type of proof (Contradiction, $\forall$, $\exists$, $!$, Contrapositive, Direct, etc.) 
-\begin{itemize}
-    \item Start to scaffold the proof: State the premises, 
-Identify the Conclusion
-\end{itemize}
-\item Formulate the proof
-\begin{itemize}
-    
-    \item Create a chain of logical equivalences and implications linking the premises to the conclusion and make explicit calls to \textbf{mathematical justifications}.
-\end{itemize}
-\end{enumerate}
-
-\vspace{.25cm}
-\hrule
-%****************************************
-
-\vspace{.5cm}
-
-\fbox{Tips \& Techniques}
-\begin{itemize}
-\item Go back to definitions!
-\item Determine \emph{what} needs to be proved (See types of proofs).
-\item Use scratch for explorations, discovery of proof, working backwards (in the case of existence proofs).
-\item Write in proper grammatical English.
-\end{itemize}
-
-\vspace{.25cm}
-\hrule
-%****************************************
-\vspace{.5cm}
-
-\tcB{Format:
-\underline{Scratch}}
-\begin{quote}
-\textcolor{Green}{Experimentation, exploration, scratch work, backward construction}
-\end{quote}
-\vspace{.25cm}
-\tcB{\underline{proposition:}} \textcolor{Green}{Statement of proposition}
-
-\vspace{.25cm}
-
-\tcB{\fbox{proof}}\textcolor{Green}{(Type)}
-\begin{itemize}
-\item \textcolor{Green}{Start with assumptions}
-\item \textcolor{Green}{proof: complete sentences, grammatically correct sentences; define variables; refer back to definitions, thms, etc.}
-\item \textcolor{Green}{Concluding statement $\blacksquare$ or Q.E.D. (quod erat demonstrandum ``that which was to be demonstrated'')}
-\end{itemize}
-\vspace{.25cm}
-\hrule
-%****************************************
-\vspace{.5cm}
-\newpage
-\normalsize
-Many proofs involve combinations of the following techniques.
-\begin{enumerate}
-    \item Contradiction: $R\Leftrightarrow \neg(\neg R)$
-	$$\neg R\Rightarrow?\Rightarrow \cdots\Rightarrow ?\Rightarrow  \ddagger$$
-\item For all (\underline{prop:} $(\forall x\in U) P(x))$
-    \begin{itemize}
-    \item Let $a$ be an arbitrary element of $U.$  Show $P(a)$ is true.
-    \end{itemize}
-\item Existence (\underline{prop:} $(\exists x\in U) P(x)$)
-    \begin{itemize}
-    \item Use scratch to construct instance/example (often backwards)
-    \item In proof, verify this instance satisfies all requirements \tcR{(\emph{Beware of backwards proofs!})}
-    \end{itemize}
-\item Uniqueness (\underline{prop:} $(\exists ! x \in U) P(x)$)
-    \begin{itemize}
-    \item Have to prove \emph{existence} and \emph{uniqueness}
-    \item Proving uniqueness:
-    \begin{itemize}
-    \item Assume there exist two such elements, i.e. $P(x_0)$ and $P(y_0)$ are both true.  Show $x_0=y_0.$ OR
-    \item Assume $x_0\not= y_0, P(x_0),$ and $P(y_0)$ are all true.  Show $\ddagger.$
-    \end{itemize}
-    \end{itemize}
-
-\item  If...Then...($P\Rightarrow Q$)
-    \begin{itemize}
-    \item \underline{Direct Proof:} Start with premises (assumptions) $P$, use logical implications and equivalences to deduce $Q.$  $$P\Rightarrow ?\Rightarrow ?\Rightarrow\dots\Rightarrow ?\Rightarrow Q$$
-    \item \underline{Contrapositive:} $(P\Rightarrow Q)\Leftrightarrow$ \fbox{$\neg Q\Rightarrow \neg P$} \newline
-        Start with $\neg Q$, use logical implications to get to $\neg P.$ $$\neg Q\Rightarrow ?\Rightarrow\dots\Rightarrow ?\Rightarrow \neg P.$$
-    \item \underline{Contradiction:} $R\Leftrightarrow \neg(\neg R),\quad\therefore (P\Rightarrow Q)\Leftrightarrow$ \fbox{$\neg(P\wedge\neg Q)$} \newline
-        Show $P\wedge\neg Q$ is a contradiction, (which makes $\neg(P\wedge\neg Q)$, i.e. $P\Rightarrow Q$, a tautology).  $$(P\wedge\neg Q)\Rightarrow ?\Rightarrow\dots\Rightarrow ?\Rightarrow \ddagger$$
-    \item \underline{Cases:}
+    \normalsize
+    \fbox{Steps to Writing a Proof}
+    \begin{enumerate}
+        \item Fully understand the proposition
         \begin{itemize}
-        \item Equivalence: $(P\Leftrightarrow Q)\Leftrightarrow$ \fbox{$(P\Rightarrow Q)\wedge(Q\Rightarrow P)$} (2 proofs in one), or \newline
-        $P\Leftrightarrow ?\Leftrightarrow \dots \Leftrightarrow ?\Leftrightarrow Q$ (Use only equivalences not implications.  Faster, but often much more difficult as you have to proceed in the same way in each direction)
-        \item Chain of equivalences: $(P\Leftrightarrow Q\Leftrightarrow R\Leftrightarrow S)\Leftrightarrow$ \fbox{$(P\Rightarrow Q)\wedge(Q\Rightarrow R)\wedge(R\Rightarrow S)\wedge (S\Rightarrow P)$} (Many proofs in one, have to close the circle.)
-        \item OR's
+            \item Simplify any negations
+            \item Review relevant definitions
+            \item Identify the structure of the statement (convert to symbolic notation, recognize hidden quantifiers, etc.)
+        \end{itemize}
+        \item Determine the type of proof (Contradiction, $\forall$, $\exists$, $!$, Contrapositive, Direct, etc.)
+        \begin{itemize}
+            \item Start to scaffold the proof: State the premises,
+            Identify the Conclusion
+        \end{itemize}
+        \item Formulate the proof
+        \begin{itemize}
+
+            \item Create a chain of logical equivalences and implications linking the premises to the conclusion and make explicit calls to \textbf{mathematical justifications}.
+        \end{itemize}
+    \end{enumerate}
+
+    \vspace{.25cm}
+    \hrule
+%****************************************
+
+    \vspace{.5cm}
+
+    \fbox{Tips \& Techniques}
+    \begin{itemize}
+        \item Go back to definitions!
+        \item Determine \emph{what} needs to be proved (See types of proofs).
+        \item Use scratch for explorations, discovery of proof, working backwards (in the case of existence proofs).
+        \item Write in proper grammatical English.
+    \end{itemize}
+
+    \vspace{.25cm}
+    \hrule
+%****************************************
+    \vspace{.5cm}
+
+    \tcB{Format:
+    \underline{Scratch}}
+    \begin{quote}
+        \textcolor{Green}{Experimentation, exploration, scratch work, backward construction}
+    \end{quote}
+    \vspace{.25cm}
+    \tcB{\underline{proposition:}} \textcolor{Green}{Statement of proposition}
+
+    \vspace{.25cm}
+
+    \tcB{\fbox{proof}}\textcolor{Green}{(Type)}
+    \begin{itemize}
+        \item \textcolor{Green}{Start with assumptions}
+        \item \textcolor{Green}{proof: complete sentences, grammatically correct sentences; define variables; refer back to definitions, thms, etc.}
+        \item \textcolor{Green}{Concluding statement $\blacksquare$ or Q.E.D. (quod erat demonstrandum ``that which was to be demonstrated'')}
+    \end{itemize}
+    \vspace{.25cm}
+    \hrule
+%****************************************
+    \vspace{.5cm}
+    \newpage
+    \normalsize
+    Many proofs involve combinations of the following techniques.
+    \begin{enumerate}
+        \item Contradiction: $R\Leftrightarrow \neg(\neg R)$
+        $$\neg R\Rightarrow?\Rightarrow \cdots\Rightarrow ?\Rightarrow  \ddagger$$
+        \item For all (\underline{prop:} $(\forall x\in U) P(x))$
+        \begin{itemize}
+            \item Let $a$ be an arbitrary element of $U.$  Show $P(a)$ is true.
+        \end{itemize}
+        \item Existence (\underline{prop:} $(\exists x\in U) P(x)$)
+        \begin{itemize}
+            \item Use scratch to construct instance/example (often backwards)
+            \item In proof, verify this instance satisfies all requirements \tcR{(\emph{Beware of backwards proofs!})}
+        \end{itemize}
+        \item Uniqueness (\underline{prop:} $(\exists ! x \in U) P(x)$)
+        \begin{itemize}
+            \item Have to prove \emph{existence} and \emph{uniqueness}
+            \item Proving uniqueness:
             \begin{itemize}
-            \item $[(A\vee B)\Rightarrow Q]\Leftrightarrow$ \fbox{$(A\Rightarrow Q)\wedge (B\Rightarrow Q)$} (2 proofs in one)
-            \item $[P\Rightarrow (A\vee B)]\Leftrightarrow$ \fbox{$(\neg A\wedge\neg B)\Rightarrow \neg P$} (Contrapositive. ``Ands'' are often easier to work with)
-            \item $[P\Rightarrow (A\vee B)]\Leftrightarrow$ \fbox{$(P\wedge\neg A)\Rightarrow B$} $\Leftrightarrow$ \fbox{$(P\wedge\neg B)\Rightarrow A$} (Whichever is easier to prove)
-            \end{itemize}
-        \item AND's
-            \begin{itemize}
-            \item $[(A\wedge B)\Rightarrow Q].$  $$(A\wedge B)\Rightarrow ?\Rightarrow \dots\Rightarrow ?\Rightarrow Q$$
-            \item $[P\Rightarrow(A\wedge B)]\Leftrightarrow$ \fbox{$(P\Rightarrow A)\wedge (P\Rightarrow B)$} (2 proofs in one)
+                \item Assume there exist two such elements, i.e. $P(x_0)$ and $P(y_0)$ are both true. Show $x_0=y_0.$ OR
+                \item Assume $x_0\not= y_0, P(x_0),$ and $P(y_0)$ are all true. Show $\ddagger.$
             \end{itemize}
         \end{itemize}
-    \end{itemize}
+
+        \item  If...Then...($P\Rightarrow Q$)
+        \begin{itemize}
+            \item \underline{Direct Proof:} Start with premises (assumptions) $P$, use logical implications and equivalences to deduce $Q.$  $$P\Rightarrow ?\Rightarrow ?\Rightarrow\dots\Rightarrow ?\Rightarrow Q$$
+            \item \underline{Contrapositive:} $(P\Rightarrow Q)\Leftrightarrow$ \fbox{$\neg Q\Rightarrow \neg P$} \newline
+            Start with $\neg Q$, use logical implications to get to $\neg P.$ $$\neg Q\Rightarrow ?\Rightarrow\dots\Rightarrow ?\Rightarrow \neg P.$$
+            \item \underline{Contradiction:} $R\Leftrightarrow \neg(\neg R),\quad\therefore (P\Rightarrow Q)\Leftrightarrow$ \fbox{$\neg(P\wedge\neg Q)$} \newline
+            Show $P\wedge\neg Q$ is a contradiction, (which makes $\neg(P\wedge\neg Q)$, i.e. $P\Rightarrow Q$, a tautology).  $$(P\wedge\neg Q)\Rightarrow ?\Rightarrow\dots\Rightarrow ?\Rightarrow \ddagger$$
+            \item \underline{Cases:}
+            \begin{itemize}
+                \item Equivalence: $(P\Leftrightarrow Q)\Leftrightarrow$ \fbox{$(P\Rightarrow Q)\wedge(Q\Rightarrow P)$} (2 proofs in one), or \newline
+                $P\Leftrightarrow ?\Leftrightarrow \dots \Leftrightarrow ?\Leftrightarrow Q$ (Use only equivalences not implications. Faster, but often much more difficult as you have to proceed in the same way in each direction)
+                \item Chain of equivalences: $(P\Leftrightarrow Q\Leftrightarrow R\Leftrightarrow S)\Leftrightarrow$ \fbox{$(P\Rightarrow Q)\wedge(Q\Rightarrow R)\wedge(R\Rightarrow S)\wedge (S\Rightarrow P)$} (Many proofs in one, have to close the circle.)
+                \item OR's
+                \begin{itemize}
+                    \item $[(A\vee B)\Rightarrow Q]\Leftrightarrow$ \fbox{$(A\Rightarrow Q)\wedge (B\Rightarrow Q)$} (2 proofs in one)
+                    \item $[P\Rightarrow (A\vee B)]\Leftrightarrow$ \fbox{$(\neg A\wedge\neg B)\Rightarrow \neg P$} (Contrapositive. ``Ands'' are often easier to work with)
+                    \item $[P\Rightarrow (A\vee B)]\Leftrightarrow$ \fbox{$(P\wedge\neg A)\Rightarrow B$} $\Leftrightarrow$ \fbox{$(P\wedge\neg B)\Rightarrow A$} (Whichever is easier to prove)
+                \end{itemize}
+                \item AND's
+                \begin{itemize}
+                    \item $[(A\wedge B)\Rightarrow Q].$  $$(A\wedge B)\Rightarrow ?\Rightarrow \dots\Rightarrow ?\Rightarrow Q$$
+                    \item $[P\Rightarrow(A\wedge B)]\Leftrightarrow$ \fbox{$(P\Rightarrow A)\wedge (P\Rightarrow B)$} (2 proofs in one)
+                \end{itemize}
+            \end{itemize}
+        \end{itemize}
 
 
-\end{enumerate}
+    \end{enumerate}
 
-\hrule
+    \hrule
 
 %****************************************
 % \vspace{.5cm}

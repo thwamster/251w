@@ -31,180 +31,192 @@
 
 
 \begin{document}
-\begin{center}
-\Large{Math 251W: Foundations of Advanced Mathematics}
+	\begin{center}
+		\Large{Math 251W: Foundations of Advanced Mathematics}
 
-\normalsize Solutions to problems from section 4.3 
-\hrule
-\vspace{0.4cm}
+		\normalsize Solutions to problems from section 4.3
+		\hrule
+		\vspace{0.4cm}
 
-\end{center}
+	\end{center}
 
 
-\noindent Problem 4.3.2  \vspace{0.3cm}
+	\noindent Problem 4.3.2  \vspace{0.3cm}
 
-\begin{enumerate}
-\item $g(x)=x+7$, $h(x)=\sqrt{|x|}$   (Note: there should be an
-absolute value in the function $f$ since otherwise the domain of $f$
-is not $\R$
-\item $g(x)=\sqrt{|x|}$, $h(x)=x+7$
-\item $g(x)=x^2$, $h(x)=\left\{\begin{array}{cc} x^3 & \mbox{ if
-}x\ge 0\\ x^2 & \mbox{ if } x<0\end{array}\right.$
-\item $g(x)=\left\{\begin{array}{cc} x^6 & \mbox{ if } x\ge0\\ x &
-\mbox{ if } x<0\end{array}\right.$, $h(x)=\left\{\begin{array}{cc} \sqrt{x}
-& \mbox{ if } x\ge0\\ x & \mbox{ if } x<0\end{array}\right.$
-\end{enumerate}
+	\begin{enumerate}
+		\item $g(x)=x+7$, $h(x)=\sqrt{|x|}$   (Note: there should be an
+		absolute value in the function $f$ since otherwise the domain of $f$
+		is not $\R$
+		\item $g(x)=\sqrt{|x|}$, $h(x)=x+7$
+		\item $g(x)=x^2$, $h(x)=\left\{\begin{array}{cc}
+										   x^3 & \mbox{ if
+										   }x\ge 0\\ x^2 & \mbox{ if } x<0
+		\end{array}\right.$
+		\item $g(x)=\left\{\begin{array}{cc}
+							   x^6 & \mbox{ if } x\ge0\\ x &
+							   \mbox{ if } x<0
+		\end{array}\right.$, $h(x)=\left\{\begin{array}{cc}
+											  \sqrt{x}
+											  & \mbox{ if } x\ge0\\ x & \mbox{ if } x<0
+		\end{array}\right.$
+	\end{enumerate}
 
-\vspace{1cm}
+	\vspace{1cm}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\noindent Problem 4.3.4  \vspace{0.3cm}
+	\noindent Problem 4.3.4  \vspace{0.3cm}
 
-\begin{enumerate}
-\item $h(x)=\left\{\begin{array}{cc} \frac{1}{5}
-& \mbox{ if } x\ge0\\ -2 & \mbox{ if } x<0\end{array}\right.$,
-$k(x)=\left\{\begin{array}{cc} 10x & \mbox{ if } x\ge0\\
-\frac{x}{-1} & \mbox{ if } x<0\end{array}\right.$
-\item $s(x)=\frac{x}{5}$, $t(x)=5x$
-\end{enumerate}
+	\begin{enumerate}
+		\item $h(x)=\left\{\begin{array}{cc}
+							   \frac{1}{5}
+							   & \mbox{ if } x\ge0\\ -2 & \mbox{ if } x<0
+		\end{array}\right.$,
+		$k(x)=\left\{\begin{array}{cc}
+						 10x & \mbox{ if } x\ge0\\
+						 \frac{x}{-1} & \mbox{ if } x<0
+		\end{array}\right.$
+		\item $s(x)=\frac{x}{5}$, $t(x)=5x$
+	\end{enumerate}
 
-\vspace{1cm}
+	\vspace{1cm}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\noindent Problem 4.3.5  \vspace{0.3cm}
+	\noindent Problem 4.3.5  \vspace{0.3cm}
 
-Let $f:A\rightarrow B$ and $g:B\rightarrow C$ be functions, and let
-$U\subseteq A$ and $V\subseteq C$.
+	Let $f:A\rightarrow B$ and $g:B\rightarrow C$ be functions, and let
+	$U\subseteq A$ and $V\subseteq C$.
 
-\vspace{0.3cm}
+	\vspace{0.3cm}
 
-\underline{proposition:} $(g\circ f)_*(U)=g_*(f_*(U))$
+	\underline{proposition:} $(g\circ f)_*(U)=g_*(f_*(U))$
 
-\vspace{0.2cm}
+	\vspace{0.2cm}
 
-\fbox{proof}
+	\fbox{proof}
 
-\vspace{0.15cm}
+	\vspace{0.15cm}
+	
+	Let $y$ be an arbitrary element of $(g\circ f)_*(U)$. Thus, by
+	definition of image, $\exists x\in U$ such that $(g\circ f)(x)=y$.
+	By definition of composition, $(g\circ f)(x)=g(f(x)).$  Since $x\in
+	U$, $f(x)\in f_*(U)$, and since $f(x)\in f_*(U)$, $g(f(x))\in
+	g_*(f_*(U))$. Thus $y=g(f(x))\in g_*(f_*(U))$, which implies $(g\circ
+	f)_*(U)\subseteq g_*(f_*(U))$.
 
- Let $y$ be an arbitrary element of $(g\circ f)_*(U)$.  Thus, by
- definition of image, $\exists x\in U$ such that $(g\circ f)(x)=y$.
- By definition of composition, $(g\circ f)(x)=g(f(x)).$  Since $x\in
- U$, $f(x)\in f_*(U)$, and since $f(x)\in f_*(U)$, $g(f(x))\in
- g_*(f_*(U))$.  Thus $y=g(f(x))\in g_*(f_*(U))$, which implies $(g\circ
- f)_*(U)\subseteq g_*(f_*(U))$.
+	Let $y$ be an arbitrary element of $g_*(f_*(U))$. By definition of
+	image, there exists an element $b\in f_*(U)$ such that $y=g(b)$.
+	Since $b\in f*(U)$, there must exist an element $x$ in $U$ such that
+	$f(x)=b$. Thus, $y=g(b)=g(f(x))=(g\circ f)(x)$. By definition of
+	image, since $x\in U$ and $y=(g\circ f)(x)$, $y\in (g\circ f)_*(U)$.
+	Thus, $(g\circ
+	f)_*(U)\supseteq g_*(f_*(U))$.
 
-Let $y$ be an arbitrary element of $g_*(f_*(U))$.  By definition of
-image, there exists an element $b\in f_*(U)$ such that $y=g(b)$.
-Since $b\in f*(U)$, there must exist an element $x$ in $U$ such that
-$f(x)=b$.  Thus, $y=g(b)=g(f(x))=(g\circ f)(x)$.  By definition of
-image, since $x\in U$ and $y=(g\circ f)(x)$, $y\in (g\circ f)_*(U)$.
-Thus, $(g\circ
- f)_*(U)\supseteq g_*(f_*(U))$.
-
-Since we've shown $(g\circ
- f)_*(U)\subseteq g_*(f_*(U))$ and $(g\circ
- f)_*(U)\supseteq g_*(f_*(U))$, $(g\circ
- f)_*(U)= g_*(f_*(U))$.  $\blacksquare$
+	Since we've shown $(g\circ
+	f)_*(U)\subseteq g_*(f_*(U))$ and $(g\circ
+	f)_*(U)\supseteq g_*(f_*(U))$, $(g\circ
+	f)_*(U)= g_*(f_*(U))$.  $\blacksquare$
 
 
-\vspace{0.3cm}
+	\vspace{0.3cm}
 
-\underline{proposition:} $(g\circ f)^*(V)=f^*(g^*(V))$
+	\underline{proposition:} $(g\circ f)^*(V)=f^*(g^*(V))$
 
-\vspace{0.2cm}
+	\vspace{0.2cm}
 
-\fbox{proof}
+	\fbox{proof}
 
-\vspace{0.15cm}
+	\vspace{0.15cm}
 
-Let $x$ be an arbitrary element of $(g\circ f)^*(V)$.  Thus, by
-definition of inverse image, $(g\circ f)(x)=g(f(x))\in V$.  Since
-$g(f(x))\in V$ it follows that $f(x)\in g^*(V)$, which implies $x\in
-f^*(g^*(V))$, again by definition of inverse image.  Thus, since $x$
-was an arbitrary element, it follows that $(g\circ f)^*(V)\subseteq
-f^*(g^*(V))$.
+	Let $x$ be an arbitrary element of $(g\circ f)^*(V)$. Thus, by
+	definition of inverse image, $(g\circ f)(x)=g(f(x))\in V$. Since
+	$g(f(x))\in V$ it follows that $f(x)\in g^*(V)$, which implies $x\in
+	f^*(g^*(V))$, again by definition of inverse image. Thus, since $x$
+	was an arbitrary element, it follows that $(g\circ f)^*(V)\subseteq
+	f^*(g^*(V))$.
 
-Let $x$ be an arbitrary element of $f^*(g^*(V))$, i.e. $f(x)\in
-g^*(V)$.  By definition of inverse image, $f(x)\in g^*(V)$ implies
-$g(f(x))=(g\circ f)(x)\in V$.  Again, by definition of inverse
-image, this implies $x\in (g\circ f)^*(V)$.  Thus, since $x$ was an
-arbitrary element, $(g\circ f)^*(V)\supseteq f^*(g^*(V))$.
+	Let $x$ be an arbitrary element of $f^*(g^*(V))$, i.e. $f(x)\in
+	g^*(V)$. By definition of inverse image, $f(x)\in g^*(V)$ implies
+	$g(f(x))=(g\circ f)(x)\in V$. Again, by definition of inverse
+	image, this implies $x\in (g\circ f)^*(V)$. Thus, since $x$ was an
+	arbitrary element, $(g\circ f)^*(V)\supseteq f^*(g^*(V))$.
 
-Having showed $(g\circ f)^*(V)\subseteq f^*(g^*(V))$ and $(g\circ
-f)^*(V)\supseteq f^*(g^*(V))$, it follows that $(g\circ f)^*(V)=
-f^*(g^*(V))$.  $\blacksquare$
+	Having showed $(g\circ f)^*(V)\subseteq f^*(g^*(V))$ and $(g\circ
+	f)^*(V)\supseteq f^*(g^*(V))$, it follows that $(g\circ f)^*(V)=
+	f^*(g^*(V))$.  $\blacksquare$
 
-\vspace{1cm}
+	\vspace{1cm}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\noindent Problem 4.3.6  \vspace{0.3cm}
+	\noindent Problem 4.3.6  \vspace{0.3cm}
 
-\underline{proposition:}  Let $f:A\rightarrow B$ and $g:B\rightarrow
-C$ be functions with inverse functions $f^{-1}:B\rightarrow A$ and
-$g^{-1}:C\rightarrow B$.  The inverse of the function $g\circ f$ is
-$f^{-1}\circ g^{-1}$.
+	\underline{proposition:}  Let $f:A\rightarrow B$ and $g:B\rightarrow
+	C$ be functions with inverse functions $f^{-1}:B\rightarrow A$ and
+	$g^{-1}:C\rightarrow B$. The inverse of the function $g\circ f$ is
+	$f^{-1}\circ g^{-1}$.
 
-\vspace{0.2cm}
+	\vspace{0.2cm}
 
-\fbox{proof}
+	\fbox{proof}
 
-\vspace{0.15cm}
+	\vspace{0.15cm}
 
-By definition of composition, $f^{-1}\circ g^{-1}$ is a function
-mapping $C\rightarrow A$.  Consider the composition $(f^{-1}\circ
-g^{-1})\circ (g\circ f)$.  By the associativity of composition,
-$(f^{-1}\circ g^{-1})\circ (g\circ f)=f^{-1}\circ(g^{-1}\circ
-g)\circ f$.  By the definition of inverse functions $g^{-1}\circ
-g=1_B$, $g\circ g^{-1}=1_C$, $f\circ f^{-1}=1_B$, and $f^{-1}\circ
-f=1_A$. Thus, by the identity law and the definition of inverse
-functions, $f^{-1}\circ (g^{-1}\circ g)\circ f=f^{-1}\circ (1_B\circ
-f)=f^{-1}\circ f=1_A$. Since $(f^{-1}\circ g^{-1})\circ (g\circ
-f)=1_A$, $f^{-1}\circ g^{-1}$ is the left inverse of $g\circ f$.
+	By definition of composition, $f^{-1}\circ g^{-1}$ is a function
+	mapping $C\rightarrow A$. Consider the composition $(f^{-1}\circ
+	g^{-1})\circ (g\circ f)$. By the associativity of composition,
+	$(f^{-1}\circ g^{-1})\circ (g\circ f)=f^{-1}\circ(g^{-1}\circ
+	g)\circ f$. By the definition of inverse functions $g^{-1}\circ
+	g=1_B$, $g\circ g^{-1}=1_C$, $f\circ f^{-1}=1_B$, and $f^{-1}\circ
+	f=1_A$. Thus, by the identity law and the definition of inverse
+	functions, $f^{-1}\circ (g^{-1}\circ g)\circ f=f^{-1}\circ (1_B\circ
+	f)=f^{-1}\circ f=1_A$. Since $(f^{-1}\circ g^{-1})\circ (g\circ
+	f)=1_A$, $f^{-1}\circ g^{-1}$ is the left inverse of $g\circ f$.
 
-Consider the composition $(g\circ f)\circ(f^{-1}\circ g^{-1})$.  By
-the associativity of composition, the definition of inverses, and
-the identity law $(g\circ f)\circ(f^{-1}\circ g^{-1})=g\circ (f\circ
-f^{-1})\circ g^{-1}=g\circ(1_B\circ g^{-1})=g\circ g^{-1}=1_C$.  By
-definition or right inverse, this implies $f^{-1}\circ g^{-1}$ is
-the right inverse of $g\circ f$.
+	Consider the composition $(g\circ f)\circ(f^{-1}\circ g^{-1})$. By
+	the associativity of composition, the definition of inverses, and
+	the identity law $(g\circ f)\circ(f^{-1}\circ g^{-1})=g\circ (f\circ
+	f^{-1})\circ g^{-1}=g\circ(1_B\circ g^{-1})=g\circ g^{-1}=1_C$. By
+	definition or right inverse, this implies $f^{-1}\circ g^{-1}$ is
+	the right inverse of $g\circ f$.
 
-Thus, since $f^{-1}\circ g^{-1}$ is the left and right inverse, it
-follows by definition of inverse that $f^{-1}\circ g^{-1}$ is the
-inverse of $g\circ f$. $\blacksquare$
+	Thus, since $f^{-1}\circ g^{-1}$ is the left and right inverse, it
+	follows by definition of inverse that $f^{-1}\circ g^{-1}$ is the
+	inverse of $g\circ f$. $\blacksquare$
 
-\vspace{1cm}
+	\vspace{1cm}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\noindent Problem 4.3.7  \vspace{0.3cm}
+	\noindent Problem 4.3.7  \vspace{0.3cm}
 
-\begin{enumerate}
-\item[1]  $g_1:[0,\infty)\rightarrow \R$ defined by $g_1(x)=x$ for all $x\in [0,\infty)$, and
-$g_2:[0,\infty)\rightarrow \R$ defined by $g_2(x)=-x$ for all $x\in
-[0,\infty)$.
-\end{enumerate}
+	\begin{enumerate}
+		\item[1]  $g_1:[0,\infty)\rightarrow \R$ defined by $g_1(x)=x$ for all $x\in [0,\infty)$, and
+		$g_2:[0,\infty)\rightarrow \R$ defined by $g_2(x)=-x$ for all $x\in
+		[0,\infty)$.
+	\end{enumerate}
 
-\vspace{1cm}
+	\vspace{1cm}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\noindent Problem 4.3.8  \vspace{0.3cm}
+	\noindent Problem 4.3.8  \vspace{0.3cm}
 
-\begin{enumerate}
-\item[2] $f_1:\R\rightarrow \R$ defined by $f_1(x)=ln|x|$ for all
-$x\in \R$, and $f_2:\R\rightarrow \R$ defined by
-$$f_2(x)=\left\{\begin{array}{cc} ln(x) & \mbox{ if } x>0\\ x &
-\mbox{ if }x\le 0\end{array}\right.$$ for all $x\in \R$.
-\end{enumerate}
+	\begin{enumerate}
+		\item[2] $f_1:\R\rightarrow \R$ defined by $f_1(x)=ln|x|$ for all
+		$x\in \R$, and $f_2:\R\rightarrow \R$ defined by
+		$$f_2(x)=\left\{\begin{array}{cc}
+							ln(x) & \mbox{ if } x>0\\ x &
+							\mbox{ if }x\le 0
+		\end{array}\right.$$ for all $x\in \R$.
+	\end{enumerate}
 
-\vspace{1cm}
+	\vspace{1cm}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

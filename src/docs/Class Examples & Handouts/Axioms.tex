@@ -24,73 +24,73 @@
 
 \begin{document}
 
-\newpage
-\hfill\small{Math 251W: Foundations of Advanced Mathematics, McNicholas}
-\vspace{0.5cm}
-\hrule
-\vspace{0.5cm}
-\large{\fbox{Axioms / Definitions / Theorems at our disposal}
-\normalsize
-\begin{itemize}
-\item[] \fbox{Defn} Number Systems
-	\begin{itemize}
-	\item[]  Integers, $\Z:=\{\ldots, -3, -2, -1, 0, 1, 2, 3, \ldots\}$
-		\begin{itemize}
-		\item Addition and Multiplication are defined and \emph{closed} on the integers, i.e. if $a,b\in \Z$ then $a+b\in \Z$ and $ab\in\Z$.
-		\item Multiplication distributes over addition, i.e. $\forall a,b,c\in\Z$ $a(b+c)=ab+ac.$
-		\item Addition and multiplication are both associative, i.e. $a+(b+c)=(a+b)+c$ and $a(bc)=a(bc)$ forall $a,b,c\in\Z$
-		\item Addition and multiplication are both commutative, i.e. $a+b=b+a$ and $ab=ba$ for all $a,b\in\Z$
-		\item Every integer has an additive inverse, i.e. for all $a\in\Z$ there exists $-a\in\Z$ such that $a+(-a)=0$
-		\item Not every element in the integers has a multiplicative inverse, i.e. given $a\in\Z$, there does NOT exist an $a^{-1}\in\Z$ such that $aa^{-1}=1$ unless $a=\pm 1.$
-		\end{itemize}
-	\item[]  Rational numbers, $\Q:=$\{set of numbers of the form $\frac{n}{m},$ where $m,n\in\Z,$ and $m\not=0,$ i.e. fractions\} 
-		\begin{itemize}
-		\item Addition and Multiplication are defined, associative, commutative, and closed on the rationals.
-		\item Multiplication distributes over addition
-		\item Every rational number has an additive inverse, i.e. for all $\frac{m}{n}\in\Q$ there exists $\frac{-m}{n}\in\Q$ such that $\frac{m}{n}+\frac{-m}{n}=0$
-		\item Every non-zero element of the rationals has a multiplicative inverse, in particular if  ($\frac{m}{n}\in\Q$ and $\frac{m}{n}\not=0$, then $\frac{n}{m}\in\Q$ and $(\frac{m}{n})(\frac{n}{m})=1$).
-		\end{itemize}
-	\item[] Real numbers $\R:=$\{the set of rational and irrational numbers, i.e. everything on the number line\}
-		\begin{itemize}	
-		\item Addition and Multiplication are defined, associative, commutative, and closed on the reals.
-		\item Multiplication distributes over addition
-		\item Every real number has an additive inverse, and every \emph{non-zero} real number has a multiplicative inverse in the reals.
-		\end{itemize}
-	\end{itemize}
-\end{itemize}
-\bigskip
+    \newpage
+    \hfill\small{Math 251W: Foundations of Advanced Mathematics, McNicholas}
+    \vspace{0.5cm}
+    \hrule
+    \vspace{0.5cm}
+    \large{\fbox{Axioms / Definitions / Theorems at our disposal}
+    \normalsize
+    \begin{itemize}
+        \item[] \fbox{Defn} Number Systems
+        \begin{itemize}
+            \item[]  Integers, $\Z:=\{\ldots, -3, -2, -1, 0, 1, 2, 3, \ldots\}$
+            \begin{itemize}
+                \item Addition and Multiplication are defined and \emph{closed} on the integers, i.e. if $a,b\in \Z$ then $a+b\in \Z$ and $ab\in\Z$.
+                \item Multiplication distributes over addition, i.e. $\forall a,b,c\in\Z$ $a(b+c)=ab+ac.$
+                \item Addition and multiplication are both associative, i.e. $a+(b+c)=(a+b)+c$ and $a(bc)=a(bc)$ forall $a,b,c\in\Z$
+                \item Addition and multiplication are both commutative, i.e. $a+b=b+a$ and $ab=ba$ for all $a,b\in\Z$
+                \item Every integer has an additive inverse, i.e. for all $a\in\Z$ there exists $-a\in\Z$ such that $a+(-a)=0$
+                \item Not every element in the integers has a multiplicative inverse, i.e. given $a\in\Z$, there does NOT exist an $a^{-1}\in\Z$ such that $aa^{-1}=1$ unless $a=\pm 1.$
+            \end{itemize}
+            \item[]  Rational numbers, $\Q:=$\{set of numbers of the form $\frac{n}{m},$ where $m,n\in\Z,$ and $m\not=0,$ i.e. fractions\}
+            \begin{itemize}
+                \item Addition and Multiplication are defined, associative, commutative, and closed on the rationals.
+                \item Multiplication distributes over addition
+                \item Every rational number has an additive inverse, i.e. for all $\frac{m}{n}\in\Q$ there exists $\frac{-m}{n}\in\Q$ such that $\frac{m}{n}+\frac{-m}{n}=0$
+                \item Every non-zero element of the rationals has a multiplicative inverse, in particular if  ($\frac{m}{n}\in\Q$ and $\frac{m}{n}\not=0$, then $\frac{n}{m}\in\Q$ and $(\frac{m}{n})(\frac{n}{m})=1$).
+            \end{itemize}
+            \item[] Real numbers $\R:=$\{the set of rational and irrational numbers, i.e. everything on the number line\}
+            \begin{itemize}
+                \item Addition and Multiplication are defined, associative, commutative, and closed on the reals.
+                \item Multiplication distributes over addition
+                \item Every real number has an additive inverse, and every \emph{non-zero} real number has a multiplicative inverse in the reals.
+            \end{itemize}
+        \end{itemize}
+    \end{itemize}
+    \bigskip
 
-Definitions \& Theorems about Number Systems
-\begin{itemize}
-\item[] \fbox{Defn} Let $a$ and $b$ be numbers in some Number System $U$.  We say $a$ divides $b$ in $U$, denoted $a|b,$ iff there exists an element $q$ in $U$ such that $b=aq.$  If $a$ divides $b$, we say $a$ is a \emph{divisor} of $b.$
-\item[] \textcolor{Red}{Check your understanding \begin{itemize}
-    \item State the definition of divides in the context of the integers
-    \item What are the divisors of $6$ in $\Z$?
-    \item What are the divisors of $6$ in $\Q$?
-    \item What are the divisors of $6$ in $\R$?
-\end{itemize}}
-\item[] \fbox{Thm}  There are no zero divisors in $\R,$ i.e. if $ab=0$ for some $a,b\in R$ then $a=0$ or $b=0.$ 
-\item[] \textcolor{Red}{Check your understanding: Are there zero divisors in $\Q$ or $\Z$?}
-\end{itemize}
-\newpage
+    Definitions \& Theorems about Number Systems
+    \begin{itemize}
+        \item[] \fbox{Defn} Let $a$ and $b$ be numbers in some Number System $U$. We say $a$ divides $b$ in $U$, denoted $a|b,$ iff there exists an element $q$ in $U$ such that $b=aq.$  If $a$ divides $b$, we say $a$ is a \emph{divisor} of $b.$
+        \item[] \textcolor{Red}{Check your understanding \begin{itemize}
+                                                             \item State the definition of divides in the context of the integers
+                                                             \item What are the divisors of $6$ in $\Z$?
+                                                             \item What are the divisors of $6$ in $\Q$?
+                                                             \item What are the divisors of $6$ in $\R$?
+        \end{itemize}}
+        \item[] \fbox{Thm}  There are no zero divisors in $\R,$ i.e. if $ab=0$ for some $a,b\in R$ then $a=0$ or $b=0.$
+        \item[] \textcolor{Red}{Check your understanding: Are there zero divisors in $\Q$ or $\Z$?}
+    \end{itemize}
+    \newpage
 
-Definitions \& Theorems involving Integers $\Z$
-\begin{itemize}
-\item[] \fbox{Defn} Let $n$ be an integer.  We say $n$ is \emph{even} if there is some integer $k$ such that $n=2k.$  We say $n$ is \emph{odd} if there is some integer $j$ such that $n=2j+1.$
-\item[] \fbox{Defn} Let $p$ be a positive integer greater than $1.$  We say $p$ is \emph{prime} iff the only positive integers which divide $p$ are $1$ and $p.$  A positive integer greater than $1$  is \emph{composite} if it is not prime.
-\item[] \fbox{Defn} Integers $a$ and $b$ are said to be \emph{relatively prime} iff their only common factors are $\pm 1.$
-\item[] \fbox{Thm} Every integer can be \emph{uniquely} expressed,  up to an ordering of the factors and multiplication by $\pm 1$, as a product of primes.
-\item[] \fbox{Cor} Every integer greater than $1$ has a prime divisor.
-\item[] \fbox{Cor to Div Alg} For all integers $a$ and non-zero integers $b$, there exist integers $q$ and $r$ such that $a=bq+r$ and $0\leq r< b$.
-\end{itemize}
+    Definitions \& Theorems involving Integers $\Z$
+    \begin{itemize}
+        \item[] \fbox{Defn} Let $n$ be an integer. We say $n$ is \emph{even} if there is some integer $k$ such that $n=2k.$  We say $n$ is \emph{odd} if there is some integer $j$ such that $n=2j+1.$
+        \item[] \fbox{Defn} Let $p$ be a positive integer greater than $1.$  We say $p$ is \emph{prime} iff the only positive integers which divide $p$ are $1$ and $p.$  A positive integer greater than $1$  is \emph{composite} if it is not prime.
+        \item[] \fbox{Defn} Integers $a$ and $b$ are said to be \emph{relatively prime} iff their only common factors are $\pm 1.$
+        \item[] \fbox{Thm} Every integer can be \emph{uniquely} expressed,  up to an ordering of the factors and multiplication by $\pm 1$, as a product of primes.
+        \item[] \fbox{Cor} Every integer greater than $1$ has a prime divisor.
+        \item[] \fbox{Cor to Div Alg} For all integers $a$ and non-zero integers $b$, there exist integers $q$ and $r$ such that $a=bq+r$ and $0\leq r< b$.
+    \end{itemize}
 
-\vfill
+    \vfill
 
-Definitions \& Theorems about Real ($\R$) and Rational ($\Q$) Numbers
-\begin{itemize}
-\item[] \fbox{Defn} Let $x\in\R.$  We say $x$ is a \emph{rational number} if there exist integers $n$ and $m$ such that $m\not=0$ and $x=n/m.$ If $x$ is not rational, we say it is an \emph{irrational number.}
+    Definitions \& Theorems about Real ($\R$) and Rational ($\Q$) Numbers
+    \begin{itemize}
+        \item[] \fbox{Defn} Let $x\in\R.$  We say $x$ is a \emph{rational number} if there exist integers $n$ and $m$ such that $m\not=0$ and $x=n/m.$ If $x$ is not rational, we say it is an \emph{irrational number.}
 
-\item[] \fbox{Thm} Every rational number $r$ can be expressed in the form $\frac{p}{q}$ where $p$ and $q$ are relatively prime integers.
-\end{itemize}
-\vfill
+        \item[] \fbox{Thm} Every rational number $r$ can be expressed in the form $\frac{p}{q}$ where $p$ and $q$ are relatively prime integers.
+    \end{itemize}
+    \vfill
 \end{document}

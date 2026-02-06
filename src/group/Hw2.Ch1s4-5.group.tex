@@ -36,80 +36,80 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
-\begin{center}
-\Large{Math 251W: Foundations of Advanced Mathematics}
+    \begin{center}
+        \Large{Math 251W: Foundations of Advanced Mathematics}
 
-\normalsize{Portfolio Assignment 2: \S 1.4-5}
+        \normalsize{Portfolio Assignment 2: \S 1.4-5}
 
-\vspace{0.2cm}
+        \vspace{0.2cm}
 
-\hfill {\bf Name:} Raven Kearsley, Teddy Wachtler, Ben Weisz
+        \hfill {\bf Name:} Raven Kearsley, Teddy Wachtler, Ben Weisz
 
-\vspace{0.25cm}
-\hrule
-\end{center}
+        \vspace{0.25cm}
+        \hrule
+    \end{center}
 
-\vspace{0.3cm}
-
-%*****************************************************************
-
-\noindent \underline{Problem 1.5.11}: Write a derivation for each of the following arguments.
-\begin{itemize}
-
-\item[(4)] $$\begin{array}{llr}
-& (\forall x \in W)(\exists y \in W)[E(x)\rightarrow (M(x)\vee N(y))] & \\
-& \neg(\forall x \in W)[M(x)]& \\
-& (\forall x \in W)[E(x)] & \\
-\hline
-& (\exists x \in W)[N(x)] &
-\end{array}$$
-
-\end{itemize}
-
-\vspace{0.25cm}
-\fbox{Solution}
-\begin{itemize}
-
-\item[(4)] $$\begin{array}{llr}
-1 & (\forall x \in W)(\exists y \in W)[E(x)\rightarrow (M(x)\vee N(y))] \\
-2 & \neg(\forall x \in W)[M(x)] \\
-3 & (\forall x \in W)[E(x)] \\
-\hline
-4 & (\exists x \in W)[\neg M(x)]& 2, \mbox{By rules of negation} \\
-5 & \neg M(a) & 4, \mbox{Existential Instantiation where $a$ is particular} \\
-6 & (\exists y \in W)[E(a)\rightarrow (M(a)\vee N(y)) & 1, \mbox{Universal Instantiation to $a$} \\
-7 & E(a)\rightarrow (M(a) \vee N(a)) & 6, \mbox{Existential Instantiation to $a$} \\
-8 & E(a) & 3, \mbox{Universal Instantiation to $a$} \\
-9 & M(a) \vee N(a) & 7, 8, \mbox{Modus Ponens} \\
-10 & N(a) & 5, 9,\mbox{Modus Tollendo Ponens} \\
-11 & (\exists x \in W)[N(x)] & 10, \mbox{Existential Generalization}
-\end{array}$$
-
-\end{itemize}
-
-\vspace{.5cm}
+    \vspace{0.3cm}
 
 %*****************************************************************
 
-\noindent \underline{Problem 1.5.N}: Negate the following statements by first writing them symbolically as quantified predicates, negating the symbolic expression, and then translating back to English.
-\begin{itemize}
+    \noindent \underline{Problem 1.5.11}: Write a derivation for each of the following arguments.
+    \begin{itemize}
 
-\item[(3)] A single man in possession of a good fortune, must be in want of a wife.
+        \item[(4)] $$\begin{array}{llr}
+                         & (\forall x \in W)(\exists y \in W)[E(x)\rightarrow (M(x)\vee N(y))] & \\
+                         & \neg(\forall x \in W)[M(x)]& \\
+                         & (\forall x \in W)[E(x)] & \\
+                         \hline
+                         & (\exists x \in W)[N(x)] &
+        \end{array}$$
 
-\end{itemize}
+    \end{itemize}
 
-\vspace{0.25cm}
-\fbox{Solution}
-\begin{itemize}
+    \vspace{0.25cm}
+    \fbox{Solution}
+    \begin{itemize}
 
-\item[(3)] Let $M$ be the set of single men in possession of a good fortune, and let $W(x)$  be the predicate ``x is in want of a wife''.
+        \item[(4)] $$\begin{array}{llr}
+                         1 & (\forall x \in W)(\exists y \in W)[E(x)\rightarrow (M(x)\vee N(y))] \\
+                         2 & \neg(\forall x \in W)[M(x)] \\
+                         3 & (\forall x \in W)[E(x)] \\
+                         \hline
+                         4 & (\exists x \in W)[\neg M(x)]& 2, \mbox{By rules of negation} \\
+                         5 & \neg M(a) & 4, \mbox{Existential Instantiation where $a$ is particular} \\
+                         6 & (\exists y \in W)[E(a)\rightarrow (M(a)\vee N(y)) & 1, \mbox{Universal Instantiation to $a$} \\
+                         7 & E(a)\rightarrow (M(a) \vee N(a)) & 6, \mbox{Existential Instantiation to $a$} \\
+                         8 & E(a) & 3, \mbox{Universal Instantiation to $a$} \\
+                         9 & M(a) \vee N(a) & 7, 8, \mbox{Modus Ponens} \\
+                         10 & N(a) & 5, 9,\mbox{Modus Tollendo Ponens} \\
+                         11 & (\exists x \in W)[N(x)] & 10, \mbox{Existential Generalization}
+        \end{array}$$
 
-Then the statement is $$(\forall a\in M)(W(a)).$$
+    \end{itemize}
 
-Thus, the negation is $$\neg (\forall a\in M)(W(a)) \Leftrightarrow (\exists a\in M)(\neg W(a)).$$
+    \vspace{.5cm}
 
-In English, we have ``There exists a single man in possession of a good fortune who is not in want of a wife.''
+%*****************************************************************
 
-\end{itemize}
+    \noindent \underline{Problem 1.5.N}: Negate the following statements by first writing them symbolically as quantified predicates, negating the symbolic expression, and then translating back to English.
+    \begin{itemize}
+
+        \item[(3)] A single man in possession of a good fortune, must be in want of a wife.
+
+    \end{itemize}
+
+    \vspace{0.25cm}
+    \fbox{Solution}
+    \begin{itemize}
+
+        \item[(3)] Let $M$ be the set of single men in possession of a good fortune, and let $W(x)$  be the predicate ``x is in want of a wife''.
+
+        Then the statement is $$(\forall a\in M)(W(a)).$$
+
+        Thus, the negation is $$\neg (\forall a\in M)(W(a)) \Leftrightarrow (\exists a\in M)(\neg W(a)).$$
+
+        In English, we have ``There exists a single man in possession of a good fortune who is not in want of a wife.''
+
+    \end{itemize}
 
 \end{document}
