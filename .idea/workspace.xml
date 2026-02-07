@@ -5,44 +5,51 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d09adc2d-53d1-4d14-9e2f-40dab1e98f5c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/251w_group/Hw1.Ch2.S1-2.group.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/251w_group/Hw2.Ch1.S4-5.group.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/251w_group/Hw4.Ch2.S4-5.group.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/251w_individual/Hw1.Ch1.S1-2.indiv.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/251w_individual/Hw4.Ch2.S4-5.indiv.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/docs/Class Examples &amp; Handouts/Axioms.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/docs/Class Examples &amp; Handouts/Axioms.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/docs/Class Examples &amp; Handouts/Class Examples.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/docs/Class Examples &amp; Handouts/Class Examples.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/docs/Class Examples &amp; Handouts/Image Preimage in Proofs.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/docs/Class Examples &amp; Handouts/Image Preimage in Proofs.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/docs/Class Examples &amp; Handouts/ImplicationsEquivalences.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/docs/Class Examples &amp; Handouts/ImplicationsEquivalences.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/docs/Class Examples &amp; Handouts/Proofs_Overview.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/docs/Class Examples &amp; Handouts/Proofs_Overview.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/docs/Homework #1 Files/Homework1Ch1s1-2.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/docs/Homework #1 Files/Homework1Ch1s1-2.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/docs/Homework #10 Files 5s2s3/Homework10Ch5s2s3.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/docs/Homework #10 Files 5s2s3/Homework10Ch5s2s3.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/docs/Homework #10 Files 5s2s3/SuggestedProblemsCh5s2.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/docs/Homework #10 Files 5s2s3/SuggestedProblemsCh5s2.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/docs/Homework #11 Files Ch7_Ch6.1/Ch6ProblemHints.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/docs/Homework #11 Files Ch7_Ch6.1/Ch6ProblemHints.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/docs/Homework #11 Files Ch7_Ch6.1/Homework11Ch7_Ch6s1.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/docs/Homework #11 Files Ch7_Ch6.1/Homework11Ch7_Ch6s1.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/docs/Homework #11 Files Ch7_Ch6.1/SuggestedProblemsCh7.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/docs/Homework #11 Files Ch7_Ch6.1/SuggestedProblemsCh7.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/docs/Homework #12 Files Ch6s3-4/Homework12Ch6s3s4.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/docs/Homework #12 Files Ch6s3-4/Homework12Ch6s3s4.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/docs/Homework #12 Files Ch6s3-4/SuggestedProblemsCh6.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/docs/Homework #12 Files Ch6s3-4/SuggestedProblemsCh6.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/docs/Homework #2 Files/Homework2Ch1s4-5.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/docs/Homework #2 Files/Homework2Ch1s4-5.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/docs/Homework #2 Files/SuggestedProblemSolnsCh1s4.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/docs/Homework #2 Files/SuggestedProblemSolnsCh1s4.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/docs/Homework #2 Files/SuggestedProblemSolnsCh1s5.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/docs/Homework #2 Files/SuggestedProblemSolnsCh1s5.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/docs/Homework #3 Files/Homework3Ch2s1-3.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/docs/Homework #3 Files/Homework3Ch2s1-3.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/docs/Homework #3 Files/SuggestedProblemSolnsCh2s1-3.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/docs/Homework #3 Files/SuggestedProblemSolnsCh2s1-3.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/docs/Homework #4 Files/Homework4Ch2s4-5.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/docs/Homework #4 Files/Homework4Ch2s4-5.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/docs/Homework #4 Files/SuggestedProblemSolnsCh2s4-5.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/docs/Homework #4 Files/SuggestedProblemSolnsCh2s4-5.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/docs/Homework #5 Files/Homework5Ch3s1-3.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/docs/Homework #5 Files/Homework5Ch3s1-3.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/docs/Homework #5 Files/SuggestedProblemsCh3.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/docs/Homework #5 Files/SuggestedProblemsCh3.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/docs/Homework #6 Files/Homework6Ch3s3-4.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/docs/Homework #6 Files/Homework6Ch3s3-4.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/docs/Homework #7 Files 4s1-2/Homework7Ch4s1-2FunctionsImagePreImage.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/docs/Homework #7 Files 4s1-2/Homework7Ch4s1-2FunctionsImagePreImage.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/docs/Homework #7 Files 4s1-2/SuggestedProblemsCh4s1.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/docs/Homework #7 Files 4s1-2/SuggestedProblemsCh4s1.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/docs/Homework #7 Files 4s1-2/SuggestedProblemsCh4s2.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/docs/Homework #7 Files 4s1-2/SuggestedProblemsCh4s2.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/docs/Homework #8 Files 4s3-4/Homework8Ch4s3-4FunctionsCompositionBijectionInverses.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/docs/Homework #8 Files 4s3-4/Homework8Ch4s3-4FunctionsCompositionBijectionInverses.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/docs/Homework #8 Files 4s3-4/SuggestedProblemsCh4s3.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/docs/Homework #8 Files 4s3-4/SuggestedProblemsCh4s3.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/docs/Homework #8 Files 4s3-4/SuggestedProblemsCh4s4.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/docs/Homework #8 Files 4s3-4/SuggestedProblemsCh4s4.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/docs/Homework #9 Files 5s1s3/Homework9Ch5s1s3RelationsRelationClasses.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/docs/Homework #9 Files 5s1s3/Homework9Ch5s1s3RelationsRelationClasses.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/docs/Homework #9 Files 5s1s3/SuggestProblemsCh5s3.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/docs/Homework #9 Files 5s1s3/SuggestProblemsCh5s3.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/docs/Homework #9 Files 5s1s3/SuggestedProblemsCh5s1.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/docs/Homework #9 Files 5s1s3/SuggestedProblemsCh5s1.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/group/Hw1.Ch1s1-2.group.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/group/Hw1.Ch1s1-2.group.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/group/Hw2.Ch1s4-5.group.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/group/Hw2.Ch1s4-5.group.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/group/Hw3.Ch2s1-3.group.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/group/Hw3.Ch2s1-3.group.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/individual/Hw1.Ch1s1-2.indiv.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/individual/Hw1.Ch1s1-2.indiv.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/individual/Hw3.Ch2s1-3.indiv.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/individual/Hw3.Ch2s1-3.indiv.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/docs/Class Examples &amp; Handouts/Axioms.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/251w_docs/Class Examples &amp; Handouts/Axioms.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/docs/Class Examples &amp; Handouts/Class Examples.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/251w_docs/Class Examples &amp; Handouts/Class Examples.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/docs/Class Examples &amp; Handouts/Image Preimage in Proofs.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/251w_docs/Class Examples &amp; Handouts/Image Preimage in Proofs.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/docs/Class Examples &amp; Handouts/ImplicationsEquivalences.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/251w_docs/Class Examples &amp; Handouts/ImplicationsEquivalences.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/docs/Class Examples &amp; Handouts/Proofs_Overview.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/251w_docs/Class Examples &amp; Handouts/Proofs_Overview.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/docs/Homework #1 Files/Homework1Ch1s1-2.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/251w_docs/Homework #1 Files/Homework1Ch1s1-2.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/docs/Homework #1 Files/SuggestedProblemSolnsCh1S2-3.ltx" beforeDir="false" afterPath="$PROJECT_DIR$/src/251w_docs/Homework #1 Files/SuggestedProblemSolnsCh1S2-3.ltx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/docs/Homework #10 Files 5s2s3/Homework10Ch5s2s3.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/251w_docs/Homework #10 Files 5s2s3/Homework10Ch5s2s3.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/docs/Homework #10 Files 5s2s3/SuggestedProblemsCh5s2.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/251w_docs/Homework #10 Files 5s2s3/SuggestedProblemsCh5s2.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/docs/Homework #11 Files Ch7_Ch6.1/Ch6ProblemHints.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/docs/Homework #11 Files Ch7_Ch6.1/Homework11Ch7_Ch6s1.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/docs/Homework #11 Files Ch7_Ch6.1/SuggestedProblemsCh7.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/docs/Homework #12 Files Ch6s3-4/Homework12Ch6s3s4.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/251w_docs/Homework #12 Files Ch6s3-4/Homework12Ch6s3s4.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/docs/Homework #12 Files Ch6s3-4/SuggestedProblemsCh6.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/251w_docs/Homework #12 Files Ch6s3-4/SuggestedProblemsCh6.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/docs/Homework #2 Files/Homework2Ch1s4-5.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/251w_docs/Homework #2 Files/Homework2Ch1s4-5.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/docs/Homework #2 Files/SuggestedProblemSolnsCh1s4.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/251w_docs/Homework #2 Files/SuggestedProblemSolnsCh1s4.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/docs/Homework #2 Files/SuggestedProblemSolnsCh1s5.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/251w_docs/Homework #2 Files/SuggestedProblemSolnsCh1s5.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/docs/Homework #3 Files/Homework3Ch2s1-3.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/251w_docs/Homework #3 Files/Homework3Ch2s1-3.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/docs/Homework #3 Files/SuggestedProblemSolnsCh2s1-3.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/251w_docs/Homework #3 Files/SuggestedProblemSolnsCh2s1-3.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/docs/Homework #4 Files/Homework4Ch2s4-5.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/251w_docs/Homework #4 Files/Homework4Ch2s4-5.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/docs/Homework #4 Files/SuggestedProblemSolnsCh2s4-5.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/251w_docs/Homework #4 Files/SuggestedProblemSolnsCh2s4-5.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/docs/Homework #5 Files/Homework5Ch3s1-3.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/251w_docs/Homework #5 Files/Homework5Ch3s1-3.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/docs/Homework #5 Files/SuggestedProblemsCh3.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/251w_docs/Homework #5 Files/SuggestedProblemsCh3.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/docs/Homework #6 Files/Homework6Ch3s3-4.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/251w_docs/Homework #6 Files/Homework6Ch3s3-4.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/docs/Homework #7 Files 4s1-2/Homework7Ch4s1-2FunctionsImagePreImage.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/251w_docs/Homework #7 Files 4s1-2/Homework7Ch4s1-2FunctionsImagePreImage.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/docs/Homework #7 Files 4s1-2/SuggestedProblemsCh4s1.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/251w_docs/Homework #7 Files 4s1-2/SuggestedProblemsCh4s1.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/docs/Homework #7 Files 4s1-2/SuggestedProblemsCh4s2.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/251w_docs/Homework #7 Files 4s1-2/SuggestedProblemsCh4s2.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/docs/Homework #8 Files 4s3-4/Homework8Ch4s3-4FunctionsCompositionBijectionInverses.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/251w_docs/Homework #8 Files 4s3-4/Homework8Ch4s3-4FunctionsCompositionBijectionInverses.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/docs/Homework #8 Files 4s3-4/SuggestedProblemsCh4s3.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/251w_docs/Homework #8 Files 4s3-4/SuggestedProblemsCh4s3.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/docs/Homework #8 Files 4s3-4/SuggestedProblemsCh4s4.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/251w_docs/Homework #8 Files 4s3-4/SuggestedProblemsCh4s4.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/docs/Homework #9 Files 5s1s3/Homework9Ch5s1s3RelationsRelationClasses.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/251w_docs/Homework #9 Files 5s1s3/Homework9Ch5s1s3RelationsRelationClasses.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/docs/Homework #9 Files 5s1s3/SuggestProblemsCh5s3.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/251w_docs/Homework #9 Files 5s1s3/SuggestProblemsCh5s3.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/docs/Homework #9 Files 5s1s3/SuggestedProblemsCh5s1.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/251w_docs/Homework #9 Files 5s1s3/SuggestedProblemsCh5s1.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/group/Hw1.Ch1s1-2.group.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/group/Hw2.Ch1s4-5.group.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/group/Hw3.Ch2s1-3.group.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/251w_group/Hw3.Ch2.S1-3.group.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/individual/Hw1.Ch1s1-2.indiv.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/individual/Hw2.Ch1s4-5.indiv.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/251w_individual/Hw2.Ch1.S4-5.indiv.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/individual/Hw3.Ch2s1-3.indiv.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/251w_individual/Hw3.Ch2.S1-3.indiv.tex" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,8 +83,10 @@
     &quot;LaTeX.Homework2Ch1s4-5.individual.executor&quot;: &quot;Run&quot;,
     &quot;LaTeX.Homework3Ch2s1-3.group.executor&quot;: &quot;Run&quot;,
     &quot;LaTeX.Homework3Ch2s1-3.individual.executor&quot;: &quot;Run&quot;,
+    &quot;LaTeX.Hw3.Ch2.S1-3.group.executor&quot;: &quot;Run&quot;,
     &quot;LaTeX.Hw3.Ch2s1-3.group.executor&quot;: &quot;Run&quot;,
     &quot;LaTeX.Hw3.Ch2s1-3.indiv.executor&quot;: &quot;Run&quot;,
+    &quot;LaTeX.Hw4.Ch2.S4-5.group.executor&quot;: &quot;Run&quot;,
     &quot;LaTeX.Image Preimage in Proofs.executor&quot;: &quot;Run&quot;,
     &quot;LaTeX.ImplicationsEquivalences.executor&quot;: &quot;Run&quot;,
     &quot;LaTeX.Proofs_Overview.executor&quot;: &quot;Run&quot;,
@@ -86,6 +95,7 @@
     &quot;LaTeX.main.executor&quot;: &quot;Run&quot;,
     &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
@@ -120,6 +130,10 @@
       <workItem from="1770259488648" duration="1176000" />
       <workItem from="1770272043453" duration="680000" />
       <workItem from="1770342810681" duration="1363000" />
+      <workItem from="1770344395384" duration="327000" />
+      <workItem from="1770431691163" duration="4682000" />
+      <workItem from="1770448294551" duration="4675000" />
+      <workItem from="1770453042551" duration="2314000" />
     </task>
     <servers />
   </component>

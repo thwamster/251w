@@ -1,0 +1,87 @@
+% Program: PortfolioCh1S2-3.ltx
+% Author: Teddy Wachtler
+% *********************************************************************
+
+\documentclass{article}
+\usepackage[dvips]{graphicx}
+\usepackage{a4wide}
+\usepackage{amsmath}
+\usepackage{euscript}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsopn} 
+
+\theoremstyle{definition}
+\newtheorem*{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+
+\newcommand{\vv}{\ensuremath{\vec{v}}}
+\newcommand{\vu}{\ensuremath{\vec{u}}}
+\newcommand{\vw}{\ensuremath{\vec{w}}}
+\newcommand{\vx}{\ensuremath{\vec{x}}}
+\newcommand{\vy}{\ensuremath{\vec{y}}}
+\newcommand{\vb}{\ensuremath{\vec{b}}}
+\newcommand{\vo}{\ensuremath{\vec{0}}}
+\newcommand{\va}{\ensuremath{\vec{a}}}
+\newcommand{\ve}{\ensuremath{\vec{e}}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\begin{center}
+\Large{Math 251W: Foundations of Advanced Mathematics}
+
+\normalsize{Portfolio Assignment 1: \S 1.2-3}
+
+\vspace{0.2cm}
+
+\hfill {\bf Name:} Teddy Wachtler
+
+\vspace{0.25cm}
+\hrule
+\end{center}
+
+\vspace{0.3cm}
+
+%*****************************************************************
+
+\noindent Problem 1.3.12: Simplify the following statements (making use of any equivalences of statements given so far in the text or exercises).
+\begin{itemize}
+\item[(1)] $\neg(P\rightarrow \neg Q).$
+\item[(2)] $A\rightarrow (A\wedge B).$
+\item[(3)] $(X\wedge Y)\rightarrow X.$
+\item[(4)] $\neg(M\vee L)\wedge L.$
+\item[(5)] $(P\rightarrow Q)\vee Q.$
+\item[(6)] $\neg(X\rightarrow Y)\vee Y.$
+\end{itemize}
+
+\vspace{0.25cm}
+\fbox{Solution}
+\begin{itemize}
+\item[(1)] $\neg(P\rightarrow \neg Q)\Leftrightarrow P\wedge Q$.
+\item[(2)] $A\rightarrow (A\wedge B) \Leftrightarrow \neg A \vee B$.
+\item[(3)] $(X\wedge Y)\rightarrow X \Leftrightarrow X\vee \neg X$. This is a tautology.
+\item[(4)] $\neg(M\vee L)\wedge L \Leftrightarrow L\wedge \neg L$. This is a contradiction.
+\item[(5)] $(P\rightarrow Q)\vee Q \Leftrightarrow \neg P\vee Q$.
+\item[(6)] $\neg(X\rightarrow Y)\vee Y \Leftrightarrow X \vee Y$.
+\end{itemize}
+
+\vspace{.5cm}
+
+%*****************************************************************
+
+\noindent Challenge Problem: 
+For each statement, determine whether the second statement is the inverse, converse, or contrapostive of the first statement, or none of these.  If none of these, write what the inverse, converse, and contrapositive of the first statement would be.
+\begin{itemize}
+    \item[(1)] ``If I am cold, I  put on a jacket;'' and ``I am not cold if I do not wear a jacket."
+    \item[(2)] ``A warm house is necessary for a warm heart"; and ``A cold heart is sufficient for a cold house."
+    \item[(3)] ``Going to the beach is sufficient for me to have fun"; and ``Not going to the beach is insufficient for me to have fun"
+\end{itemize}
+\vspace{0.25cm}
+\fbox{Solution}
+\begin{itemize}
+\item[(1)] Inverse. The first statement is similar to $ C \rightarrow J $, and the second statement is similar to $ \neg C \rightarrow \neg J$
+\item[(2)] Inverse. The first statement is similar to $ E \rightarrow O  $, and the second statement is similar to $ \neg E \rightarrow \neg O$
+\item[(3)] None of these.  The first statement is similar to $ B \rightarrow F $, and the second statement is similar to $ \neg (\neg B \rightarrow F) $. The converse is "Having fun is sufficient for me to go to the beach" ($ F \rightarrow B $); the inverse is "Not going to the beach is sufficient for me not to have fun" ($ \neg B \rightarrow \neg F $); and the contrapositive is "Not having fun is sufficient for me to not go to the beach" ($ \neg F \rightarrow \neg B $). 
+\end{itemize}
+\end{document}

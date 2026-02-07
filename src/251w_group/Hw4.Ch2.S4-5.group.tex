@@ -1,0 +1,212 @@
+% Program: PortfolioCh2S4-5.ltx
+% Author: Michael Cotten, Isaiah Trotter, Teddy Wachtler
+%
+% Description: Portfolio Assignment 4: Sections 2.4 & 2.5
+% *********************************************************
+
+\documentclass{article}
+\usepackage[dvips]{graphicx}
+\usepackage{a4wide}
+\usepackage{amsmath}
+\usepackage{euscript}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsopn}
+
+\theoremstyle{definition}
+\newtheorem*{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+
+\renewcommand{\qed}{\blacksquare}
+
+\newcommand{\vv}{\ensuremath{\vec{v}}}
+\newcommand{\vu}{\ensuremath{\vec{u}}}
+\newcommand{\vw}{\ensuremath{\vec{w}}}
+\newcommand{\vx}{\ensuremath{\vec{x}}}
+\newcommand{\vy}{\ensuremath{\vec{y}}}
+\newcommand{\vb}{\ensuremath{\vec{b}}}
+\newcommand{\vo}{\ensuremath{\vec{0}}}
+\newcommand{\va}{\ensuremath{\vec{a}}}
+\newcommand{\ve}{\ensuremath{\vec{e}}}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+	\begin{center}
+		\Large{Math 251W: Foundations of Advanced Mathematics}
+
+		\normalsize{Portfolio Assignment 4: \S 2.4 \& 2.5}
+
+		\vspace{0.2cm}
+
+		\hfill {\textbf Name:} Michael Cotten, Isaiah Trotter, Teddy Wachtler
+
+		\vspace{0.25cm}
+		\hrule
+	\end{center}
+
+	\vspace{0.3cm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	\noindent Problem 2.4.3 [DISCUSS]
+	\vspace{0.3cm}
+
+	For the following proposition, give a list of conditional statements you would prove to prove the entire stated equivalence.
+	Then prove \textbf{one} of those conditional statements.
+
+	\medskip
+
+	\underline{proposition:} Given $a$ and $b$ are positive integers,
+	the following are equivalent:
+	\begin{itemize}
+		\item[i] $a$ and $b$ are relatively prime.
+		\item[ii] $a+b$ and $b$ are relatively prime.
+		\item[iii] $a$ and $a+b$ are relatively prime.
+	\end{itemize}
+
+	\vspace{0.2cm}
+
+	Conditional statements:
+	\begin{itemize}
+		\item[i] For all integers $a$ and $b$, if $a$ and $b$ are coprime, then $a+b$ and $b$ are coprime.
+		\item[ii] For all integers $a$ and $b$, if $a+b$ and $b$ are coprime, then $a$ and $b$ are coprime.
+	\end{itemize}
+
+	\vspace{0.4cm}
+	\fbox{proof}()
+	\vspace{0.2cm}
+
+	Let $a$ and $b$ be arbitrary natural numbers so that $a$ and $b$ are coprime.
+	By the definition of coprime numbers, let $d$ be a particular integer so that $d|a$, $d|b$ and $d = \pm 1$.
+	By the properties of integer divisibility, let $f$ and $g$ be arbitrary integers so that $df = a$ and $dg = b$.
+	By combining both equations, we see $df + dg = a + b$.
+	By the distributive law, we see $d(f + g) = a + b$.
+	Since addition is closed on the integers, let $h$ be a particular integer so that $h = f + g$.
+	By substitution, we see $dh = a + b$.
+	By the properties of integer divisibility, we see $d|(a + b)$.
+	This proof is in fact incorrect, but it is too late to change it.
+	$\qed$.
+
+	\vspace{1cm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	\noindent Problem 2.4.6 [DISCUSS]
+	Fill in, and then prove, the following proposition.
+	\vspace{0.3cm}
+
+	\medskip
+
+	\underline{proposition}
+	The only triple primes (i.e., primes of the form $p, p + 2,$ and $p + 4$ for some integer $p$) are $3, 5$, and $7$.
+
+	\vspace{0.4cm}
+	\fbox{proof} (Direct)
+	\vspace{0.2cm}
+
+	Let $p$ be an arbitrary prime natural number.
+	Let $q$ and $r$ be particular prime natural numbers so that $q = p + 2$ and $r = p + 4$.
+	Label $p, q$, and $r$ as triple primes.
+	Any number that ends in $0, 2, 4, 6,$ or $8$ must be composite.
+	Any number that ends in $5$ except for $5$ itself must be composite.
+	Every third number must be composite except for $3$ itself because it is divisible by $3$.
+	Therefore, the only sequences of triple primes where $p > 3$ must span numbers ending in $7$, $9$, $1$, or $3$.
+	$\qed$.
+
+	\vspace{1cm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	\noindent Problem 2.4.8 [INDIVIDUAL]
+	Prove the following
+	\vspace{0.3cm}
+
+	\underline{proposition:}
+	If $n$ is an odd integer, then there exists an integer $k$ such that $n^2=8k+1$.
+
+	\vspace{0.4cm}
+	\fbox{proof} (Direct)
+	\vspace{0.2cm}
+
+	Let $n$ be an arbitrary odd integer.
+	By the definition of odd integers, let $c$ be a particular integer so that $n = 2c + 1$.
+	By taking both sides to the power of two, we see $n^2 = (2c + 1)^2$.
+	By simplification and the distributive law, we see \[n^2 = 4c^2 + 4c + 1 = n^2 = 4(c^2 + c) + 1.\]
+	Consider the parity of $c$ and $c^2 + c$.
+	Consider $c_{even}$ to represent $c$ the case that $c$ is even.
+	By the properties of even numbers, let $a$ be an integer so that $c_{even} = 2a$.
+	By substitution, simplification, and the distributive law we see \[c_{even}^2 + c_{even} = (2a)^2 + 2a = 4a^2 + 2a = 2(a^2 + 2a).\]
+	Consider $c_{odd}$ to represent $c$ in the case that $c$ is odd.
+	By the properties of odd numbers, let $b$ be an integer so that $c_{odd} = 2b + 1$.
+	By substitution, simplification, and the distributive law we see \[c_{odd}^2 + c_{odd} = (2b + 1)^2 + 2b + 1 = 4b^2 + 4b + 1 + 2b + 1 = 4b^2 + 6b + 2 = 2(b^2 + 3b + 1).\]
+	Since addition is closed, let $k$ be an integer so that $k = a^2 + 2a$ or $k = b^2 + 3b + 1$.
+	By substitution, we see $c_{odd}^2 + c_{odd} = 2k$ or $c_{even}^2 + c_{even} = 2k$.
+	Since an integer must be even or odd, and since the value of $c^2 + c$ is the same irrespective of the parity of $c$, we see $c^2 + c = 2k$.
+	By substitution, we see $n^2 = 4(2k) + 1$.
+	By simplification, we see $n^2 = 8k + 1$.
+	Therefore, for all odd integers $n$, there exists an integer $k$ so that $n^2 = 8k + 1$.
+	$\qed$.
+
+	\vspace{1cm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	\noindent Problem 2.5.8 [GROUP or 2.5.9]
+	Prove or give a counterexample
+	\vspace{0.3cm}
+
+	\underline{proposition:}
+	For each real number $p$, there exist real numbers $q$ and $r$ such that \[q\sin\left(\frac{r}{5}\right)=p.\]
+
+	\vspace{0.3cm}
+	\fbox{proof} (Direct)
+	\vspace{0.2cm}
+
+	Let $p$ be an arbitrary real number.
+	Let $q$ be a particular real number so that $q = p$.
+	By the multiplicative identity property, we see $q \cdot 1 = p$.
+	Let $r$ be a particular real number so that \[r = \frac{5\pi}{2}.\]
+	By dividing both sides by five and simplification, we see \[\frac{r}{5} = \frac{\frac{5\pi}{2}}{5} = \frac{\pi}{2}.\]
+	By applying the $\sin$ function to both sides and simplification, we see \[\sin\left(\frac{r}{5}\right) = \sin\left(\frac{\pi}{2}\right) = 1.\]
+	By substitution, we see \[q \cdot 1 = q \sin\left(\frac{r}{5}\right) = p.\]
+	Therefore, for all real numbers $p$, there exist real numbers $q$ and $r$ so that \[q\sin\left(\frac{r}{5}\right)=p.\]
+	$\qed$.
+
+	\vspace{1cm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	\noindent Problem 2.5.9 [GROUP or 2.5.8]
+	Prove or give a counterexample
+	\vspace{0.3cm}
+
+	\underline{proposition:}
+	For each integer $x$, and for each integer $y$, there exists an integer $z$ such that \[z^2+2xz-y^2=0.\]
+
+	\vspace{0.4cm}
+	\fbox{counterproof}
+	\vspace{0.2cm}
+
+	We ask whether for all integers $x$ and $y$ there exists a particular integer $z$ so that $z^2 + 2xz - y^2 = 0$.
+	We will show this to be false through a counterexample.
+	Suppose $x = 1$ and $y = 1$.
+	By substitution and simplification we see \[z^2 + 2(1)z - (1)^2 = z^2 + 2z - 1 = 0\]
+	We will solve this quadratic equation by completing the square.
+	By adding $2$ to both sides, we see $z^2 + 2z + 1 = 2$.
+	By the distributive law, we see $(z + 1)^2 = 2$.
+	By taking the square root of both sides, we see $z + 1 = \pm \sqrt{2}$.
+	By subtracting 1 from both sides, we see $z = -1 \pm \sqrt{2}$.
+	Since the square root of $2$ is an irrational number, and since the sum of an integer and an irrational number is always an irrational number, we see that $z$ must be irrational.
+	Therefore, it is not true that for all integers $x$ and $y$, there exists an integer $z$ so that $z^2 + 2xz - y^2 = 0$.
+	$\qed$.
+
+	\vspace{1cm}
+
+\end{document}
