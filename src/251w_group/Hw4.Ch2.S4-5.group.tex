@@ -71,27 +71,33 @@
 		\item[iii] $a$ and $a+b$ are relatively prime.
 	\end{itemize}
 
-	\vspace{0.2cm}
+	\vspace{0.4cm}
 
-	Conditional statements:
+	Statements:
 	\begin{itemize}
-		\item[i] For all integers $a$ and $b$, if $a$ and $b$ are coprime, then $a+b$ and $b$ are coprime.
-		\item[ii] For all integers $a$ and $b$, if $a+b$ and $b$ are coprime, then $a$ and $b$ are coprime.
+		\item[i] For all integers $a$ and $b$, if $a$ and $b$ are coprime, then $a$ and $a + b$ are coprime.
+		\item[ii] For all integers $a$ and $b$, if $a$ and $a + b$ are coprime, then $a$ and $b$ are coprime.
 	\end{itemize}
 
-	\vspace{0.4cm}
-	\fbox{proof}()
+	\vspace{0.2cm}
+	\fbox{proof} (Contradiction)
 	\vspace{0.2cm}
 
-	Let $a$ and $b$ be arbitrary natural numbers so that $a$ and $b$ are coprime.
-	By the definition of coprime numbers, let $d$ be a particular integer so that $d|a$, $d|b$ and $d = \pm 1$.
-	By the properties of integer divisibility, let $f$ and $g$ be arbitrary integers so that $df = a$ and $dg = b$.
-	By combining both equations, we see $df + dg = a + b$.
-	By the distributive law, we see $d(f + g) = a + b$.
-	Since addition is closed on the integers, let $h$ be a particular integer so that $h = f + g$.
-	By substitution, we see $dh = a + b$.
-	By the properties of integer divisibility, we see $d|(a + b)$.
-	This proof is in fact incorrect, but it is too late to change it.
+	Let $a$ and $b$ be arbitrary integers so that $a$ and $b$ are coprime.
+	Suppose $a$ and $a + b$ are not coprime.
+	We will show this to be false through a contradiction.
+	By the definition of coprime numbers, let $d$ be a particular integer so that $d|a$, $d|(a + b)$ and $d \not = \pm 1$.
+	By the definition of integer divisibility, let $f$ and $g$ be particular integers so that $df = a$ and $dg = a + b$.
+	By subtracting $b$ from both sides, we see $dg - b = a$.
+	By substitution, we see $df = dg - b$.
+	By adding $b$ to both sides, we see $b + df = dg$.
+	By subtracting $df$ from both sides, we see $b = dg - df$.
+	By the distributive law, we see $b = d(g - f)$.
+	Since addition is closed on the integers, let $h$ be a particular integer so that $h = g - f$.
+	By substitution, we see $b = dh$.
+	By the definition of integer divisibility, we see $d|b$.
+	This contracts with the fact that $a$ and $b$ are coprime as $d|a$ and $d \not = \pm 1$.
+	Therefore, for all integers $a$ and $b$, if $a$ and $b$ are coprime, then $a$ and $a + b$ are coprime.
 	$\qed$.
 
 	\vspace{1cm}
@@ -113,11 +119,33 @@
 
 	Let $p$ be an arbitrary prime natural number.
 	Let $q$ and $r$ be particular prime natural numbers so that $q = p + 2$ and $r = p + 4$.
-	Label $p, q$, and $r$ as triple primes.
-	Any number that ends in $0, 2, 4, 6,$ or $8$ must be composite.
-	Any number that ends in $5$ except for $5$ itself must be composite.
-	Every third number must be composite except for $3$ itself because it is divisible by $3$.
-	Therefore, the only sequences of triple primes where $p > 3$ must span numbers ending in $7$, $9$, $1$, or $3$.
+	Let $p, q$, and $r$ be considered triple primes.
+	Consider that every third natural number must be composite except for $3$ itself because it is divisible by $3$.
+	Since $p$ is prime, let $a$ and $b$ be particular integers so that we see $p = 3, p = 3a + 1$, or $p = 3b + 2$.
+
+	Consider the case where $p = 3$.
+	If $p = 3$, then by substitution and simplification we see $q = (3) + 2 = 5$ and $r = (3) + 4 = 7$.
+	Therefore, $3, 5$ and $7$ are triple primes.
+
+	Consider the case where $p = 3a + 1$.
+	Since the smallest prime in this case is $7$, we see that $7 + 2 = 9 \leq q$.
+	If $p = 3a + 1$, then substitution, simplification and the distributive law we see $q = (3a + 1) + 2 = 3a + 3 = 3(a + 1)$.
+	Since addition is closed on the integers, let $c$ be a particular integer so that $c = a + 1$.
+	By substitution, we see $q = 3c$.
+	By the properties of integer divisibility, we see $3|q$.
+	Therefore, since $q$ must be larger than $3$, we see that $q$ must be composite and this case has no triple primes.
+
+	Consider the case where $p = 3b + 2$.
+	Since the smallest prime in this case is $4$, we see that $2 + 4 = 6 \leq r$.
+	If $p = 3b + 2$, then substitution, simplification and the distributive law we see $r = (3b + 2) + 4 = 3b + 6 = 3(b + 2)$.
+	Since addition is closed on the integers, let $d$ be a particular integer so that $d = b + 1$.
+	By substitution, we see $r = 3d$.
+	By the properties of integer divisibility, we see $3|r$.
+	Therefore, since $r$ must be larger than $3$, we see that $r$ must be composite and this case has no triple primes.
+
+	Therefore, the only case of triple primes occurs when $p = 3$.
+
+	Therefore, for all natural numbers $p$, if $p, p + 2$, and $p + 4$ are all prime, then $p = 3$.
 	$\qed$.
 
 	\vspace{1cm}
@@ -136,19 +164,19 @@
 	\vspace{0.2cm}
 
 	Let $n$ be an arbitrary odd integer.
-	By the definition of odd integers, let $c$ be a particular integer so that $n = 2c + 1$.
-	By taking both sides to the power of two, we see $n^2 = (2c + 1)^2$.
-	By simplification and the distributive law, we see \[n^2 = 4c^2 + 4c + 1 = n^2 = 4(c^2 + c) + 1.\]
-	Consider the parity of $c$ and $c^2 + c$.
-	Consider $c_{even}$ to represent $c$ the case that $c$ is even.
-	By the properties of even numbers, let $a$ be an integer so that $c_{even} = 2a$.
-	By substitution, simplification, and the distributive law we see \[c_{even}^2 + c_{even} = (2a)^2 + 2a = 4a^2 + 2a = 2(a^2 + 2a).\]
-	Consider $c_{odd}$ to represent $c$ in the case that $c$ is odd.
-	By the properties of odd numbers, let $b$ be an integer so that $c_{odd} = 2b + 1$.
-	By substitution, simplification, and the distributive law we see \[c_{odd}^2 + c_{odd} = (2b + 1)^2 + 2b + 1 = 4b^2 + 4b + 1 + 2b + 1 = 4b^2 + 6b + 2 = 2(b^2 + 3b + 1).\]
-	Since addition is closed, let $k$ be an integer so that $k = a^2 + 2a$ or $k = b^2 + 3b + 1$.
-	By substitution, we see $c_{odd}^2 + c_{odd} = 2k$ or $c_{even}^2 + c_{even} = 2k$.
-	Since an integer must be even or odd, and since the value of $c^2 + c$ is the same irrespective of the parity of $c$, we see $c^2 + c = 2k$.
+	By the definition of odd integers, let $a$ be a particular integer so that $n = 2a + 1$.
+	By taking both sides to the power of two, we see $n^2 = (2a + 1)^2$.
+	By simplification and the distributive law, we see \[n^2 = 4a^2 + 4a + 1 = n^2 = 4(a^2 + a) + 1.\]
+	Consider the parity of $a$.
+	Consider $a_{even}$ to represent $a$ in the case that $a$ is even.
+	By the properties of even numbers, let $b$ be an integer so that $a_{even} = 2b$.
+	By substitution, simplification, and the distributive law we see \[a_{even}^2 + a_{even} = (2b)^2 + (2b) = 4b^2 + 2b = 2(2b^2 + b).\]
+	Consider $a_{odd}$ to represent $a$ in the case that $a$ is odd.
+	By the properties of odd numbers, let $c$ be an integer so that $a_{odd} = 2c + 1$.
+	By substitution, simplification, and the distributive law we see \[a_{odd}^2 + a_{odd} = (2c + 1)^2 + (2c + 1) = 4c^2 + 4c + 1 + 2c + 1 = 4c^2 + 6c + 2 = 2(2c^2 + 3c + 1).\]
+	Since addition is closed, let $k$ be an integer so that $k = b^2 + 2b$ or $k = c^2 + 3c + 1$.
+	By substitution, we see $a_{odd}^2 + a_{odd} = 2k$ or $a_{even}^2 + a_{even} = 2k$.
+	Since an integer must be even or odd, and since the value of $a^2 + a$ is the same irrespective of the parity of $a$, we see $a^2 + a = 2k$.
 	By substitution, we see $n^2 = 4(2k) + 1$.
 	By simplification, we see $n^2 = 8k + 1$.
 	Therefore, for all odd integers $n$, there exists an integer $k$ so that $n^2 = 8k + 1$.
@@ -188,7 +216,7 @@
 	\vspace{0.3cm}
 
 	\underline{proposition:}
-	For each integer $x$, and for each integer $y$, there exists an integer $z$ such that \[z^2+2xz-y^2=0.\]
+	For each integer $x$, and for each integer $y$, there exists an integer $z$ such that $z^2+2xz-y^2=0$.
 
 	\vspace{0.4cm}
 	\fbox{counterproof}
@@ -197,7 +225,8 @@
 	We ask whether for all integers $x$ and $y$ there exists a particular integer $z$ so that $z^2 + 2xz - y^2 = 0$.
 	We will show this to be false through a counterexample.
 	Suppose $x = 1$ and $y = 1$.
-	By substitution and simplification we see \[z^2 + 2(1)z - (1)^2 = z^2 + 2z - 1 = 0\]
+	By substitution and simplification we see $z^2 + 2(1)z - (1)^2 = 0$.
+	By simplification, we see $z^2 + 2z - 1 = 0$.
 	We will solve this quadratic equation by completing the square.
 	By adding $2$ to both sides, we see $z^2 + 2z + 1 = 2$.
 	By the distributive law, we see $(z + 1)^2 = 2$.
