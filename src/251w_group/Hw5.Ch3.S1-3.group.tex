@@ -12,6 +12,7 @@
 \newtheorem{theorem}{Theorem}
 
 \renewcommand{\qed}{\blacksquare}
+\newcommand{\powset}{{\cal P}}
 
 \newcommand{\vv}{\ensuremath{\vec{v}}}
 \newcommand{\vu}{\ensuremath{\vec{u}}}
@@ -28,7 +29,6 @@
 \newcommand{\C}{\mathbb{C}}
 \newcommand{\N}{\mathbb{N}}
 \newcommand{\Q}{\mathbb{Q}}
-\newcommand{\Pow}{{\cal P}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -38,7 +38,7 @@
 
 		\normalsize Portfolio problems from sections 3.2 $\&$ 3.3
 
-		\hfill Name: Teddy Wachtler
+		\hfill Name: Carmen Beltran, Brendan Butler, Teddy Wachtler
 		\hrule
 		\vspace{0.4cm}
 		\vspace{0.75cm}
@@ -46,40 +46,12 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-	\noindent Problem 3.2.13 [DISCUSS]
+	\noindent Problem 3.3.7
 	\vspace{0.3cm}
-
-	\underline{proposition:}
-	Given sets $A$ and $B$, If $A \subseteq B$, then $\Pow(A) \subseteq \Pow(B)$.
-
-	\vspace{.2cm}
-
-	\fbox{proof} (Direct)
-
-	\vspace{.15cm}
-
-	Let $A$ and $B$ be arbitrary sets so that $A \subseteq B$.
-	Consider the power set of $A$.
-	Let $X$ be an arbitrary set in $\Pow(A)$.
-	Let $x$ be an arbitrary element of $X$.
-	By the definition of the power set, we see $X \subseteq A$, and therefore $x \in A$.
-	Since $A \subseteq B$, we see that $x \in B$.
-	By the definition of subsets, since $x$ was an arbitrary element of $X$, we see that $X \subseteq B$.
-	By the definition of power sets, we see that $X \in \Pow(B)$.
-	Since $X$ was an arbitrary element of $\Pow(A)$, we see that $\Pow(A)$ is a subset of $\Pow(B)$.
-	Therefore, for all sets $A$ and $B$, if $A\subseteq B$, then $\Pow(A) \subseteq \Pow(B)$.
-
-	\vspace{1cm}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-	\noindent Problem 3.3.7 [GROUP LATEX]
-	\vspace{0.3cm}
-
 	\begin{enumerate}
 		\item[iv]
 		\underline{proposition:}
-		\item Given sets $A$ and $B$, $B-(B-A)=A$ if and only if $A\subseteq B$.
+		\item Given sets $A$ and $B$, $B- (B - A) = A$ if and only if $A \subseteq B$.
 
 		\vspace{.2cm}
 
@@ -87,41 +59,41 @@
 
 		\vspace{.15cm}
 
-		We ask whether for all sets $A$ and $B$, $A = B - (B - A)$ if and only if $A\subseteq B$.
+		We ask whether for all sets $A$ and $B$, $A = B - (B - A)$ if and only if $A \subseteq B$.
 		Let $A$ and $B$ be arbitrary sets.
 		Consider the following:
 
-		Suppose $A = B - (B - A)$.
+		Consider the case where $A = B - (B - A)$.
 		Let $x$ be an arbitrary element of $A$.
-		Since $A = B - (B - A)$, we see that $x \in B - (B - A)$.
-		By the definition of set subtraction, we see $x \in B$ and $x \not \in B - A$.
-		By the properties of subsets, since $x$ was an arbitrary element of $A$, and since $x \in B$, we see that $A \subseteq B$.
-		Therefore, we see that if $A = B - (B - A)$, then $A\subseteq B$.
+		By the definition of set equality, since $A = B - (B - A)$, we see that $x \in B - (B - A)$.
+		By the definition of the difference of sets, we see $x \in B$ and $x \not \in B - A$.
+		By the definition of subsets, since $x$ was an arbitrary element of $A$, and since $x \in B$, we see that $A \subseteq B$.
+		Therefore, we see that if $A = B - (B - A)$, then $A \subseteq B$.
 
-		Suppose $A\subseteq B$.
+		Consider the case where $A \subseteq B$.
 		Suppose $y$ is an arbitrary element in $A$.
-		By the properties of subsets, since $A \subseteq B$, we see that $y \in B$.
-		By the definition of set subtraction, we see that $y \not \in B - A$.
-		By the definition of set subtraction, since $y \in B$, and since $y \not \in B - A$, we see that $y \in B - (B - A)$.
-		Therefore, by the properties of subsets, since $y$ was an arbitrary element of $A$, we see $A \subseteq B - (B - A)$.
+		By the definition of subsets, since $A \subseteq B$, we see that $y \in B$.
+		By the definition of the difference of sets, since  $y \in B$ and  $y \in A$ we see that $y \not \in B - A$.
+		Again by the definition of the difference of sets, since $y \in B$, and since $y \not \in B - A$, we see that $y \in B - (B - A)$.
+		Therefore, by the definition of subsets, since $y$ was an arbitrary element of $A$, we see $A \subseteq B - (B - A)$.
 
-		Suppose $A\subseteq B$.
+		Consider the case where $A \subseteq B$ again.
 		Suppose $z$ is an arbitrary element in $B - (B - A)$.
-		By the definition of set subtraction, we see $z \in B$ and $z \not \in B - A$.
-		By the definition of set subtraction, we see that it is not true that $z \in B$ and $z \not \in A$.
+		By the definition of the difference of sets, we see $z \in B$ and $z \not \in B - A$.
+		By the definition of the difference of sets, we see that it is not true that $z \in B$ and $z \not \in A$.
 		By logical negation, we see that $z \not \in B$ or $z \in A$.
 		Since $z \in B$, we see that $z \in A$.
-		Therefore, by the properties of subsets, since $z$ was an arbitrary element of $B - (B - A)$, $B - (B - A) \subseteq A$.
+		Therefore, by the definition of subsets, since $z$ was an arbitrary element of $B - (B - A)$, $B - (B - A) \subseteq A$.
 
-		Therefore, since if $A\subseteq B$, $A \subseteq B - (B - A)$ and $B - (B - A) \subseteq A$, we see that if $A\subseteq B$, then $A = B - (B - A)$.
-		Therefore, since if $A = B - (B - A)$, then $A\subseteq B$, for all sets $A$ and $B$, $A = B - (B - A)$ if and only if $A\subseteq B$.
+		Therefore, by the definition of set equality, since if $A \subseteq B$, $A \subseteq B - (B - A)$ and $B - (B - A) \subseteq A$, we see that if $A \subseteq B$, then $A = B - (B - A)$.
+		Therefore, since if $A = B - (B - A)$, then $A \subseteq B$, for all sets $A$ and $B$, $A = B - (B - A)$ if and only if $A \subseteq B$.
 		$\qed$.
 
 		\vspace{.15cm}
 
 		\item[vi]
 		\underline{proposition:}
-		\item Given sets $A$ and $B$, if $A\subseteq B$ then $C - A\supseteq C - B$.
+		\item Given sets $A$ and $B$, if $A \subseteq B$ then $C - A \supseteq C - B$.
 
 		\vspace{.2cm}
 
@@ -131,82 +103,13 @@
 
 		Let $A$, $B$, and $C$ be arbitrary sets so that $A \subseteq B$.
 		Let $x$ be an arbitrary element in $C - B$.
-		By the definition of set subtraction, we see $x \in C$ and $x \not \in B$.
+		By the definition of the difference of sets, we see $x \in C$ and $x \not \in B$.
 		By the definition of subsets, since $A \subseteq B$, if an element is in $A$, then the same element is in $B$.
 		By the contrapositive of that statement, since $x \not \in B$, we see $x \not \in A$.
-		By the definition of set subtraction, since $x \in C$ and $x \not \in A$, we see $x \in C - A$.
+		By the definition of the difference of sets, since $x \in C$ and $x \not \in A$, we see $x \in C - A$.
 		Since $x$ was an arbitrary element of $C - B$, we see that $C - B \subseteq C - A$.
-		Therefore, for all sets $A$, $B$, and $C$, if $A\subseteq B$ then $C-B \subseteq C - A$.
+		Therefore, for all sets $A$, $B$, and $C$, if $A \subseteq B$ then $C - B \subseteq C - A$.
 		$\qed$.
-
-		\vspace{.15cm}
-
-	\end{enumerate}
-	\vspace{1cm}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-	\noindent Problem 3.3.17 [INDIVIDUAL LATEX]
-	\vspace{0.3cm}
-
-	Prove or give a counterexample
-
-	\begin{enumerate}
-		\item[1]
-		Given sets $A$ and $B$, $\Pow (A\cup B)$ is necessarily equal to $\Pow (A)\cup \Pow(B)$.
-		\vspace{.2cm}
-
-		\fbox{Proof/Counterexample}
-
-		\vspace{.15cm}
-
-		We ask whether for all sets $A$ and $B$, $\Pow (A\cup B) = \Pow (A)\cup \Pow(B)$.
-		We will show this to be false through a counterexample.
-		Let $A$ and $B$ be particular sets so that $A = \{1\}$ and $B = \{2\}$.
-		By the definition of set union, we see that $A \cup B = \{1, 2\}$.
-		By the definition of the power set, we see that $\Pow (A\cup B) = \{\{ \emptyset\}, \{1\}, \{2\}\, \{1, 2\}\}$.
-		By the definition of the power set, we see that $\Pow (A) = \{\{ \emptyset\}, \{1\}\}$ and $\Pow (B) = \{\{ \emptyset\}, \{2\}\}$.
-		By the definition of set union, we see that $\Pow (A)\cup \Pow(B) = \{\{ \emptyset\}, \{1\}, \{2\}\}$.
-		Since $\{1, 2\} \in \Pow (A\cup B)$ and $\{1, 2\} \not \in \Pow (A)\cup \Pow(B)$, we see $\Pow (A\cup B) \not = \Pow (A\cup B)$.
-		Therefore, for all sets $A$ and $B$, $\Pow (A\cup B)$ is not necessarily equal to $\Pow (A)\cup \Pow(B)$.
-		$\qed$.
-
-		\vspace{.15cm}
-
-		\item[2] \underline{proposition:}
-		Given sets $A$ and $B$, $\Pow(A\cap B) = \Pow(A)\cap \Pow(B)$
-		\vspace{.2cm}
-
-		\fbox{Proof/Counterexample}
-
-		\vspace{.15cm}
-
-		We ask whether for all sets $A$ and $B$, $\Pow(A \cap B) = \Pow(A) \cap \Pow(B)$.
-		Let $A$ and $B$ be arbitrary sets.
-		Consider the following:
-
-		Let $X$ be an arbitrary set in $\Pow(A \cap B)$.
-		Let $x$ be an arbitrary element in $X$.
-		By the definition of the power set, we see that $X \subseteq A \cap B$.
-		By the definition of subsets, we see that $x \in A \cap B$.
-		By the definition of set intersection, we see that $x \in A$ and $x \in B$.
-		By the definition of subsets, since $x$ was an arbitrary element of $X$, we see that $X \subseteq A$ and $X \subseteq B$.
-		By the definition of the power set, we see that $X \in \Pow(A)$ and $X \in \Pow(B)$.
-		By the definition of set intersection, we see that $X \in \Pow(A) \cap \Pow(B)$.
-		By the definition of subsets, since $X$ was an arbitrary element of $\Pow(A \cap B)$, we see that $\Pow(A \cap B) \subseteq \Pow(A)\cap \Pow(B)$,
-
-		Let $Y$ be an arbitrary element in $\Pow(A) \cap \Pow(B)$.
-		Let $y$ be an arbitrary element in $Y$.
-		By the definition of set intersection, we see that $Y \in \Pow(A)$ and $Y \in \Pow(B)$.
-		By the definition of the power set, we see that $Y \subseteq A$ and $Y \subseteq B$.
-		By the definition of subsets, we see that $y \in A$ and $y \in B$.
-		By the definition of set intersection, we see that $y \in A \cap B$.
-		By the definition of subsets, since $y$ was an arbitrary element of $Y$, we see that $Y \subseteq A \cap B$.
-		By the definition of the power set, we see that $Y \in \Pow(A \cap B)$.
-		Since $Y$ was an arbitrary element of $\Pow(A) \cap \Pow(B)$, we see that $\Pow(A) \cap \Pow(B) \subseteq \Pow(A \cap B)$.
-
-		Therefore, since $\Pow(A \cap B) \subseteq \Pow(A)\cap \Pow(B)$ and $\Pow(A) \cap \Pow(B) \subseteq \Pow(A \cap B)$, we see $\Pow(A \cap B) = \Pow(A) \cap \Pow(B)$.
-		Therefore, for all sets $A$ and $B$, $\Pow(A \cap B) = \Pow(A) \cap \Pow(B)$.
 
 		\vspace{.15cm}
 

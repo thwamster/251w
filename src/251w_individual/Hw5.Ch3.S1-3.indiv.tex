@@ -52,60 +52,22 @@
 
 	\begin{enumerate}
 		\item[1]
-		Given sets $A$ and $B$, $\Pow (A\cup B)$ is necessarily equal to $\Pow (A)\cup \Pow(B)$.
+		Given sets $A$ and $B$, ${\cal P}(A\cup B)$ is necessarily equal to ${\cal P}(A)\cup{\cal P}(B)$.
 		\vspace{.2cm}
 
 		\fbox{Proof/Counterexample}
 
-		\vspace{.15cm}
-
-		We ask whether for all sets $A$ and $B$, $\Pow (A\cup B) = \Pow (A)\cup \Pow(B)$.
-		We will show this to be false through a counterexample.
-		Let $A$ and $B$ be particular sets so that $A = \{1\}$ and $B = \{2\}$.
-		By the definition of set union, we see that $A \cup B = \{1, 2\}$.
-		By the definition of the power set, we see that $\Pow (A\cup B) = \{\{ \emptyset\}, \{1\}, \{2\}\, \{1, 2\}\}$.
-		By the definition of the power set, we see that $\Pow (A) = \{\{ \emptyset\}, \{1\}\}$ and $\Pow (B) = \{\{ \emptyset\}, \{2\}\}$.
-		By the definition of set union, we see that $\Pow (A)\cup \Pow(B) = \{\{ \emptyset\}, \{1\}, \{2\}\}$.
-		Since $\{1, 2\} \in \Pow (A\cup B)$ and $\{1, 2\} \not \in \Pow (A)\cup \Pow(B)$, we see $\Pow (A\cup B) \not = \Pow (A\cup B)$.
-		Therefore, for all sets $A$ and $B$, $\Pow (A\cup B)$ is not necessarily equal to $\Pow (A)\cup \Pow(B)$.
 		$\qed$.
 
 		\vspace{.15cm}
 
 		\item[2] \underline{proposition:}
-		Given sets $A$ and $B$, $\Pow(A\cap B) = \Pow(A)\cap \Pow(B)$
+		Given sets $A$ and $B$, ${\cal P}(A\cap B)={\cal P}(A)\cap{\cal P}(B)$
 		\vspace{.2cm}
 
 		\fbox{Proof/Counterexample}
 
-		\vspace{.15cm}
-
-		We ask whether for all sets $A$ and $B$, $\Pow(A \cap B) = \Pow(A) \cap \Pow(B)$.
-		Let $A$ and $B$ be arbitrary sets.
-		Consider the following:
-
-		Let $X$ be an arbitrary set in $\Pow(A \cap B)$.
-		Let $x$ be an arbitrary element in $X$.
-		By the definition of the power set, we see that $X \subseteq A \cap B$.
-		By the definition of subsets, we see that $x \in A \cap B$.
-		By the definition of set intersection, we see that $x \in A$ and $x \in B$.
-		By the definition of subsets, since $x$ was an arbitrary element of $X$, we see that $X \subseteq A$ and $X \subseteq B$.
-		By the definition of the power set, we see that $X \in \Pow(A)$ and $X \in \Pow(B)$.
-		By the definition of set intersection, we see that $X \in \Pow(A) \cap \Pow(B)$.
-		By the definition of subsets, since $X$ was an arbitrary element of $\Pow(A \cap B)$, we see that $\Pow(A \cap B) \subseteq \Pow(A)\cap \Pow(B)$,
-
-		Let $Y$ be an arbitrary element in $\Pow(A) \cap \Pow(B)$.
-		Let $y$ be an arbitrary element in $Y$.
-		By the definition of set intersection, we see that $Y \in \Pow(A)$ and $Y \in \Pow(B)$.
-		By the definition of the power set, we see that $Y \subseteq A$ and $Y \subseteq B$.
-		By the definition of subsets, we see that $y \in A$ and $y \in B$.
-		By the definition of set intersection, we see that $y \in A \cap B$.
-		By the definition of subsets, since $y$ was an arbitrary element of $Y$, we see that $Y \subseteq A \cap B$.
-		By the definition of the power set, we see that $Y \in \Pow(A \cap B)$.
-		Since $Y$ was an arbitrary element of $\Pow(A) \cap \Pow(B)$, we see that $\Pow(A) \cap \Pow(B) \subseteq \Pow(A \cap B)$.
-
-		Therefore, since $\Pow(A \cap B) \subseteq \Pow(A)\cap \Pow(B)$ and $\Pow(A) \cap \Pow(B) \subseteq \Pow(A \cap B)$, we see $\Pow(A \cap B) = \Pow(A) \cap \Pow(B)$.
-		Therefore, for all sets $A$ and $B$, $\Pow(A \cap B) = \Pow(A) \cap \Pow(B)$.
+		$\qed$.
 
 		\vspace{.15cm}
 

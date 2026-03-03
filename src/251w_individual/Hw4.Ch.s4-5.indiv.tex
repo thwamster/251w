@@ -1,0 +1,90 @@
+% Program: PortfolioCh2S4-5.ltx
+% Author: Teddy Wachtler
+%
+% Description: Portfolio Assignment 4: Sections 2.4 & 2.5
+% *********************************************************
+
+\documentclass{article}
+\usepackage[dvips]{graphicx}
+\usepackage{a4wide}
+\usepackage{amsmath}
+\usepackage{euscript}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsopn}
+
+\theoremstyle{definition}
+\newtheorem*{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+
+\renewcommand{\qed}{\blacksquare}
+
+\newcommand{\vv}{\ensuremath{\vec{v}}}
+\newcommand{\vu}{\ensuremath{\vec{u}}}
+\newcommand{\vw}{\ensuremath{\vec{w}}}
+\newcommand{\vx}{\ensuremath{\vec{x}}}
+\newcommand{\vy}{\ensuremath{\vec{y}}}
+\newcommand{\vb}{\ensuremath{\vec{b}}}
+\newcommand{\vo}{\ensuremath{\vec{0}}}
+\newcommand{\va}{\ensuremath{\vec{a}}}
+\newcommand{\ve}{\ensuremath{\vec{e}}}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+	\begin{center}
+		\Large{Math 251W: Foundations of Advanced Mathematics}
+
+		\normalsize{Portfolio Assignment 4: \S 2.4 \& 2.5}
+
+		\vspace{0.2cm}
+
+		\hfill {\textbf Name:} Teddy Wachtler
+
+		\vspace{0.25cm}
+		\hrule
+	\end{center}
+
+	\vspace{0.3cm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	\noindent Problem 2.4.8 [INDIVIDUAL]
+	Prove the following
+	\vspace{0.3cm}
+
+	\underline{proposition:}
+	If $n$ is an odd integer, then there exists an integer $k$ such that $n^2=8k+1$.
+
+	\vspace{0.4cm}
+	\fbox{proof} (Direct)
+	\vspace{0.2cm}
+
+	Let $n$ be an arbitrary odd integer.
+	By the definition of odd integers, let $c$ be a particular integer so that $n = 2c + 1$.
+	By taking both sides to the power of two, we see $n^2 = (2c + 1)^2$.
+	By simplification and the distributive law, we see \[n^2 = 4c^2 + 4c + 1 = n^2 = 4(c^2 + c) + 1.\]
+	Consider the parity of $c$ and $c^2 + c$.
+	Consider $c_{even}$ to represent $c$ the case that $c$ is even.
+	By the properties of even numbers, let $a$ be an integer so that $c_{even} = 2a$.
+	By substitution, simplification, and the distributive law we see \[c_{even}^2 + c_{even} = (2a)^2 + 2a = 4a^2 + 2a = 2(a^2 + 2a).\]
+	Consider $c_{odd}$ to represent $c$ in the case that $c$ is odd.
+	By the properties of odd numbers, let $b$ be an integer so that $c_{odd} = 2b + 1$.
+	By substitution, simplification, and the distributive law we see \[c_{odd}^2 + c_{odd} = (2b + 1)^2 + 2b + 1 = 4b^2 + 4b + 1 + 2b + 1 = 4b^2 + 6b + 2 = 2(b^2 + 3b + 1).\]
+	Since addition is closed, let $k$ be an integer so that $k = a^2 + 2a$ or $k = b^2 + 3b + 1$.
+	By substitution, we see $c_{odd}^2 + c_{odd} = 2k$ or $c_{even}^2 + c_{even} = 2k$.
+	Since an integer must be even or odd, and since the value of $c^2 + c$ is the same irrespective of the parity of $c$, we see $c^2 + c = 2k$.
+	By substitution, we see $n^2 = 4(2k) + 1$.
+	By simplification, we see $n^2 = 8k + 1$.
+	Therefore, for all odd integers $n$, there exists an integer $k$ so that $n^2 = 8k + 1$.
+	$\qed$.
+
+	\vspace{1cm}
+
+\end{document}
