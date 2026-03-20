@@ -1,0 +1,1189 @@
+\documentclass{article}
+\usepackage{amscd,amssymb,hyperref}
+\usepackage{amsthm}
+\usepackage{color}
+\usepackage[all]{xy}
+\topmargin-0.1truein \textwidth5.2 in \textheight8.61 in
+\oddsidemargin .5in
+
+%the following defines theorem environments for Theorems, Corollaries, and Definitions.
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{definition}{Definition}
+\newtheorem{hw}{Homework Problem}
+\newtheorem{rdq}{Reading \& Discussion Question}
+
+%the following commands are for the special sets R, Z, C, N, Q.  They will appear in blackboard bold (bb). 
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+
+%here are some shorthand commands for some of the well user longer commands in LaTeX.
+%make up your own shorthand for the commands you use the most!
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+\newcommand{\yp}{\bfrac{dy}{dx}}
+\newcommand{\la}[1]{\displaystyle{\cal{L}}\left\{{#1}\right\}}
+\newcommand{\li}[1]{\displaystyle{\cal{L}}^{-1}\left\{{#1}\right\}}
+\newcommand{\lb}{\left[}
+\newcommand{\rb}{\right]}
+\newcommand{\ba}{\begin{array}}
+\newcommand{\ea}{\end{array}}
+\newcommand{\bmat}{\left[\begin{array}}
+\newcommand{\emat}{\end{array}\right]}
+\newcommand{\bt}{\begin{thm}}
+\newcommand{\et}{\end{thm}}
+\newcommand{\bp}{\begin{proof}}
+\newcommand{\ep}{\end{proof}}
+\newcommand{\bprop}{\begin{prop}}
+\newcommand{\eprop}{\end{prop}}
+\newcommand{\bl}{\begin{lemma}}
+\newcommand{\el}{\end{lemma}}
+\newcommand{\bc}{\begin{cor}}
+\newcommand{\ec}{\end{cor}}
+\newcommand{\bd}{\begin{defn}}
+\newcommand{\ed}{\end{defn}}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\ov}{\overline}
+\newcommand{\f}[2]{\displaystyle \frac{#1}{#2}}
+\newcommand{\series}[3]{\displaystyle \sum_{{#1}={#2}}^{#3} }
+
+
+%%%%%%%%  END OF HEADER   -----     TYPE YOUR SOLUTIONS AFTER EACH PROBLEM BELOW
+
+
+\begin{document}
+
+	\Large \begin{center} {\bf Foundations of Advanced Math Homework (tentative list)}  \end{center}
+
+	\normalsize
+
+
+	\
+
+	\underline{\hspace{5in}}
+
+	\
+
+	\noindent{\bf\underline{Section 1.2 of {\em Bloch}}}
+
+%1
+	\begin{hw}
+				Let X = ``Pikachu has red toes," let Y = ``Pikachu has a big nose" and R = ``Pikachu likes to eat figs."  Translate the following into symbols.
+			\begin{enumerate}
+				\item Pikachu likes to eat figs, and he has red toes or he has a big nose.
+				\item It is not the case that Pikachu has a big nose or has red toes.
+				\item It is not the case that Pikachu has a big nose, or he has red toes.
+				\item Pikachu has a big nose and red toes, or he has a big nose and likes to eat figs.
+			\end{enumerate}
+	\end{hw}
+
+%2
+	\begin{hw}
+				Translate the following statements to symbols. Make sure to define your variables.
+			\begin{enumerate}
+				\item The house is not ugly if it is blue, and it is not ugly only if it is 30 years old.
+				\item In order to pass the vision test, it is sufficient for the candidate to read the line Q S Z W M 4.
+				\item In order to pass the driver's test, the candidate must be able to parallel park.
+			\end{enumerate}
+	\end{hw}
+
+%3
+	\begin{hw}
+		Which of the following statements is a tautology, which is a contradiction and which is neither? Justify your answer with a truth table and a sentence.
+		\begin{enumerate}
+			\item $(W \rightarrow X) \leftrightarrow \neg(Z \vee Y).$
+			\item $[(Y \rightarrow W) \leftrightarrow W] \wedge \neg X.$
+		\end{enumerate}
+	\end{hw}
+
+	% The conjunction symbol (AND) is made using the command \wedge.  The disjunction symbol (OR) is made using the command \vee.   The negation symbol (NOT) is made using the command \neg.
+
+
+	\noindent {\bf LaTeX Help for truth tables: Here is a template of a truth table for part 1. Look at the tex code provided and edit this as you see fit. An online table generator can be found here: https://www.tablesgenerator.com}
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|ccc|c|}  % the entries c mean the contents will be centered, the | is a vertical bar (not a capital letter i or a lowercase L) which puts the lines between the columns.  More columns can be added by adding additional c's and | vertical lines. More rows can be added by adding  & &  &  &   &  &  &  \\  and filling in the entries between the ampersands
+
+			$X$ & $Y$ & $Z$ & $W$ & $(W \rightarrow X)$ & $\leftrightarrow$ & $\neg(Z \vee Y)$ & $Z\vee Y$ \\ \hline \hline
+			F   & T   & F   & T   &                     &                   &                  &           \\
+			&     &     &     & fill out 1st        & fill out last     & \dots 3rd        & \dots 2nd \\
+		\end{tabular}
+	\end{center}
+
+	\
+
+
+	\underline{\hspace{5in}}
+
+	\
+
+%4
+	\noindent{\bf\underline{Section 1.3 of {\em Bloch}}}
+
+	\begin{hw}
+				For each pair of statements, determine whether or not  (1) {\it implies}  (2). Hint: You should rewrite the statements in terms of symbols that represent the component statements. Next, justify your answer with a truth table. Remember to define your symbols before presenting your solution.
+			\begin{enumerate}
+				\item  (1) ``If my hoodie is pink then my earbuds are green, and my earbuds are green."; (2) ``My hoodie is pink."
+				\item (1) ``If it rains, then I will watch YouTube."; (2)``it is not raining or I will watch YouTube."
+				\item (1) ``It is not raining or I will watch YouTube."; (2) ``If it is raining, then I will watch YouTube."
+				\item (1) ``If I eat blue ramen I will get sick, or if I eat green potatoes I will get sick."; (2) ``if I eat blue ramen or green potatoes, I will get sick."
+			\end{enumerate}
+	\end{hw}
+
+%Put your solution here. 
+
+	\
+
+%5
+	\begin{hw}
+				State the inverse, converse and contrapositive of each statement.
+			\begin{enumerate}
+				\item I will do my homework if it is after 10PM.
+				\item If I check the map, then I won't get lost.
+				\item The food is lousy whenever the meal is fast.
+			\end{enumerate}
+	\end{hw}
+
+%Put your solution here. 
+%1.
+%Inverse: write the inverse here
+%Converse: write the converse here.
+%Contrapositive: write the contrapositive here.
+
+%6
+	\begin{hw}
+		Negate and simplify the following statements.
+		\begin{enumerate}
+			\item It is Saturday night and it is snowing pizzas.
+			\item If $a, b, c$ denote the lengths of the sides of a right triangle and $c$ is the hypotenuse, then $a^2+b^2 =c^2$.
+			\item Eren and Mikasa will not finish their homework if Armin plays billiards and Annie doesn't mow the yard.
+		\end{enumerate}
+	\end{hw}
+
+%Put your solution here. 
+
+	\
+
+	\underline{\hspace{5in}}
+
+	\
+
+	\noindent{\bf\underline{Section 1.4 of {\em Bloch}}}
+
+%7
+	\begin{hw}
+				Below is an argument. If it is valid, give a derivation, and if it is not, show why.
+			\begin{enumerate}
+				\item
+				$
+				\begin{array}{l}
+					L \rightarrow M  \\
+					(M \vee N) \rightarrow (L \rightarrow K)    \\
+					\neg P \wedge L\\  \hline
+					K
+				\end{array}
+				$
+
+				\item
+				$
+				\begin{array}{l}
+					\neg A \rightarrow (B \rightarrow \neg C) \\
+					C \rightarrow \neg A  \\
+					(\neg D \vee A) \rightarrow \neg \neg C \\
+					\neg D  \\  \hline
+					\neg B
+				\end{array}
+				\hspace{.2in}
+				$
+			\end{enumerate}
+	\end{hw}
+
+
+		{\bf Example code for your solution. This array has two columns. You can include the justifications for each line of your derivation in the second column.
+
+	Sample LaTeX code. }
+
+	$
+	\begin{array}{ll}
+		(1) L \rightarrow M & \\
+	(2) (M \vee N) \rightarrow (L \rightarrow K)  &  \\
+	(3) \neg P \wedge L & \\  \hline
+	(4) & (\textrm{ put name of rule of inference here})
+	\end{array}
+	$
+
+%8
+	\begin{hw}
+				Determine whether the following argument is valid. If it is valid, give a derivation, if it is not valid, show why.
+			\begin{enumerate}
+				\item If Jack likes squeaky toys, then he likes squirrels. If Jack does not like dog treats, the he does not like squirrels. If Jack likes dog treats, then he likes white bread. Jack likes squeaky toys or he likes to go on walks. Jack doesn't like white bread. Therefore Jack likes to go on walks.
+			\end{enumerate}
+	\end{hw}
+
+%Put your solution here. 
+
+
+%9
+	\begin{hw}
+		Write a derivation for each of the following \textbf{valid} arguments. State whether the premises are consistent or inconsistent.
+		\begin{enumerate}
+			\item If amoebas can dance, then they are friendly. If amoebas make people sick, then they are not friendly. Amoebas can dance and they make people sick. Therefore people are friendly.
+
+			\item Computers are useful and fun, and computers are time consuming. If computers are hard to use, then they are not fun. If computers are not well designed, then they are hard to use. Therefore computers are well designed.
+		\end{enumerate}
+	\end{hw}
+
+%Put your solution here.  
+
+%10
+	\begin{hw}
+				Find and name the fallacy (or fallacies) in each of the following arguments.
+			\begin{enumerate}
+				\item If Fred eats a frog, then Susan will eat a snake. Fred does not eat a frog. Therefore Susan does not eat a snake.
+				\item Aliens invade the earth whenever it is Friday. Aliens invade the earth. Therefore it is Friday.
+			\end{enumerate}
+	\end{hw}
+
+%Put your solution here.  
+
+
+	\
+
+	\underline{\hspace{5in}}
+
+	\
+
+	\noindent{\bf\underline{Section 1.5 of {\em Bloch}}}
+
+%11
+	\begin{hw}
+				Suppose the possible values of $x$ and $y$ are all people. \newline Let $Z(x)= $ ``$x$ likes pickles," and let $W(x)=$``$x$ has a pet frog."  Determine if the translation of the following statements into words is correct or incorrect. If incorrect, explain why.
+			\begin{enumerate}
+				\item $(\exists x)(W(x) \wedge Z(x))$ means
+
+				``Someone has a pet frog and someone likes pickles."
+				\item $(\exists y) Z(y)\rightarrow (\forall s) W(s)$ means
+
+				``If everyone likes pickles, then someone has a pet frog."
+				\item $(\exists t)[W(t) \rightarrow (\forall x) Z(x)]$ means
+
+				``There is a person such that if that person has a pet frog, then all people like pickles."
+			\end{enumerate}
+	\end{hw}
+
+%Put your solution here.  
+
+%12
+	\begin{hw}
+				Translate the following into symbols. Define all symbols and notation you use.
+			\begin{enumerate}
+				\item There is a dog that bites.
+				\item All dogs will not go to heaven, if there is a dog that bites.
+				\item No one likes ice cream and pickles {\it together}.
+			\end{enumerate}
+	\end{hw}
+
+%Put your solution here.  
+% \textbf{ Solution.  write your answer here after deleting the % symbolÉ..}
+
+%13
+	\begin{hw}
+				Negate the following statements. Do not write the word ``not" applied any of the objects being quantified (for example, do not write ``Not all boys are good" for part (1)).
+			\begin{enumerate}
+				\item All boys are good.
+				\item Every flying saucer is aiming to conquer some galaxy.
+				\item There is a house in Salem such that everyone who enters the house turns green.
+			\end{enumerate}
+	\end{hw}
+
+%Put your solution here.  
+% \textbf{ Solution.  write your answer here after deleting the % symbolÉ..}
+
+
+%14
+	\begin{hw}
+				Write a derivation for the following argument.
+			\begin{enumerate}
+				\item Every cockroach that is clever eats garbage. There is a cockroach that likes dirt or does not like dust. For each cockroach, it is not the case that it likes dirt or it eats garbage. Therefore there is a cockroach such that it is not the case that if it is not clever then it likes dust.
+			\end{enumerate}
+	\end{hw}
+
+%Put your solution here.  
+
+	\
+
+	\underline{\hspace{5in}}
+
+	\
+
+	\noindent{\bf\underline{Sections 2.1-2.3 of {\it Bloch}}}
+
+%15
+	\begin{hw}
+				The following are statements of mathematical theorems. Reformulate each of them so they are of the form ``If ...., then ....."
+			\begin{enumerate}
+				\item[(1)] The area of a circle is $\pi r^2$.
+
+%solution here
+
+				\item[(2)]  Given a line $l$ and a point $P$ not on $l$, there is exactly one line $m$ containing $P$ that is parallel to $l$.
+
+%solution here
+
+			\end{enumerate}
+	\end{hw}
+
+%16
+	\begin{hw}\label{pf-outline}
+		For each statement do the following three things:
+		(i) outline a direct proof , (ii) outline a proof by contrapositive, and (iii) outline a proof by contradiction. That is, for each statement and each proof method write down what you would assume and what you would want to conclude. Do not try to prove the statements, they are meaningless. Hint: You might want to rephrase the statements into the standard ``If ... , then ... " form before your write your proof outlines.
+		\begin{enumerate}
+			\item Let $n$ be an integer. If $7 | n$ then 7 is bulbous.
+%solution
+			\item Every globular integer is even.
+%solution
+			\item In an integer is divisible by 13 and is greater than 100, then it is pesky.
+%solution
+			\item An integer is both tactile and filigreed whenever it is odd.
+%solution
+		\end{enumerate}
+	\end{hw}
+
+
+%17
+	\begin{hw}
+				Prove the following statements.
+			\begin{enumerate}
+				\item Let $a, b, c, m,$ and $n$ be integers. Show that if $a|  b$ and $a|  c$ then $a|  (bm+cn)$.
+
+%put proof here
+
+				\item Let $n$ be an integer. We say that $n$ is a \textbf{multiple} of 3 if $n=3k$ for some integer $k$.
+				Let  $n$ and $m$ be integers. Show that if $n$ and $m$ are multiples of 3, then $n+m$ and $nm$ are multiples of 3.
+			\end{enumerate}
+	\end{hw}
+
+
+%18
+	\begin{hw}
+				Let $a$ and $b$ be integers. We say that $a$ and $b$ are \textbf{relatively prime} if the following condition holds: if $n$ is an integer such that $n|a$ and $n|b$, then $n=\pm1$.
+			\begin{enumerate}
+				\item Find an example of two integers $a$ and $b$ that are relatively prime, but not prime themselves.
+				Find an example of two integers $c$ and $d$ that are not prime and not relatively prime.
+				\item Let  $c$ and $d$ be integers. Show that the following statements are equivalent:
+				\begin{enumerate}
+					\item[(i)] $c$ and $d$ are relatively prime.
+					\item[(ii)] $c-d$ and $d$ are relatively prime.
+				\end{enumerate}
+			\end{enumerate}
+	\end{hw}
+%put proof here
+
+
+%put proof here
+	\noindent {\bf NEW LaTeX commands for beginning and ending a proof. These are optional. Don't use them if you want to create and use your own end-of-proof symbol.}
+
+	\bp
+%put proof here
+
+	\ep
+
+
+%19
+	\begin{hw}
+		Suppose $a$ is an integer. Prove that if $a^2-2a+7$ is even,  then $a$ is odd.
+	\end{hw}
+%put proof here
+
+	\bp
+
+	\ep
+
+%20
+	\begin{hw}
+				Prove or disprove each statement.
+			\begin{itemize}
+				\item[(i)] If $x+y$ is an irrational number, then either $x$ or $y$ is irrational.
+
+%Put your solution here.  
+
+
+				\item[(ii)] If $x$ and $y$ are irrational numbers, then $x+y$ is irrational.
+
+%Put your solution here.  
+
+			\end{itemize}
+	\end{hw}
+
+%21
+	\begin{hw}
+				Let $x$ be a real number. \newline  Define the absolute value of $x$, denoted $|x|$ by
+			$$|x| =
+			\left\{
+				\begin{array}{cl}
+					x,  & \textrm{ if } x \geq 0    \\
+					-x & \textrm{ if } x<0.
+				\end{array}
+			\right.
+			$$
+			Let $w, v, x$, and $y$ be real numbers. Prove the following statements. Hint on (a), cases regarding $w$. Hint on (b), use part (a) with a strategic choice for $w$.
+			\begin{enumerate}
+				\item[(a)] $|x-y| = |y-x|$
+				\item[(b)]    $|w| \leq v$ if and only if $-v\leq  w \leq v$.
+
+				\item[(c)]  $|x + y | \leq |x| + |y|$.
+			\end{enumerate}
+	\end{hw}
+
+	\bp[ Proof of (a)]
+	\ep
+
+	\bp[ Proof of (b)] \ep
+
+
+
+
+	\
+
+	\underline{\hspace{5in}}
+
+	\
+
+
+	\noindent{\bf\underline{Section 2.4, 2.5 of {\em Bloch}}}
+
+	\
+
+	\begin{hw}
+				Prove or give a counterexample to each of the following statements.
+			\begin{enumerate}
+				\item[(i)] For each integer $a$ there exists an integer $b$ such that $a|b$.
+%Put your solution here.  
+
+				\item[(ii)] There exists an integer $b$ such that for all integers $a$, we have $a|b$.
+%Put your solution here.  
+
+				\item[(iii)] For each integer $b$ there is and integer $a$ such that $a|b$.
+%Put your solution here.  
+
+				\item[(iv)] There is an integer $a$ such that for all integers $b$, we have $a|b$.
+%Put your solution here.  
+
+			\end{enumerate}
+	\end{hw}
+
+
+	\begin{hw}
+				Let $a$ and $b$ be integers. We say that $a$ and $b$ are \textbf{relatively prime} if the following condition holds: if $n$ is an integer such that $n|a$ and $n|b$, then $n=\pm1$.
+
+		Show that the following statements are equivalent:
+			\begin{enumerate}
+				\item[(i)] $a$ and $b$ are relatively prime.
+				\item[(ii)] $a+b$ and $a$ are relatively prime.
+				\item[(iii)] $b$ and $a-b$ are relatively prime.
+			\end{enumerate}
+	\end{hw}
+%put proof here
+
+
+	\begin{hw}
+				Prove or give a counterexample to the following statement. For each positive integer $a$, there exists a positive integer $b$ such that $$\frac{1}{2b^2+b} < \frac{1}{ab^2}.$$
+	\end{hw}
+
+%Put your solution here.  
+
+	\
+
+	\underline{\hspace{5in}}
+
+	\
+
+
+	\noindent{\bf\underline{Section 2.6 of {\em Bloch}}}
+
+	\
+
+	\begin{hw}
+		Each write-up below contains an error or needs improvement. Explain what is wrong with the write-ups (some have more than one error) and, if possible, suggest a fix. Bring your ideas to class on Friday, Feb 26, for discussion.
+
+		\begin{enumerate}
+
+			\item Let $x$ be a real number. Then $x^2\geq 0$ for all real numbers $x$, ...
+
+			\vspace{0.5in}
+
+
+			\item We want to multiply the two polynomials  $(7+2y)$ and $(y^2+5y-6)$, which we do by computing
+			$$(7+2y)(y^2+5y-6)$$
+			$$7y^2+35y-42+2y^3+10y^2-12y$$
+			$$2y^3+17y^2+23y-42$$
+			the answer is $2y^3+17y^2+23y-42$.
+
+			\vspace{0.5in}
+
+			\item {\bf Claim.} If $n$ is even, then $n+1$ is odd.
+
+				{\bf Proof.} Let $n$ be even. Let $n=2k.$   Then $n+1=2k+1$, so $n+1$ is odd. \hfill  $\square$
+
+
+			\vspace{0.5in}
+
+
+			\item {\bf Claim.}  An even number is not odd.
+
+				{\bf Proof.} Let $n$ be an even number, and let $m$ be an odd number. Then there exists integers $k$ and $j$ such that $n=2k$ and $m=2j+1$. If $2k=2j+1$ then $1=2(k-j)$, which is a contradiction. Therefore $n \neq m.$\hfill  $\square$
+
+			\vspace{0.5in}
+
+			\item {\bf Claim.}  If $n$ is even, then $n^2$ is even.
+
+				{\bf Proof.}  Contradiction. We assume $n^2$ is odd. Let $n=2k$ for some $k$. Then $n^2=4k=2(2k)$, so $n^2$ is even. But this contradicts our assumption that $n^2$ is odd, so the result follows. \hfill  $\square$
+
+
+			\vspace{0.5in}
+
+			\item {\bf Claim.}  If $a|b$ and $b|c$ then $a|c$.
+
+
+				{\bf Proof.}  $b=ak$, $c=kb$, $c=k^2a$, $\frac{c}{a}=k^2$.
+
+			Since $\frac{c}{a}$ is a whole number, $a|c$. \hfill  $\square$
+
+			\vspace{0.5in}
+
+
+			\item {\bf Claim.}   All odd numbers are prime.
+
+				{\bf Proof.}
+			By way of contradiction, suppose all odd numbers are not prime.
+			7 is prime, which contradicts the fact that all odd numbers are
+			not prime.\hfill  $\square$
+
+
+			\vspace{0.5in}
+
+			\item {\bf Claim.}  For all positive integers $x$, there exists a positive integer $y$ such that $x<y$.
+
+				{\bf Proof.}  $X$ is an arbitrary positive integer let $x =y/2$ then $x<y$  \hfill  $\square$
+
+		\end{enumerate}
+
+		\vfill
+	\end{hw}
+
+
+
+	\
+
+	\underline{\hspace{5in}}
+
+	\
+
+	\noindent{\bf\underline{Section 3.1-3.3 of {\em Bloch}}}
+
+	\
+
+	\begin{hw}
+				Describe the following sets in set builder notation the style of Equation $3.2.1$ on top of page 94.
+			\begin{enumerate}
+				\item The set of all positive real numbers.
+%Put your solution here.  
+
+				\item The set of all rational numbers that have a factor of five in their denominator.
+%Put your solution here.  
+
+				\item $\{ -64, -27, -8, -1, 0, 1, 8, 27, 64\}$
+%Put your solution here.  
+
+				\item $\{1, 5, 9, 13, 17, 21, ... \}$
+%Put your solution here.  
+
+			\end{enumerate}
+	\end{hw}
+
+
+	\begin{hw}
+				Let $A$ and $B$ be any two sets. Is it true that one of $A \subseteq B$ or $A=B$ or $B \subseteq A$ must be true? Give a proof or a counterexample.
+	\end{hw}
+% put solution here
+
+	\begin{hw}
+				Let $C = \{a, b, c, d, e, f \}$ and $D = \{a, c, e \}$ and $E = \{d, e, f\}$ and $F = \{a, b \}$. Find each of the following sets. (Note $\mathcal{P}(G)$ denotes the power set of $G$.)
+			\begin{enumerate}
+				\item $C - (D \cup E)$.
+				\item $(C-D) \cup E$.
+				\item $F - (C - E)$.
+				\item $F \times (D - E)$.
+				\item $\mathcal{P}(E)$.
+				\item $(D-C) \times (F \cup E)$.
+			\end{enumerate}
+	\end{hw}
+
+
+	\begin{hw}
+				Let $A$, $B$ and $C$ be sets.
+
+		Prove $A \cap (B \cup C) = (A \cap B) \cup (A \cap C).$
+	\end{hw}
+% put solution here
+
+
+	\begin{hw}
+		Which of the following are true and which are false?  (Note $\mathcal{P}(G)$ denotes the power set of $G$.)
+		\begin{enumerate}
+			\item $\{ \emptyset \} \subseteq G$ for all sets $G$.
+			\item $ \emptyset \subseteq G$ for all sets $G$.
+			\item $ \emptyset \subseteq \mathcal{P}(G)$ for all sets $G$.
+			\item $ \{\emptyset\} \subseteq \mathcal{P}(G)$ for all sets $G$.
+			\item $ \emptyset \in G$ for all sets $G$.
+			\item $ \emptyset \in \mathcal{P}(G)$ for all sets $G$.
+			\item $\{ \{ \emptyset \} \} \subseteq \mathcal{P}( \{\emptyset\})$.
+			\item $\{ \emptyset \} \subseteq \{ \{ \emptyset, \{ \emptyset \} \}, \{ \{ \emptyset \} \} \}$.
+			\item $\mathcal{P}(\{ \emptyset \}) = \{ \emptyset ,  \{ \emptyset \} \}$.
+		\end{enumerate}
+	\end{hw}
+
+
+	\begin{hw}
+				Let $A$, $B$ and $C$ be sets. Prove or find a counterexample.
+			$$A-(B-C) = \emptyset \textrm{ if and only if } (A-B)-C = \emptyset$$
+	\end{hw}
+%solution
+
+
+	\begin{hw}
+				Let $A$, $B$, and $C$ be sets.  \newline Prove that $C - (A\cap B) = (C-A) \cup (C-B).$
+	\end{hw}
+%solution
+
+
+	\begin{hw}
+				Let $A$, $B$ and $C$ be sets. Prove that
+			$$ A \subseteq C  \textrm { if and only if  }   A\cup (B \cap C) = (A \cup B) \cap C.$$
+	\end{hw}
+
+%solution
+
+	\bp
+
+	\ep
+
+
+	\begin{hw}
+				For a set $X$, let $\mathcal{P}(X)$ denote the power set of $X$. \newline  Prove or give a counterexample to each of the following statements for sets $A$ and $B$.
+	\end{hw}
+
+	\begin{enumerate}
+		\item  $\mathcal{P}(A \cup B) = \mathcal{P}(A) \cup \mathcal{P}(B).$
+
+
+		\item   $\mathcal{P}(A \cap B) = \mathcal{P}(A) \cap \mathcal{P}(B).$
+	\end{enumerate}
+
+
+	\begin{hw}
+				Let $A, B, C, D$ be sets. Prove that $$(A \cap B) \times (C \cap D) = (A \times C) \cap (B \times D).$$
+	\end{hw}
+
+%solution
+
+	\bp
+
+	\ep
+
+
+	\begin{hw}
+				Let $A$ and $B$ be sets. Suppose that $A \neq B$ and $E$ is a set such that $A \times E = B \times E$.
+		Prove that $E =\emptyset.$
+	\end{hw}
+
+% put solution here
+
+	\
+
+	\
+
+	\underline{\hspace{5in}}
+
+	\
+
+
+	\noindent{\bf\underline{Section 3.4 of {\em Bloch}}}
+
+
+	\
+
+
+	\begin{hw}
+				Find $\displaystyle \cup_{k\in \N} B_k$ and $\displaystyle \cap_{k \in \N} B_k$ for the each of the families of sets $B_k, k\in \N$ given below.
+			\begin{enumerate}
+				\item $B_k = \{ 1-k, 0, 2k \}$ for all $k \in \N.$
+				\item $B_k = [0, \frac{k+1}{k+2}] \cup [7, \frac{9k+1}{k})$ for all $k \in \N$.
+			\end{enumerate}
+	\end{hw}
+
+
+	\begin{hw}
+		Find a family of sets $\{ E_k\}_{k\in \N}$ such that $E_k \subseteq \R$ for all $k \in \N$ and no two $E_k$ are equal to each other and that the following conditions hold.
+		$$ \bigcup_{k \in \N} E_k = \R \textrm{  \  \  \ and \  \ \ } \ds \bigcap_{k \in \N} E_k = (2,40].$$
+	\end{hw}
+
+
+	\begin{hw}
+				Let $I$ be a nonempty set and $\{ C_i \}_{i \in I}$ be a family of sets indexed by $I$. Let $B$ be a set. Prove that
+			$$ B \times (\bigcup_{i\in I} C_i )=  \bigcup_{i \in I} (B \times C_i).$$
+	\end{hw}
+
+%solution
+	\bp
+
+	\ep
+
+	\
+
+
+	\begin{hw}
+				Let $\mathcal{A}$ be a nonempty family of sets and $B$ be a set. Prove that
+			$$B- (\bigcup_{X \in \mathcal{A}} X ) = \bigcap_{X \in \mathcal{A}} (B-X).$$
+	\end{hw}
+
+%solution
+	\bp
+
+	\ep
+
+	\
+
+
+	\underline{\hspace{5in}}
+
+	\
+
+
+	\noindent{\bf\underline{Section 4.1 and 4.2 of {\em Bloch}}}
+
+	\
+
+
+
+	\begin{hw}
+				Which of the following define a function from $\mathbb{R}$  to  $\mathbb{R}$? Explain your answers.
+
+		(1) \  $ p(x) = \frac{x^2+3}{x+5}$ for all $x \in \mathbb{R}$.
+
+		\
+
+		(2) \ $g(x) = \left\{
+						  \begin{tabular}{ll}
+							  $2x-x^3,$ & \textrm{ if } $x \geq 1$ \\
+							  $|x|,$    & \textrm{ if } $x \leq 1$
+						  \end{tabular} \right.$
+
+			\
+
+			(3) \ $f(x) =  \left\{
+							   \begin{tabular}{ll}
+								   $p-q$ & \textrm{ if } $x=\frac{p}{q} \in \Q$ \\
+								   $10$  & \textrm{ if } $x\in \R -  \Q$
+							   \end{tabular} \right.$
+	\end{hw}
+
+
+
+	\begin{hw}
+				Let $f: A \rightarrow B$ be a function. Let $P, Q \subseteq A$. Prove that  $f_*(P) - f_*(Q) \subseteq f_*(P-Q)$. Is it necessarily the case that $ f_*(P-Q) \subseteq f_*(P) - f_*(Q)$? Give a proof or find a counterexample.
+	\end{hw}
+
+
+	\begin{hw}
+				Let $X$ and $Y$ be sets, let $A \subseteq X$ and $B \subseteq Y$ and let $\pi_1 : X \times Y \rightarrow X$ and $\pi_2: X \times Y \rightarrow Y$ be projections maps defined by $\pi_1((x, y)) = x$ for all $(x, y) \in X\times Y$ and  $\pi_2((x, y)) = y$ for all $(x, y) \in X\times Y$
+			\begin{enumerate}
+				\item Prove that $(\pi_1)^{*}(A) = A \times Y$ and $(\pi_2)^{*}(B) = X \times B$.
+				\item Prove that $(\pi_1)^{*}(A) \cap (\pi_2)^{*}(B) = A \times B$.
+				\item Let $P\subseteq X \times Y.$  Does $(\pi_1)_*( P )\times (\pi_2)_*( P ) = P$? Give a proof or find a counterexample.
+			\end{enumerate}
+	\end{hw}
+
+
+	\begin{hw}
+				Let $f:A \rightarrow B$ be a function. Let $X \subseteq A$ and $Y \subseteq B.$
+			\begin{enumerate}
+				\item Show that $X = f^{*}(f_*(X))$ if and only if $X=f^{*}(Z)$ for some $Z\subseteq B$.
+				\item Show that $Y = f_*(f^{*}(Y))$ if and only if $Y = f_*(W)$ for some $W \subseteq A$.
+			\end{enumerate}
+	\end{hw}
+
+
+
+	\begin{hw}
+				Let  $f:A \rightarrow B$ be a function and $S, T \subseteq B$. Let $I$ be a non-empty index set and $\{ U_i \}_{i\in I}$ be a family of subsets of A indexed by $I$. Prove the statements below.
+			\be
+			\item If $S\subseteq T$, then $f^*(S) \subseteq f^*(T)$.
+			\item $\displaystyle f_*( \cap_{i \in I} U_i ) \subseteq \cap_{i \in I} f_*(U_i)$
+			\ee
+	\end{hw}
+
+
+	\
+
+	\begin{hw}
+				Let $f, g: A\rightarrow B$ be functions. These functions induce  \newline  functions $f_*, g_*: \mathcal{P}(A) \rightarrow \mathcal{P}(B)$ and $f^*, g^*: \mathcal{P}(B) \rightarrow \mathcal{P}(A)$.
+
+		Show that $f=g$ iff $f_* = g_*$ iff $f^{*} = g^{*}$ iff $f = g$.
+	\end{hw}
+
+
+	Note: We completed one of the conditional statements in class. Please consult your class notes and write up the formal proof as part of your solution here.
+
+
+	\
+
+	\underline{\hspace{5in}}
+
+	\
+
+
+	\noindent{\bf\underline{Section 4.3 and 4.4 of {\em Bloch}}}
+
+	\
+
+
+	\begin{hw}
+				Review the definitions of left and right inverses.
+			\begin{enumerate}
+						\item[(i)] Find two different right inverses for the function $$f:\R \rightarrow [0,\infty) \textrm{ given by } f(x) = |x-3|  \textrm{ for all } x\in \R.$$  Prove that the two functions are right inverses of $f$.
+					\item[(ii)] Find two different left inverses for the function $$g: \R \rightarrow \R  \textrm{ given by  }  g(x) = e^{3x} \textrm{ for all } x \in \R.$$  Prove that the two functions are left inverses of $g$.
+			\end{enumerate}
+	\end{hw}
+
+
+
+	\begin{hw}
+				For each function below, determine whether the function is injective, surjective, both or neither. Prove your answers.
+			\begin{enumerate}
+				\item[$(i)$] $g: \R \rightarrow \R$ given by $g(x) = x^4+3$ for all $x\in \mathbb{R}$.
+				\item[$(ii)$] $w: \R^2 \rightarrow [0,\infty) $ given by $w((x, y)) = x^2 + y^2$ for all $(x, y) \in \R^2$.
+				\item[$(iii)$] $f: \N \rightarrow \mathcal{P}(\N)$ given by $f(n) = \{1, 2, 3, \dots, n\}$ for all $n \in \N$.
+			\end{enumerate}
+	\end{hw}
+
+
+	\begin{hw}
+				Let $f, g: \R \rightarrow \R$ be given by
+			$$f(x) = \left\{
+						 \begin{array}{ll}
+							 1-2x, & \textrm{ if } x\geq 0     \\
+							 |x|, & \textrm{ if } x <0,
+						 \end{array}
+		\right.
+			\hspace{.3in}
+			g(x) = \left\{
+					   \begin{array}{ll}
+						   3x, & \textrm{ if } x\geq 0     \\
+						   x^2-1, & \textrm{ if } x <0,
+					   \end{array}
+		\right.
+			$$
+			Find $g \circ f$, that is determine its domain, codomain and rule of assignment.
+	\end{hw}
+
+
+
+	\begin{hw}
+				Let $f:A\rightarrow B$ be a function, $f^*:\mathcal{P}(B) \rightarrow \mathcal{P}(A)$ be the preimage function induced by $f$, and $f_*:\mathcal{P}(A) \rightarrow \mathcal{P}(B)$ be the image function induced by $f$.
+			\begin{enumerate}
+				\item[$(i)$]  Prove that   $f$ is injective iff $f^*$ is surjective.
+				\item[$(ii)$] Prove that   $f$ is injective iff $f_*$ is injective.
+			\end{enumerate}
+	\end{hw}
+
+	\
+
+	\underline{\hspace{5in}}
+
+	\
+
+
+	\noindent{\bf\underline{Section 5.1 and 5.2 of {\em Bloch}}}
+
+	\
+
+
+	\begin{hw}
+				Let $A$ be a set, and let $R$ be a relation on $A$.
+			\begin{enumerate}
+				\item Suppose that $R$ is reflexive. Prove that $\bigcup_{x \in A} [x] =A$.
+				\item Suppose that $R$ is symmetric. Prove that $x \in [y]$ if and only if $y\in [x]$, for all $x, y \in A$.
+				\item Suppose that $R$ is transitive. Prove that if $x R y$, then $[y] \subseteq [x]$, for all $x, y \in A$.
+			\end{enumerate}
+	\end{hw}
+
+	\begin{hw}
+				Suppose $R_1$ and $R_2$ are relations on a set $A$.
+		If $R_1$ is transitive and $R_2$ is transitive, is the relation $R_1 \cup R_2$ necessarily transitive? Prove or give a counterexample.
+	\end{hw}
+
+
+
+	\begin{hw}
+				Determine whether or not the relation T given below is reflexive, symmetric and/or transitive. Prove your answers.
+
+				Let $T$ be the relation on $\Z  \times \Z$ defined by $(x, y) T (z, w)$ if and only if there is a line in $\R^2$ that contains $(x, y)$ and $(z, w)$ that has an integer slope, for all $(x, y), (z, w) \in \Z \times \Z$.
+	\end{hw}
+
+
+
+	\begin{hw}
+		Let $n \in \N$ and $a, b, c, d \in \Z$. For each statement below, prove it or give a counterexample.
+		\begin{enumerate}
+			\item  If $a \equiv b (\bmod n)$ and $b \equiv c (\bmod n)$, then $a \equiv c (\bmod n)$.
+			\item  If $a \equiv b (\bmod n)$ and $c \equiv d (\bmod n)$, then $a+c \equiv b+d (\bmod n)$.
+			\item  If $a \equiv b (\bmod n)$ and $c \equiv d (\bmod n)$, then $ac \equiv bd (\bmod n)$.
+			\item  If $ac \equiv bc (\bmod n)$, then $a \equiv b (\bmod n)$.
+			\item  If $a \equiv b (\bmod n)$, then $a^2 \equiv b^2 (\bmod n)$.
+			\item  If $a^2 \equiv b^2 (\bmod n)$, then $a \equiv b (\bmod n)$.
+		\end{enumerate}
+	\end{hw}
+
+
+	\begin{hw}
+				Let $n, q \in \N$, and let $a, b \in \Z$. Suppose $a \equiv b (\bmod{n}),$ and $q|n$. Prove that $a \equiv b (\bmod{q})$.
+	\end{hw}
+
+
+	\
+
+	\underline{\hspace{5in}}
+
+	\
+
+
+	\noindent{\bf\underline{Section 5.3 of {\em Bloch}}}
+
+	\
+
+	\begin{hw} {\bf Group Problem.} \newline
+		Let $A$ be a non-empty set. Let $E(A)$ denote the set of all equivalence relations on the set $A$. Let $\mathcal{T}_A$ denote the set of all partitions of the set $A$.
+		We have defined functions $F: E(A) \rightarrow \mathcal{T}_A$ and $G: \mathcal{T}_A \rightarrow E(A)$ as follows,
+
+		\begin{center}
+					$F(\sim) = \{ [a]  \ | \ a \in A \},  \textrm{ for each equivalence relation }  \sim  \  \in E(A)$,
+		\end{center}
+
+		\begin{center}
+					$G(\mathcal{W}) = R_{\mathcal{W}}, \textrm{ for each partition  } \mathcal{W} \in \mathcal{T}_A.$
+		\end{center}
+
+
+		\begin{enumerate}
+			\item  Prove the function $F$ is well-defined by showing $F(\sim) \in \mathcal{T}_A$.  \newline (This proof shows that the codomain of $F$ is indeed $\mathcal{T}_A$ as claimed!)
+
+			\begin{proof}  {\bf Edit this outline.}%and remove this text
+
+				We will show that for any equivalence relation $\sim$ the set of equivalence classes $\{ [a] | a\in A \}$ forms a partition of $A$.
+				So we need to show that the equivalence classes comprise all of $A$ and the equivalence classes are pairwise disjoint.
+
+					{\bf Look at the definition of a partition (in the book or on the Worksheet) and review a previous Homework Problem for ideas on this problem.}
+
+			\end{proof}
+
+			\item  Prove the function $G$ is well-defined by showing $G(\mathcal{W}) \in E(A)$.  \\ (This proof shows that the codomain of $G$ is indeed $E(A)$ as claimed!)
+
+			\begin{proof}  {\bf Edit this outline.} %and remove this text
+
+				We will show that for an arbitrary partition $\mathcal{W}$, the relation $R_{\mathcal{W}}$ is an equivalence relation. This means we will show that $R_{\mathcal{W}}$ is reflexive, symmetric and transitive.  {\bf Review the in-class worksheet for ideas on this problem.}
+
+			\end{proof}
+
+
+			\item Prove that $F \circ G = Id_{\mathcal{T}_A}$.
+
+
+			\begin{proof}    {\bf Edit this outline.} %and remove this text
+				We begin by showing $F \circ G = Id_{\mathcal{T}_A}$.  (Write a sentence showing you have checked that they have the same domain and codomain!) To prove $F \circ G = Id_{\mathcal{T}_A}$ we must show $F \circ G (\mathcal{W})=  \mathcal{W}$ for all  $\mathcal{W} \in \mathcal{T}_A$. We calculate
+				$$ F \circ G (\mathcal{W})= F(G(\mathcal{W})) = F(R_{\mathcal{W}}) = A/(R_{\mathcal{W}}).$$
+				So we want to show that the two partitions $A/(R_{\mathcal{W}})$ and $ \mathcal{W}$ are equal. We will prove that $A/(R_{\mathcal{W}}) \subseteq \mathcal{W}$  and $\mathcal{W} \subseteq A/(R_{\mathcal{W}})$. Recall, that equivalence classes are elements of
+				$A/(R_{\mathcal{W}}) = \{ [a] | a \in A \}$  and the elements of $ \mathcal{W}$ are sets without special names, so something like $P \in \mathcal{W}$.
+
+					{\bf Fill in details.}
+			\end{proof}
+
+			\
+
+			\item Prove that $G \circ F = Id_{E(A)}$.
+			\begin{proof}   {\bf Edit this outline.} %and remove this text
+				Next we will show $G \circ F = Id_{E(A)}$.  (Write a sentence showing you have checked that they have the same domain and codomain!)   To prove $G \circ F = Id_{E(A)}$ we will show $G \circ F(\sim) =  \sim$. We calculate
+				$$G \circ F(\sim)  = G(F(\sim)) = G(A/\sim) = R_{A/\sim}.$$
+				We aim to prove that the equivalence relations $R_{A/\sim}$ and $\sim$ are equal. To prove these equivalence relations are equal we will show for all $a, b \in A$, $a \sim b$ if and only if $a R_{A/\sim} b$.
+
+					{\bf Fill in details.}
+			\end{proof}
+
+		\end{enumerate}
+	\end{hw}
+
+
+	\
+
+	\underline{\hspace{5in}}
+
+	\
+
+
+	\noindent{\bf\underline{Section 6.3 of {\em Bloch}}}
+
+	\
+
+	\begin{hw}
+		Prove that $7n<2^n$ for all $n \in \N$ such that $n \geq 6.$
+	\end{hw}
+
+
+	\begin{hw}
+				Prove that for all $n \in \mathbb{N}$, $10^n - 6^n$ is divisible by 4.
+	\end{hw}
+
+	\begin{hw}
+				Prove that for all natural numbers $n$, $$ \frac{1}{1\cdot 2} + \frac{1}{2\cdot 3} +\frac{1}{3\cdot 4} + \dots + \frac{1}{n\cdot (n+1)} = \frac{n}{n+1}.$$
+	\end{hw}
+
+
+	\begin{hw}
+				Prove that for all $n \in \N$ such that $n\geq 2$, $$(1-\frac{1}{2^2})(1-\frac{1}{3^2})(1-\frac{1}{4^2}) \dots (1-\frac{1}{n^2}) = \frac{n+1}{2n}.$$
+	\end{hw}
+
+	\begin{hw}
+				Let $f:A \rightarrow B$ a function.
+		Prove that for all $n \in \N$, $$f^*(W_1 \cup \ldots \cup W_n) =f^*(W_1) \cup \cdots \cup f^*(W_n)$$
+			where $W_i \subseteq B$, for all $i \in \{ 1, 2, \dots, n\}$.
+	\end{hw}
+
+
+	%Let $n, k \in \N$.  Let $S \subseteq \{1, 2, \dots, n\}$ be a nonempty subset.  Then there is a bijective function $g:\{1, 2, \dots, n\} \rightarrow \{1, 2, \dots, n\}$ such that \newline $g_*(S) = \{1, 2, \dots, r \}$ for some $r\in \N$ such that $r \leq n$.  If $S$ is a proper subset of  $\{1, 2, \dots, n\}$, then $r<n$.
+
+
+	\
+
+	\underline{\hspace{5in}}
+
+	\
+
+
+	\noindent{\bf\underline{Section 6.4 of {\em Bloch}}}
+
+	\
+	\begin{hw}
+		\be
+		\item Prove that $F_1 + F_2 + F_3 + \dots + F_n = F_{n+2}-1$ for all $n \in \N$.
+		\item Prove that $F_1^2 + F_2^2 + F_3^2 + \dots + F_n^2 = F_nF_{n+1}$ for all $n \in \N$.
+		\ee
+	\end{hw}
+
+
+	\begin{hw}
+				Let $r_1, r_2, r_3, \dots$ be the sequence defined by $$r_1 = 1 \textrm{ \  and  \ } r_{n+1} = 4r_n+7$$ for all $n \in \N$. Prove that $$r_n = \frac{1}{3} (10 \cdot 4^{n-1} -7 )$$ for all $n\in \N$.
+	\end{hw}
+
+	\
+
+	\underline{\hspace{5in}}
+
+	\
+
+
+	\noindent{\bf\underline{Section 6.5 of {\em Bloch}}}
+
+	\
+
+	\begin{hw}
+				Prove that the set of all integers that are a multiple of 5 has the same cardinality as the set of all integers.
+	\end{hw}
+
+	\begin{hw}
+				Let $A$ and $B$ be sets, let $X\subseteq A$. Prove that if $f:A \rightarrow B$ is an injective function, then $X \sim f_*(X)$.
+	\end{hw}
+
+	\begin{hw}
+				Let $a, b, c, d \in \R$. Suppose $a<b$ and $c<d$. Use the Schroeder-Bernstein Theorem to prove that  $[a,b) \sim [c,d]$.
+	\end{hw}
+
+%\begin{hw} Let $A$ be a set.  Prove that the following three statements are equivalent.
+%\be \item $A$ is finite. \item There is an injective function $f: A \rightarrow \{ 1, 2, 3, \dots, n \}$ for some $n\in \N$. \item There is a surjective function $g: \{1, 2, 3, \dots, n\} \rightarrow A$ for some $n \in \N$.
+%\ee
+%\end{hw}
+
+	\
+
+	\underline{\hspace{5in}}
+
+	\
+
+
+	\noindent{\bf\underline{Section 6.6 of {\em Bloch}}}
+
+	\
+
+	\begin{hw}
+				Let $X$ be a set. Suppose $X$ is countably infinite. Prove that there is a function $f:X \rightarrow X$  that is injective, but not surjective.
+	\end{hw}
+	\
+
+	\
+
+	\underline{\hspace{5in}}
+
+	\
+
+
+	\noindent{\bf\underline{Section 6.7 of {\em Bloch}}}
+
+	\
+
+	\begin{hw}
+				Prove that the set $$S = \{ x \in (0, 1) \ | \ \textrm{the decimal expansion of {\it x}  has only odd digits} \}$$ is uncountable.
+	\end{hw}
+
+
+	\underline{\hspace{5in}}
+
+	\
+
+
+	\noindent{\bf\underline{Section 7.8 of {\em Bloch}}}
+
+	\
+
+	\begin{hw}
+				Use the definition of a limit to prove $\ds \lim_{n \rightarrow \infty} \frac{n^2}{5-n^2} = -1$.
+	\end{hw}
+
+	\begin{hw}
+				Use the definition of a limit to prove $\ds \lim_{n \rightarrow \infty} \frac{3n+1}{57+2n} = \frac{3}{2}$.
+	\end{hw}
+
+	\begin{hw}
+				Prove that the sequence $\{ 2n \}_{n=1}^{\infty}$ is divergent using the definition of a limit.
+	\end{hw}
+
+	\begin{hw}
+				Prove Limit Law 2 for sequences. (Theorem 7.8.6, part 2)
+	\end{hw}
+
+	\begin{hw}
+				Prove Limit Law 3 for sequences. (Theorem 7.8.6, part 3)
+	\end{hw}
+
+	\
+
+	\noindent{\bf\underline{Other Problems}}
+
+	\begin{hw}  {\bf Use strong induction} to show that every natural number can be written as a sum of distinct powers of 2. For example, $13=2^3 + 2^2 + 2^0$. You'll want 2 cases for this one. Be sure to use your strong induction hypothesis.
+	\end{hw}
+
+	\
+
+\end{document}

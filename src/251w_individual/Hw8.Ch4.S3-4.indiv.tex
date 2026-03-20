@@ -1,0 +1,176 @@
+% Authors: Teddy Wachtler
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass{article}
+\usepackage[dvips]{graphicx}
+\usepackage{a4wide}
+\usepackage{amsmath}
+\usepackage{euscript}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsopn}
+
+\theoremstyle{definition}
+\newtheorem*{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+
+\renewcommand{\qed}{\blacksquare}
+\newcommand{\powset}{{\cal P}}
+\newcommand{\img}{_{*}}
+\newcommand{\pimg}{^{*}}
+
+\newcommand{\vv}{\ensuremath{\vec{v}}}
+\newcommand{\vu}{\ensuremath{\vec{u}}}
+\newcommand{\vw}{\ensuremath{\vec{w}}}
+\newcommand{\vx}{\ensuremath{\vec{x}}}
+\newcommand{\vy}{\ensuremath{\vec{y}}}
+\newcommand{\vb}{\ensuremath{\vec{b}}}
+\newcommand{\vo}{\ensuremath{\vec{0}}}
+\newcommand{\va}{\ensuremath{\vec{a}}}
+\newcommand{\ve}{\ensuremath{\vec{e}}}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+	\begin{center}
+		\Large{Math 251W: Foundations of Advanced Mathematics}
+		\vspace{0.1cm}
+
+		\normalsize Portfolio Assignment 4: \S 4.3 \& 4.4
+		\vspace{0.1cm}
+
+		\hfill Name: Teddy Wachtler
+		\vspace{0.1cm}
+
+		\hrule
+		\vspace{0.5cm}
+	\end{center}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	\noindent Problem 4.4.14
+	\vspace{0.2cm}
+
+	\begin{enumerate}
+		\item[3]
+		\underline{Proposition:}
+		Given functions $f : A \rightarrow B$, and $g : B \rightarrow C$, if $g \circ f$ is bijective, then $f$ must be injective and $g$ must be surjective.
+
+	\end{enumerate}
+
+	\vspace{0.2cm}
+	\fbox{Proof} (Direct)
+	\vspace{0.2cm}
+
+	Let $A, B$, and $C$ be arbitrary sets.
+	Let $f$ and $g$ be arbitrary functions defined by $f : A \rightarrow B$ and $g : B \rightarrow C$.
+	Suppose $g \circ f$ is bijective.
+	By the definition of bijective functions, we see that $g \circ f$ is injective and surjective.
+
+	Let $a_1$ and $a_2$ be arbitrary elements in $A$ so that $f(a_1) = f(a_2)$
+	By substitution, we see that $g(f(a_1)) = g(f(a_2))$.
+	By the definition of function composition, we see that $(g \circ f)(a_1) = (g \circ f)(a_2)$.
+	By the definition of injective functions, we see that $a_1 = a_2$.
+	By the definition of injective functions, since $a_1$ and $a_2$ were arbitrary elements of $A$, and $f(a_1) = f(a_2)$ implies $a_1 = a_2$, we see that $f$ is injective.
+
+	Let $c$ be an arbitrary element in $C$.
+	By the definition of surjective functions, since $g \circ f$ is surjective, we see that there exists $a \in A$ so that $(g \circ f)(a) = c$.
+	By the definition of function composition, we see that $g(f(a)) = c$.
+	Since $f : A \rightarrow B$, we see that there exists $b \in B$ so that $f(a) = b$.
+	By substitution, we see that $g(b) = c$.
+	Therefore, by the definition of surjective functions, since $c$ was an arbitrary element in $C$, and there exists an element $b \in B$ so that $g(b) = c$, we see that $g$ is surjective.
+
+	Therefore, we see that for all sets $A, B$, and $C$, and for all functions $f : A \rightarrow B$, and $g : B \rightarrow C$, if $g \circ f$ is bijective, then $f$ must be injective and $g$ must be surjective.
+	$\qed$.
+
+	\vspace{0.5cm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	\newpage
+
+	\noindent Challenge Problem
+	\vspace{0.2cm}
+
+	\underline{Proposition:}
+	Let $f: A \rightarrow B$ be a function.
+	We can define a new function $F: \mathcal{P}(A) \rightarrow \mathcal{P}(B)$ by the image map:\[ F(S) = f_{*}(S) = \{ f(x)  \mid x \in S \} \]
+
+	\begin{enumerate}
+		\item
+		Prove that if $f$ is surjective, then $F$ is surjective.
+
+		\vspace{0.2cm}
+		\fbox{Proof} (Direct)
+		\vspace{0.2cm}
+
+		Let $A$ and $B$ be arbitrary sets.
+		Let $f$ be an arbitrary function defined by $f : A \rightarrow B$.
+		Let $F$ be an arbitrary function defined by $F : \powset (A) \rightarrow \powset (B)$ and $F(S) = f \img (S) = \{ f(x) : x \in S \}$.
+		Suppose $f$ is surjective.
+		Let $Y$ be an arbitrary element of $\powset(B)$.
+		Let $X$ be the set defined by $X = \{x \in A : f(x) \in Y\}$.
+
+		Let $y_1$ be an arbitrary element of $f \img (X)$.
+		By the definition of the image, we see that there exists a $x_1 \in X$ so that $f(x_1) = y_1$.
+		By the definition of $X$, since $x_1 \in X$, we see that $f(x_1) \in Y$.
+		By substitution, we see that $y_1 \in Y$.
+		Therefore, by the definition of subsets, since $y_1 \in f \img (X)$ implies $y_1 \in Y$, we see that $f \img (X) \subseteq Y$.
+
+		Let $y_2$ be an arbitrary element of $Y$.
+		By the definition of the power set, we see that $Y \subseteq B$.
+		By the definition of subsets, since $y_2 \in Y$, we see that $y_2 \in B$.
+		By the definition of surjective functions, since $f$ is surjective, we see that there exists $x_2 \in A$ so that $f(x_2) = y_2$.
+		By the definition of $X$, since $f(x_2) \in Y$, we see that $x_2 \in X$.
+		By the definition of the image, we see that $y_2 \in f \img (X)$
+		Therefore, by the definition of subsets, since $y_2 \in Y$ implies $y_2 \in f \img (X)$, we see that $Y \subseteq f \img (X)$.
+
+		Therefore, by the definition of set equality, since $Y \subseteq f \img (X)$ and $f \img (X) \subseteq Y$, we see that $Y = f \img (X)$.
+		By the definition of $X$, we see that $X \subseteq A$.
+		By the definition of the power set, we see that $X \in \powset (A)$.
+		By the definition of $F$, we see that $F(X) = Y$.
+		By the definition of surjective functions, since $Y$ was an arbitrary element of $\powset (B)$ and there exists an element $X$ so that $F(X) = Y$, we see that $F$ is surjective.
+		Therefore, for all sets $A$ and $B$, and for all functions $f$ defined by $f : A \rightarrow B$ and functions $F$ defined by $F : \powset (A) \rightarrow \powset (B)$ and $F(S) = f \img (S) = \{ f(x) : x \in S \}$, we see that if $f$ is surjective, then $F$ is surjective.
+		$\qed$.
+
+		\vspace{0.2cm}
+		\item
+		Is it true that if $f$ is injective, then $F$ is injective?
+		Provide a Proof or counterexample.
+
+		\vspace{0.2cm}
+		\fbox{Proof} (Direct)
+		\vspace{0.2cm}
+
+		Let $A$ and $B$ be arbitrary sets.
+		Let $f$ be an arbitrary function defined by $f : A \rightarrow B$.
+		Let $F$ be an arbitrary function defined by $F : \powset (A) \rightarrow \powset (B)$ and $F(S) = f \img (S) = \{ f(x) : x \in S \}$.
+		Suppose $f$ is injective.
+		Let $A_1$ and $A_2$ be arbitrary elements of $\powset (A)$ so that $F(A_1) = F(A_2)$.
+		By the definition of $F$, we see that $f \img (A_1) = f \img (A_2)$.
+		Let $a_1$ be an arbitrary element in $A_1$.
+		By the definition of $f$, there exists a particular element $b \in B$ so that $f(a_1) = b$.
+		By the definition of images, we see that $b \in f \img (A_1)$.
+		By the definition of set equality, since $f \img (A_1) = f \img (A_2)$, we see that $b \in f \img (A_2)$.
+		By the definition of the image, we see that there exists some element $a_2 \in A_2$ so that $f(a_2) = b$.
+		By the definition of injective functions, since $f$ is injective, we see that $a_1 = a_2$.
+		By substitution, we see that $a_1 \in A_2$.
+		By the definition of subsets, since $a_1 \in A_1$ implies $a_1 \in A_2$, we see that $A_1 \subseteq A_2$.
+		By a similar argument, we see that $A_2 \subseteq A_1$.
+		By the definition of set equality, we see that $A_1 = A_2$.
+		By the definition of injective functions, since $A_1$ and $A_2$ were arbitrary elements of $\powset (A)$ and $F(A_1) = F(A_2)$ implies $A_1 = A_2$, we see that $F$ is injective.
+		Therefore, for all sets $A$ and $B$, and for all functions $f$ defined by $f : A \rightarrow B$ and functions $F$ defined by $F : \powset (A) \rightarrow \powset (B)$ and $F(S) = f \img (S) = \{ f(x) : x \in S \}$, we see that if $f$ is injective, then $F$ is injective.
+		$\qed$.
+
+		\vspace{0.2cm}
+	\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}

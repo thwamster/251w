@@ -1,0 +1,153 @@
+\documentclass{amsart}
+
+\usepackage{keytheorems}
+\usepackage{amsthm}
+\usepackage{color}
+
+\newkeytheorem{problem}
+\newtheorem*{proposition}{Proposition}
+\newcommand{\todo}{\textcolor{red}{TO-DO.} }
+
+\newcommand{\set}[1]{\left\{#1\right\}}
+\newcommand{\powset}{{\cal P}}
+\newcommand{\img}{_{*}}
+\newcommand{\pimg}{^{*}}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+
+\numberwithin{equation}{section}
+
+\begin{document}
+
+	\title{
+		Math 251W: Foundations of Advanced Mathematics \\
+		\textmd{Homework \#10: Portfolio Problems \S 5.2 \& 5.3}}
+	\author{Carmen Beltran \and Brendan Butler \and Teddy Wachtler}
+	\date{\today}
+
+	\maketitle
+
+	\begin{problem}[manual-num=55]
+		\begin{proposition}
+			Let $n, q \in \N$, and let $a, b \in \Z$.
+			Suppose $a \equiv b (\bmod{n}),$ and $q|n$.
+			Prove that $a \equiv b (\bmod{q})$.
+		\end{proposition}
+
+		\begin{proof}
+			Let $n$ and $q$ be arbitrary natural numbers.
+			Let $a$ and $b$ be arbitrary integers.
+			Suppose $a \equiv b(\bmod{n})$ and $q|n$.
+			\todo
+			We see that $a \equiv b (\bmod{q})$.
+			Therefore, we see that for all natural numbers $n$ and $q$, and for all integers $a$ and $b$, if $a \equiv b(\bmod{n})$ and $q|n$, then $a \equiv b (\bmod{q})$.
+		\end{proof}
+	\end{problem}
+
+	\begin{problem}[manual-num=56]
+		\newcommand{\W}{\mathcal{W}}
+		\newcommand{\T}{\mathcal{T}}
+
+		Let $A$ be a non-empty set.
+		Let $E(A)$ denote the set of all equivalence relations on the set $A$.
+		Let $\T_A$ denote the set of all partitions of the set $A$.
+		Let $F: E(A) \rightarrow \T_A$ be the function defined by $F(\sim) = \set{\sim [a] \mid a \in A}$ for all equivalence relations $\sim \in E(A)$.
+		Let $G : \T_A \rightarrow E(A)$ be the function defined by $G(\W) = R_{\W}$ for all partitions $\W \in \T_A$.
+
+		\begin{enumerate}
+			\item
+			Prove the function $F$ is well-defined by showing $F(\sim) \in \T_A$.
+
+			\begin{proof}
+				We ask whether $F: E(A) \rightarrow \T_A$ is well-defined.
+				LEt $\sim$ be an arbitrary element in $E(A)$.
+				We ask whether the set of equivalence classes $\set{\sim [a] \mid a \in A}$ forms a partition of $A$.
+				\todo
+				Therefore, we see that $F: E(A) \rightarrow \T_A$ is well-defined.
+			\end{proof}
+
+			\item
+			Prove the function $G$ is well-defined by showing $G(\W) \in E(A)$.
+
+			\begin{proof}
+				We ask whether $G : \T_A \rightarrow E(A)$ is well-defined.
+				Let $\W$ be an arbitrary partition in $\T_A$.
+
+				We ask whether $R_{\W}$ is reflexive.
+				\todo
+
+				We ask whether $R_{\W}$ is symmetric.
+				\todo
+
+				We ask whether $R_{\W}$ is transitive.
+				\todo
+
+				By the definition of equivalence relations, since $R_{\W}$ is reflexive, symmetric, and transitive, we see that $R_{\W}$ is an equivalence relation.
+				By substitution, since $R_{\W} = G(\W)$, we see that $G(\W)$ is an equivalence relation.
+				By the definition of $E(A)$, we see that $G(\W) \in E(A)$.
+				Therefore, we see that $G : \T_A \rightarrow E(A)$ is well-defined.
+			\end{proof}
+
+			\item Prove that $F \circ G = Id_{\T_A}$.
+
+			\begin{proof}
+				We ask whether $F \circ G = Id_{\T_A}$.
+				By the definition of function composition, we see that $F \circ G : \T_A \rightarrow \T_A$.
+				By the definition of the identity function, we see that $Id_{\T_A} : \T_A \rightarrow \T_A$.
+				We see that the domain and co-domain of $F \circ G$ and $Id_{\T_A}$ are the same.
+				Let $\W$ be an arbitrary element of $\T_A$.
+				By the definition of the identity function, we see that $Id_{\T_A}(\W) = \W$.
+				By the definition of function composition and substitution, we see that
+				$(F \circ G)(\W) = F(G(\W)) = F(R_{\W}) = A /( R_{\W})$.
+
+				Let $A_0$ be an arbitrary element of $A / (R_{\W})$.
+				\todo
+				We see that $A_0 \in \W$.
+				By the definition of subsets, since $A_0 \in A / (R_{\W})$ implies $A_0 \in \W$, we see that $A / (R_{\W}) \subseteq \W$.
+
+				Let $A_1$ be an arbitrary element of $A / (R_{\W})$.
+				\todo
+				By the definition of subsets, since $A_1 \in \W$ implies $A / (R_{\W})$, we see that $\W \subseteq A / (R_{\W})$.
+
+				By the definition of set equality, we see that $A / (R_{\W}) = \W$.
+				By substitution, we see that $(F \circ G)(\W) = Id_{\T_A}(\W)$.
+				Therefore, By the definition of function equality, since the domain and co-domain of $F \circ G$ and $Id_{\T_A}$ are the same and  $(F \circ G)(\W) = Id_{\T_A}(\W)$ for all elements $\W \in T_A$, we see that $(F \circ G) = Id_{\T_A}$.
+			\end{proof}
+
+			\item Prove that $G \circ F = Id_{E(A)}$.
+
+			\begin{proof}
+				We ask whether $G \circ F = Id_{E(A)}$.
+				By the definition of function composition, we see that $G \circ F : E(A) \rightarrow E(A)$.
+				By the definition of the identity function, we see that $Id_{E(A)} : E(A) \rightarrow E(A)$.
+				We see that the domain and co-domain of $F \circ G$ and $Id_{\T_A}$ are the same.
+				Let $\sim$ be an arbitrary element of $E(A)$.
+				By the definition of the identity function, we see that $Id_{\T_A}(\sim) = \sim$.
+				By the definition of function composition and substitution, we see that
+				$(G \circ F)(\sim)  = G(F(\sim)) = G(A / \sim) = R_{A / \sim}$.
+				Let $a$ and $b$ be arbitrary elements of $A$.
+
+				Consider the case where $(a, b) \in \sim$.
+				\todo
+				We see that $(a, b) \in R_{A / \sim}$.
+				We see that if $(a, b) \in \sim$, then $(a, b) \in R_{A / \sim}$.
+
+				Consider the case where $(a, b) \in R_{A / \sim}$.
+				\todo
+				We see that $(a, b) \in \sim$.
+				We see that if $(a, b) \in R_{A / \sim}$, then $(a, b) \in \sim$.
+
+				We see that $(a, b) \in R_{A / \sim}$ if and only if $(a, b) \in \sim$.
+				\todo
+				We see that $R_{A / \sim} = \sim$.
+				By substitution, we see that $(F \circ G)(\sim) = Id_{\T_A}(\sim)$.
+				Therefore, By the definition of function equality, since the domain and co-domain of $G \circ F$ and $Id_{E(A)}$ are the same and  $(G \circ F)(\sim) = Id_{E(A)}(\sim)$ for all elements $\sim \in E(A)$, we see that $(F \circ G) = Id_{\T_A}$.
+			\end{proof}
+		\end{enumerate}
+	\end{problem}
+
+\end{document}

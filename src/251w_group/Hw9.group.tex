@@ -1,0 +1,130 @@
+% Authors: Carmen Beltran, Brendan Butler, Teddy Wachtler
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass{article}
+\usepackage[dvips]{graphicx}
+\usepackage[a4paper, margin=3cm]{geometry}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsopn}
+\usepackage{amsmath}
+
+\theoremstyle{definition}
+\newtheorem*{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+
+\newcommand{\header}[3]{
+	\begin{center}
+	\Large{{#1}} \\
+	\smallskip \normalsize {#2} \\
+	\smallskip \hfill Name: {#3} \\
+	\smallskip \hrule
+	\bigskip
+	\end{center}}
+\newcommand{\problem}[1]{
+	\noindent Problem {#1}
+	\medskip }
+\newcommand{\proposition}{\underline{Proposition: }}
+\renewcommand{\proof}{
+	\medskip \fbox{Proof}
+	\medskip }
+\renewcommand{\qed}{\blacksquare}
+\newcommand{\todo}{\textcolor{red}{TO-DO.} }
+
+\newcommand{\set}[1]{\{{#1}\}}
+\newcommand{\powset}{{\cal P}}
+\newcommand{\img}{_{*}}
+\newcommand{\pimg}{^{*}}
+
+\newcommand{\vv}{\ensuremath{\vec{v}}}
+\newcommand{\vu}{\ensuremath{\vec{u}}}
+\newcommand{\vw}{\ensuremath{\vec{w}}}
+\newcommand{\vx}{\ensuremath{\vec{x}}}
+\newcommand{\vy}{\ensuremath{\vec{y}}}
+\newcommand{\vb}{\ensuremath{\vec{b}}}
+\newcommand{\vo}{\ensuremath{\vec{0}}}
+\newcommand{\va}{\ensuremath{\vec{a}}}
+\newcommand{\ve}{\ensuremath{\vec{e}}}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+	\header
+	{Math 251W: Foundations of Advanced Mathematics}
+	{Portfolio Assignment 5: \S 5.1 \& 5.3}
+	{Carmen Beltran, Brendan Butler, Teddy Wachtler}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	\problem{52}
+
+	\proposition
+	Suppose $R_1$ and $R_2$ are relations on a set $A$.
+	If $R_1$ is transitive and $R_2$ is transitive, is the relation $R_1 \cup R_2$ necessarily transitive?
+	Prove or give a counterexample.
+
+	\proof (Counterexample)
+
+	Let $A$ be the set $\set{0, 1, 2}$.
+	Let $R_1$ and $R_2$ be relations on a $A$ defined by $R_1 = \set{(0, 1)}$ and $R_2 = \set{(1, 2)}$.
+	By the definition of transitive relations, since there do not exist any elements $(a, b) \in R_1$ so that there exists an element $(b, c) \in R_1$, where $a, b$, and $c$ are arbitrary, we see that $R_1$ is transitive.
+	By a similar argument, we see that $R_2$ is transitive.
+	By the definition of set union, we see that $R_1 \cup R_2 = \set{(0, 1), (1, 2)}$.
+	By the definition of set membership, we see that $(0, 2) \not \in R_1 \cup R_2$.
+	By the definition of transitive relations, since there exists elements $(a, b) \in R_1 \cup R_2$ and $(b, c) \in R_1 \cup R_2$ so that $(a, c) \not \in R_1 \cup R_2$ in the case where $a = 0, b = 1$, and $c = 2$, we see that $R_1 \cup R_2$ is not transitive.
+	Therefore, for all sets $A$, and for all relations $R_1$ and $R_2$ on $A$, if $R_1$ and $R_2$ are transitive, then $R_1 \cup R_2$ is not necessarily transitive.
+	$\qed$.
+
+	\bigskip
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	\problem{53}
+
+	\proposition
+	Determine whether or not the relation $T$ given below is reflexive, symmetric and/or transitive.
+	Prove your answers.
+	Let $T$ be the relation on $\Z  \times \Z$ defined by $(x, y) T (z, w)$ if and only if there is a line in $\R^2$ that contains $(x, y)$ and $(z, w)$ that has an integer slope, for all $(x, y), (z, w) \in \Z \times \Z$.
+
+	\proof
+
+	Let $T$ be the relation on $\Z^2$ so that for all $(x_0, y_0) \in \Z^2$ and $(x_1, y_1) \in \Z^2$, $((x_0, y_0), (x_1, y_1)) \in \bar T$ if and only if there is a line in $\R^2$ with an integer slope that contains $(x_0, y_0)$ and $(x_1, y_1)$.
+	By the definition of $T$, we see that $\bar T = \set{((x_0, y_0), (x_1, y_1)) \in (\Z^2)^2 \mid \exists m \in \Z : y_1 - y_0 = m(x_1 - x_0)}$.
+
+	We ask whether $T$ is reflexive.
+	Let $(x, y)$ be an arbitrary element of $\Z^2$.
+	By substitution, we see that $y - y = 0 = x - x$.
+	By the multiplicative identity law, we see that $y - y = 1(x - x)$.
+	By the definition of $T$, since there exists $m = 1 \in \Z$ so that $y - y = m(x - x)$, we see that $((x, y), (x, y)) \in \bar T$.
+	By the definition of reflexive relations, since for all elements $(x, y) \in \Z^2$ it is the case that $((x, y), (x, y)) \in \bar T$, we see that $T$ is reflexive.
+
+	We ask whether $T$ is symmetric.
+	Let $((x_0, y_0), (x_1, y_1))$ be an arbitrary element of $\bar T$.
+	By the definition of $T$, we see that there exists $m \in \Z$ so that $y_1 - y_0 = m(x_1 - x_0)$.
+	By substitution, we see that$-1(y_1 - y_0) = -1(m)(x_1 - x_0)$.
+	By the distributive law, we see that $y_0 - y_1 = m(x_0 - x_1)$.
+	By the definition of $T$, since there exists $m \in \Z$ so that $y_0 - y_1 = m(x_0 - x_1)$, we see that $((x_1, y_1), (x_0, y_0)) \in \bar T$.
+	By the definition of symmetric relations, since for all elements $((x_0, y_0), (x_1, y_1)) \in \bar T$ it is the case that $((x_1, y_1), (x_0, y_0)) \in \bar T$, we see that $T$ is symmetric.
+
+	We ask whether $T$ is transitive.
+	Consider the points $(0, 0), (1, 2)$, and $(2, 1)$.
+	By the slope formula, we see that the slope between $(0, 0)$ and $(1, 2)$ is $\frac{0 - 2}{0 - 1} = 2$.
+	By the definition of $T$, since $2 \in \Z$, we see that $((0, 0), (1, 2)) \in \bar T$.
+	By a similar argument, we see that the slope between $(1, 2)$ and $(2, 1)$ is $\frac{1 - 2}{2 - 1} = -1$, $-1 \in \Z$, and $((1, 2), (2, 1)) \in \bar T$.
+	By a similar argument, we see that the slope between  $(0, 0)$ and $(2, 1)$ is $\frac{1 - 0}{2 - 0} = \frac{1}{2}, \frac{1}{2} \not \in \Z$, and $((0, 0), (2, 1)) \not \in \bar T$.
+	By the definition of transitive relations, since there exists elements $(a, b) \in \bar T$ and $(b, c) \in \bar T$ so that $(a, c) \not \in \bar T$ in the case where $a = (0, 0), b = (1, 2)$, and $c = (2, 1)$, we see that $T$ is not transitive.
+
+	Therefore, for all relations $T$ on $\Z^2$ so that for all $(x_0, y_0) \in \Z^2$ and $(x_1, y_1) \in \Z^2$, $((x_0, y_0), (x_1, y_1)) \in \bar{T}$ if and only if there is a line in $\R^2$ with an integer slope that contains $(x_0, y_0)$ and $(x_1, y_1)$, it is the case that $T$ is reflexive, symmetric, but not transitive.
+	$\qed$.
+
+	\bigskip
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}

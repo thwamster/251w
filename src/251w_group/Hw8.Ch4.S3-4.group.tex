@@ -1,4 +1,4 @@
-% Authors: Carmen Beltran, Brendan Butler, Teddy Wachtler
+% Authors: Carmen Beltran, Brendan Butler, Teddy Wachtle
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \documentclass{article}
@@ -54,29 +54,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-	\noindent Problem 4.3.10 [DISCUSS]
-	\vspace{0.2cm}
-
-	\underline{Proposition:}
-	Let $f : A \rightarrow B$ be a function.
-
-	\begin{itemize}
-		\item[i]
-		If $f$ has two distinct left inverses, it has no right inverse.
-
-	\end{itemize}
-
-	\vspace{0.2cm}
-	\fbox{Proof} ( )
-	\vspace{0.2cm}
-
-	$\qed$.
-
-	\vspace{0.5cm}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-	\noindent Problem 4.3.11 [GROUP]
+	\noindent Problem 4.3.11
 	\vspace{0.2cm}
 
 	\underline{Proposition:}
@@ -87,26 +65,27 @@
 	\vspace{0.2cm}
 
 	Let $k$ be an arbitrary natural number.
-	Let $A, A_i$, $U_i$ be arbitrary sets so that $U_i \subseteq A_i$ for all $i \in \{1, \dots, k\}$.
+	Let $I$ be the particular set $\{1, \dots, k\}$.
+	Let $A, A_i$, $U_i$ be arbitrary sets so that $U_i \subseteq A_i$ for all $i \in I$.
 	Let $f$ be an arbitrary function defined by $f : A \rightarrow A_1 \times A_2 \times \dots \times A_k$.
-	Let $f_i$ be the coordinate function of $f$ defined by $f_i : A \rightarrow A_i$ and $f_i = \pi_i \circ f$ for all $i \in \{1, \dots, k\}$.
+	Let $f_i$ be the coordinate function of $f$ defined by $f_i : A \rightarrow A_i$ and $f_i = \pi_i \circ f$ for all $i \in I$.
 	We ask whether $f \pimg (U_1 \times U_2 \times \dots \times U_k) = \bigcap_{i = 1}^k f_i \pimg (U_i)$.
 
 	Let $x$ be an arbitrary element of $f \pimg (U_1 \times U_2 \times \dots \times U_k)$.
 	By the definition of the pre-image, we see that $f(x) \in U_1 \times U_2 \times \dots \times U_k$.
-	By the definition of the Cartesian product, we see that $\pi_i(f(x)) \in U_i$ for all $i \in \{1, \dots, k\}$.
-	By the definition of function composition, we see that $(\pi_i \circ f)(x) \in U_i$ for all $i \in \{1, \dots, k\}$.
-	By the definition of $f_i$, we see that $f_i(x) \in U_i$ for all $i \in \{1, \dots, k\}$.
-	By the definition of the pre-image, we see that $x \in f_i \pimg (U_i)$ for all $i \in \{1, \dots, k\}$.
+	By the definition of the Cartesian product, we see that $\pi_i(f(x)) \in U_i$ for all $i \in I$.
+	By the definition of function composition, we see that $(\pi_i \circ f)(x) \in U_i$ for all $i \in I$.
+	By the definition of $f_i$, we see that $f_i(x) \in U_i$ for all $i \in I$.
+	By the definition of the pre-image, we see that $x \in f_i \pimg (U_i)$ for all $i \in I$.
 	By the definition of indexed intersections, we see that $x \in \bigcap_{i = 1}^k f_i \pimg (U_i)$.
 	Therefore, by the definition of subsets, since $x$ was an arbitrary element of $f \pimg (U_1 \times U_2 \times \dots \times U_k)$ and $x \in \bigcap_{i = 1}^k f_i \pimg (U_i)$, we see that $f \pimg (U_1 \times U_2 \times \dots \times U_k) \subseteq \bigcap_{i = 1}^k f_i \pimg (U_i)$.
 
 	Let $y$ be an arbitrary element of $\bigcap_{i = 1}^k f_i \pimg (U_i)$.
-	By the definition of indexed intersections, we see that $y \in f_i \pimg (U_i)$ for all $i \in \{1, \dots, k\}$.
-	By the definition of the pre-image, we see that $f_i(y) \in U_i$ for all $i \in \{1, \dots, k\}$.
-	By the definition of $f_i$, we see that $(\pi_i \circ f)(y) \in U_i$ for all $i \in \{1, \dots, k\}$.
-	By the definition of function composition, we see that $\pi_i(f(y)) \in U_i$ for all $i \in \{1, \dots, k\}$.
-	By the definition of the Cartesian product, we see that $f(y) \in U_1 \times U_2 \times \dots \times U_k$.
+	By the definition of indexed intersections, we see that $y \in f_i \pimg (U_i)$ for all $i \in I$.
+	By the definition of the pre-image, we see that $f_i(y) \in U_i$ for all $i \in I$.
+	By the definition of $f_i$, we see that $(\pi_i \circ f)(y) \in U_i$ for all $i \in I$.
+	By the definition of function composition, we see that $\pi_i(f(y)) \in U_i$ for all $i \in I$.
+	By the definition of the Cartesian product, since $f : A \rightarrow A_1 \times A_2 \times \dots \times A_k$, we see that $f(y) \in U_1 \times U_2 \times \dots \times U_k$.
 	By the definition of the pre-image, we see that $y \in f \pimg (U_1 \times U_2 \times \dots \times U_k)$.
 	Therefore, by the definition of subsets, since $y$ was an arbitrary element of $\bigcap_{i = 1}^k f_i \pimg (U_i)$ and $y \in f \pimg (U_1 \times U_2 \times \dots \times U_k)$, we see that $\bigcap_{i = 1}^k f_i \pimg (U_i) \subseteq f \pimg (U_1 \times U_2 \times \dots \times U_k)$.
 
@@ -118,63 +97,9 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-	\noindent Problem 4.4.7 [DISCUSS]
-	\vspace{0.2cm}
-
-	\underline{Proposition:}
-	The function $\phi : \powset (A) \rightarrow \powset (A)$, defined by $\phi (X) = A - X$ for all $X \in \powset (A)$, is bijective.
-
-	\vspace{0.2cm}
-	\fbox{Proof} ( )
-	\vspace{0.2cm}
-
-	$\qed$.
-
-	\vspace{0.5cm}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-	\noindent Problem 4.4.14 [INDIVIDUAL]
-	\vspace{0.2cm}
-
-	\begin{enumerate}
-		\item[3]
-		\underline{Proposition:}
-		Given functions $f : A \rightarrow B$, and $g : B \rightarrow C$, if $g \circ f$ is bijective, then $f$ must be injective and $g$ must be surjective.
-
-	\end{enumerate}
-
-	\vspace{0.2cm}
-	\fbox{Proof} (Direct)
-	\vspace{0.2cm}
-
-	Let $A, B$, and $C$ be arbitrary sets.
-	Let $f$ and $g$ be arbitrary functions defined by $f : A \rightarrow B$ and $g : B \rightarrow C$.
-	Suppose $g \circ f$ is bijective.
-	By the definition of bijective functions, we see that $g \circ f$ is injective and surjective.
-
-	Let $a_1$ and $a_2$ be arbitrary elements in $A$ so that $f(a_1) = f(a_2)$
-	By substitution, we see that $g(f(a_1)) = g(f(a_2))$.
-	By the definition of function composition, we see that $(g \circ f)(a_1) = (g \circ f)(a_2)$.
-	By the definition of injective functions, we see that $a_1 = a_2$.
-	By the definition of injective functions, since $a_1$ and $a_2$ were arbitrary elements of $A$, and $f(a_1) = f(a_2)$ implies $a_1 = a_2$, we see that $f$ is injective.
-
-	Let $c$ be an arbitrary element in $C$.
-	By the definition of surjective functions, since $g \circ f$ is surjective, we see that there exists $a \in A$ so that $(g \circ f)(a) = c$.
-	By the definition of function composition, we see that $g(f(a)) = c$.
-	By the definition of $f$, we see that there exists $b \in B$ so that $f(a) = b$.
-	By substitution, we see that $g(b) = c$.
-	Therefore, by the definition of surjective functions, since $c$ was an arbitrary element in $C$, and there exists an element $b \in B$ so that $g(b) = c$, we see that $g$ is surjective.
-
-	Therefore, we see that for all sets $A, B$, and $C$, and for all sets $f : A \rightarrow B$, and $g : B \rightarrow C$, if $g \circ f$ is bijective, then $f$ must be injective and $g$ must be surjective.
-	$\qed$.
-
-	\vspace{0.5cm}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	\newpage
 
-	\noindent Problem 4.4.17 [GROUP]
+	\noindent Problem 4.4.17
 	\vspace{0.2cm}
 
 	\underline{Proposition:}
@@ -218,39 +143,6 @@
 	$\qed$.
 
 	\vspace{0.5cm}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-	\noindent Challenge Problem
-	\vspace{0.2cm}
-
-	\underline{Proposition:}
-	Let $f: A \rightarrow B$ be a function.
-	We can define a new function $F: \mathcal{P}(A) \rightarrow \mathcal{P}(B)$ by the image map:\[ F(S) = f_{*}(S) = \{ f(x)  \mid x \in S \} \]
-
-	\begin{enumerate}
-		\item
-		Prove that if $f$ is surjective, then $F$ is surjective.
-
-		\vspace{0.2cm}
-		\fbox{Proof} ( )
-		\vspace{0.2cm}
-
-		$\qed$.
-
-		\vspace{0.2cm}
-		\item
-		Is it true that if $f$ is injective, then $F$ is injective?
-		Provide a Proof or counterexample.
-
-		\vspace{0.2cm}
-		\fbox{Proof} ( )
-		\vspace{0.2cm}
-
-		$\qed$.
-
-		\vspace{0.2cm}
-	\end{enumerate}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
