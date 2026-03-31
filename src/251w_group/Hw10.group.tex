@@ -7,11 +7,13 @@
 \newkeytheorem{problem}
 \newtheorem*{proposition}{Proposition}
 \newcommand{\todo}{\textcolor{red}{TO-DO.} }
+\newcommand{\temp}{\textcolor{red}{TEMPORARY.} }
 
 \newcommand{\set}[1]{\left\{#1\right\}}
 \newcommand{\powset}{{\cal P}}
 \newcommand{\img}{_{*}}
 \newcommand{\pimg}{^{*}}
+\newcommand{\id}[1]{\mathrm{id}_{#1}}
 
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\Z}{\mathbb{Z}}
@@ -19,11 +21,14 @@
 \newcommand{\N}{\mathbb{N}}
 \newcommand{\Q}{\mathbb{Q}}
 
+\newcommand{\W}{\mathcal{W}}
+\newcommand{\T}{\mathcal{T}}
+
 \numberwithin{equation}{section}
 
 \begin{document}
 
-	\title{
+	\title[Math 251W: Homework \#10]{
 		Math 251W: Foundations of Advanced Mathematics \\
 		\textmd{Homework \#10: Portfolio Problems \S 5.2 \& 5.3}}
 	\author{Carmen Beltran \and Brendan Butler \and Teddy Wachtler}
@@ -32,6 +37,7 @@
 	\maketitle
 
 	\begin{problem}[manual-num=55]
+		\temp
 		\begin{proposition}
 			Let $n, q \in \N$, and let $a, b \in \Z$.
 			Suppose $a \equiv b (\bmod{n}),$ and $q|n$.
@@ -41,32 +47,74 @@
 		\begin{proof}
 			Let $n$ and $q$ be arbitrary natural numbers.
 			Let $a$ and $b$ be arbitrary integers.
-			Suppose $a \equiv b(\bmod{n})$ and $q|n$.
-			\todo
-			We see that $a \equiv b (\bmod{q})$.
+			Suppose $a \equiv b (\bmod{n})$ and $q | n$.
+			By the definition of modular congruence, we see that there exists a particular integer $c$ so that $a - b = cn$.
+			By the definition of divides, we see that there exists a particular integer $d$ so that $n = qd$.
+			By substitution, we see that $a - b = cqd$.
+			By the closure of the integers, there exists a particular integer $e$ so that $e = cd$.
+			By substitution, we see that $a - b = eq$.
+			By the definition of modular congruence, we see that $a \equiv b (\bmod{q})$.
 			Therefore, we see that for all natural numbers $n$ and $q$, and for all integers $a$ and $b$, if $a \equiv b(\bmod{n})$ and $q|n$, then $a \equiv b (\bmod{q})$.
 		\end{proof}
 	\end{problem}
 
 	\begin{problem}[manual-num=56]
-		\newcommand{\W}{\mathcal{W}}
-		\newcommand{\T}{\mathcal{T}}
-
 		Let $A$ be a non-empty set.
 		Let $E(A)$ denote the set of all equivalence relations on the set $A$.
 		Let $\T_A$ denote the set of all partitions of the set $A$.
-		Let $F: E(A) \rightarrow \T_A$ be the function defined by $F(\sim) = \set{\sim [a] \mid a \in A}$ for all equivalence relations $\sim \in E(A)$.
-		Let $G : \T_A \rightarrow E(A)$ be the function defined by $G(\W) = R_{\W}$ for all partitions $\W \in \T_A$.
+		Let $F: E(A) \rightarrow \T_A$ be the function defined by $F(\sim) = A / \sim$ for all equivalence relations $\sim \in E(A)$.
+		Let $G : \T_A \rightarrow E(A)$ be the function defined by $G(\W) = R_\W$ for all partitions $\W \in \T_A$.
 
 		\begin{enumerate}
 			\item
 			Prove the function $F$ is well-defined by showing $F(\sim) \in \T_A$.
 
 			\begin{proof}
-				We ask whether $F: E(A) \rightarrow \T_A$ is well-defined.
-				LEt $\sim$ be an arbitrary element in $E(A)$.
-				We ask whether the set of equivalence classes $\set{\sim [a] \mid a \in A}$ forms a partition of $A$.
-				\todo
+				We ask whether $F : E(A) \rightarrow \T_A$ is well-defined.
+				Let $\sim$ be an arbitrary element in $E(A)$.
+				We ask whether $A / \sim$ forms a partition of $A$.
+
+				Let $P_a$ be an arbitrary set in $A / \sim$.
+				By the definition of set quotients, we see that there exists a particular element $a \in A$ so that $P_a = \sim [a]$.
+				By the definition of reflexive relations, we see that $a \in \sim[a]$.
+				By the substitution, we see that $a \in P_a$.
+				By the definition of the empty set, we see that $P_a \neq \emptyset$.
+				Since $P_a \in A / \sim$ implies $P_a \neq \emptyset$, we see that $A / \sim$ contains no empty subsets.
+
+				Let $P_b$ and $Q_b$ be arbitrary sets so that $P_b \in A / \sim$ and $Q_b \in A / \sim$.
+				Suppose that $P_b \cap Q_b \neq \emptyset$.
+				Let $b_0$ be an arbitrary element of $P_b$.
+				Let $b_1$ be an arbitrary element of $P_b \cap Q_b$.
+				By the definition of set intersection, we see that $b_1 \in P_b$ and $b_1 \in Q_b$.
+				By the definition of set quotients, since $P_b \in A / \sim$ and $Q_b \in A / \sim$, we see that there exists particular elements $b_p \in A$ and $b_q \in A$ so that $P_b = \sim [b_p]$ and $Q_b = \sim [b_q]$.
+				By substitution, we see that $b_0 \in \sim [b_p]$, $b_1 \in \sim [b_p]$, and $b_1 \in \sim [b_q]$.
+				By the definition of equivalence classes, we see that $(b_p, b_0) \in \sim$, $(b_p, b_1) \in \sim$, and $(b_q, b_1) \in \sim$.
+				By the definition of symmetric relations, we see that $(b_1, b_p) \in \sim$.
+				By the definition of transitive relations, we see that $(b_q, b_p) \in \sim$.
+				By the definition of transitive relations, we see that $(b_q, b_0) \in \sim$.
+				By the definition of equivalence classes, we see that $b_0 \in \sim [b_q]$.
+				By the definition of set quotients, we see that $b_0 \in Q_b$.
+				By the definition of subsets, since $b_0 \in P_b$ implies $b_0 \in Q_b$, we see that $P_b \subseteq Q_b$.
+				Analogously, we see that $Q_b \subseteq P_b$.
+				By the definition of set equality, we see that $P_b = Q_b$.
+				By the contrapositive, since $P_b \cap Q_b \neq \emptyset$ implies $P_b = Q_b$, $P_b \neq Q_b$ implies $P_b \cap Q_b = \emptyset$.
+				By the definition of pairwise disjoint sets, we see that $A / \sim$ is pairwise disjoint.
+
+				Let $c_0$ be an arbitrary element of $\bigcup_{P \in A / \sim} P$.
+				By the definition of indexed union, we see that there exists a particular element $P_c \in A / \sim$ so that $c_0 \in P_c$.
+				By the definition of set quotients, we see that there exists a particular element $c_1 \in A$ so that $c_0 \in \sim [c_1]$.
+				Since $\sim$ is an equivalence relation on $A$, we see that $c_0 \in A$.
+				By the definition of subsets, since $c_0 \in \bigcup_{P \in A / \sim} P$ implies $c_0 \in A$, we see that $\bigcup_{P \in A / \sim} P \subseteq A$.
+				Let $d$ be an arbitrary element of $A$.
+				By the definition of set quotients, we see that there exists a particular element $P_d \in A / \sim$ so that $P_d = \sim [d]$.
+				By the definition of reflexive relations, we see that $d \in \sim [d]$.
+				By substitution, we see that $d \in P_d$.
+				By the definition of indexed union, since there exists a particular element $P_d \in A / \sim$ so that $d \in P_d$, we see that $d \in \bigcup_{P \in A / \sim} P$.
+				By the definition of subsets, since $d \in A$ implies $d \in \bigcup_{P \in A / \sim} P$, we see that $A \subseteq \bigcup_{P \in A / \sim} P$.
+				By the definition of set equality, we see that $\bigcup_{P \in A / \sim} P = A$.
+				By the definition of exhaustive families of sets, we see that $A / \sim$ is exhaustive.
+
+				By the definition of partitions, since $A / \sim$ contains no empty subsets, is pairwise disjoint, and is exhaustive, we see that $A / \sim$ is a partition.
 				Therefore, we see that $F: E(A) \rightarrow \T_A$ is well-defined.
 			\end{proof}
 
@@ -76,76 +124,102 @@
 			\begin{proof}
 				We ask whether $G : \T_A \rightarrow E(A)$ is well-defined.
 				Let $\W$ be an arbitrary partition in $\T_A$.
+				Let $R_\W$ be the relation on $A$ induced by $W$.
 
-				We ask whether $R_{\W}$ is reflexive.
-				\todo
+				Let $a$ be an arbitrary element in $A$.
+				By the definition of partitions, we see that there exists a particular element $P_a \in W$ so that $a \in P_a$.
+				By the definition of $R_\W$, we see that $(a, a) \in R_\W$.
+				By the definition of reflexive relations, we see that $R_\W$ is reflexive.
 
-				We ask whether $R_{\W}$ is symmetric.
-				\todo
+				Let $b_0$ and $b_1$ be arbitrary elements of $A$ so that $(b_0, b_1) \in R_\W$.
+				By the definition of $R_\W$, we see that there exists a particular element $P_b \in W$ so that $b_0 \in P_b$ and $b_1 \in P_b$.
+				By the definition of $R_\W$, we see that $(b_1, b_0) \in R_\W$.
+				By the definition of symmetric relations, we see that $R_\W$ is symmetric.
 
-				We ask whether $R_{\W}$ is transitive.
-				\todo
+				We ask whether $R_\W$ is transitive.
+				Let $c_0, c_1$, and $c_2$ be arbitrary elements of $A$ so that $(c_0, c_1) \in R_\W$ and $(c_1, c_2) \in R_\W$.
+				By the definition of $R_\W$, we see that there exists a unique element $P_c \in \W$ so that $c_0 \in P_c$ and so that $c_1 \in P_c$.
+				By the definition of $R_\W$, we see that there exists a unique element $Q_c \in \W$ so that $c_1 \in Q_c$ and so that $c_2 \in Q_c$.
+				By the definition of partitions, since $\W$ is pairwise disjoint, $c_1 \in P_c$, and $c_1 \in Q_c$, we see that $P_c = Q_c$.
+				By substitution, we see that $c_2 \in P_c$.
+				By the definition of $R_\W$, since $c_0 \in P_c$ and $c_2 \in P_c$, we see that $(c_0, c_2) \in R_\W$.
+				By the definition of transitive relations, we see that $R_\W$ is transitive.
 
-				By the definition of equivalence relations, since $R_{\W}$ is reflexive, symmetric, and transitive, we see that $R_{\W}$ is an equivalence relation.
-				By substitution, since $R_{\W} = G(\W)$, we see that $G(\W)$ is an equivalence relation.
+				By the definition of equivalence relations, since $R_\W$ is reflexive, symmetric, and transitive, we see that $R_\W$ is an equivalence relation.
+				By substitution, since $R_\W = G(\W)$, we see that $G(\W)$ is an equivalence relation.
 				By the definition of $E(A)$, we see that $G(\W) \in E(A)$.
 				Therefore, we see that $G : \T_A \rightarrow E(A)$ is well-defined.
 			\end{proof}
 
-			\item Prove that $F \circ G = Id_{\T_A}$.
+			\item
+			Prove that $F \circ G = \id{\T_A}$.
 
 			\begin{proof}
-				We ask whether $F \circ G = Id_{\T_A}$.
+				We ask whether $F \circ G = \id{\T_A}$.
 				By the definition of function composition, we see that $F \circ G : \T_A \rightarrow \T_A$.
-				By the definition of the identity function, we see that $Id_{\T_A} : \T_A \rightarrow \T_A$.
-				We see that the domain and co-domain of $F \circ G$ and $Id_{\T_A}$ are the same.
+				By the definition of the identity function, we see that $\id{\T_A} : \T_A \rightarrow \T_A$.
+				We see that the domain and co-domain of $F \circ G$ and $\id{\T_A}$ are the same.
 				Let $\W$ be an arbitrary element of $\T_A$.
-				By the definition of the identity function, we see that $Id_{\T_A}(\W) = \W$.
+				By the definition of the identity function, we see that $\id{\T_A}(\W) = \W$.
 				By the definition of function composition and substitution, we see that
-				$(F \circ G)(\W) = F(G(\W)) = F(R_{\W}) = A /( R_{\W})$.
+				$(F \circ G)(\W) = F(G(\W)) = F(R_\W) = A / R_\W$.
 
-				Let $A_0$ be an arbitrary element of $A / (R_{\W})$.
-				\todo
-				We see that $A_0 \in \W$.
-				By the definition of subsets, since $A_0 \in A / (R_{\W})$ implies $A_0 \in \W$, we see that $A / (R_{\W}) \subseteq \W$.
+				Let $A_0$ be an arbitrary element of $A / R_\W$.
+				By the definition of set quotients, we see that there exists a particular element $a_0 \in A$ so that $A_0 = R_\W [a_0]$.
+				By the definition of partitions, since $\W$ is exhaustive, we see that there exists a particular element $P_0 \in \W$ so that $a_0 \in P_0$.
+				By the definition of $R_\W$, we see that there exists a unique element $R_\W [a_0] \in \W$.
+				By the definition of reflexive relations, we see that $a_0 \in R_\W [a_0]$.
+				By the definition of partitions, since $\W$ is pairwise disjoint, $a_0 \in P_0$, $a_0 \in R_\W [a_0]$, we see that $P_0 = R_\W [a_0]$.
+				By substitution, we see that $A_0 = P_0$.
+				By substitution, we see that $A_0 \in \W$.
+				By the definition of subsets, since $A_0 \in A / R_\W$ implies $A_0 \in \W$, we see that $A / R_\W \subseteq \W$.
 
-				Let $A_1$ be an arbitrary element of $A / (R_{\W})$.
-				\todo
-				By the definition of subsets, since $A_1 \in \W$ implies $A / (R_{\W})$, we see that $\W \subseteq A / (R_{\W})$.
+				Let $A_1$ be an arbitrary element of $\W$.
+				By the definition of partitions, since $\W$ contains no empty subsets, there exists a particular element $a_1 \in A_1$.
+				By the definition of $\W$, since $A_1 \in \W$, we see that $a_1 \in A$.
+				By the definition of $R_\W$, we see that there exists a unique element $R_\W [a_1] \in \W$.
+				By the definition of reflexive relations, we see that $a_1 \in R_\W [a_1]$.
+				By the definition of partitions, since $\W$ is pairwise disjoint, $a_1 \in A_1$, and $a_1 \in R_\W [a_1]$, we see that $A_1 = R_\W [a_1]$.
+				By the definition of set quotients, we see that $A_1 \in A / R_\W$.
+				By the definition of subsets, since $A_1 \in \W$ implies $A_1 \in A / R_\W$, we see that $\W \subseteq A / R_\W$.
 
-				By the definition of set equality, we see that $A / (R_{\W}) = \W$.
-				By substitution, we see that $(F \circ G)(\W) = Id_{\T_A}(\W)$.
-				Therefore, By the definition of function equality, since the domain and co-domain of $F \circ G$ and $Id_{\T_A}$ are the same and  $(F \circ G)(\W) = Id_{\T_A}(\W)$ for all elements $\W \in T_A$, we see that $(F \circ G) = Id_{\T_A}$.
+				By the definition of set equality, we see that $A / R_\W = \W$.
+				By substitution, we see that $(F \circ G)(\W) = \id{\T_A}(\W)$.
+				Therefore, by the definition of function equality, since the domain and co-domain of $F \circ G$ and $\id{\T_A}$ are the same and  $(F \circ G)(\W) = \id{\T_A}(\W)$ for all elements $\W \in T_A$, we see that $(F \circ G) = \id{\T_A}$.
 			\end{proof}
 
-			\item Prove that $G \circ F = Id_{E(A)}$.
+			\item
+			Prove that $G \circ F = \id{E(A)}$.
 
 			\begin{proof}
-				We ask whether $G \circ F = Id_{E(A)}$.
+				We ask whether $G \circ F = \id{E(A)}$.
 				By the definition of function composition, we see that $G \circ F : E(A) \rightarrow E(A)$.
-				By the definition of the identity function, we see that $Id_{E(A)} : E(A) \rightarrow E(A)$.
-				We see that the domain and co-domain of $F \circ G$ and $Id_{\T_A}$ are the same.
+				By the definition of the identity function, we see that $\id{E(A)} : E(A) \rightarrow E(A)$.
+				We see that the domain and co-domain of $G \circ F$ and $\id{E(A)}$ are the same.
 				Let $\sim$ be an arbitrary element of $E(A)$.
-				By the definition of the identity function, we see that $Id_{\T_A}(\sim) = \sim$.
+				By the definition of the identity function, we see that $\id{E(A)}(\sim) = \sim$.
 				By the definition of function composition and substitution, we see that
 				$(G \circ F)(\sim)  = G(F(\sim)) = G(A / \sim) = R_{A / \sim}$.
-				Let $a$ and $b$ be arbitrary elements of $A$.
 
-				Consider the case where $(a, b) \in \sim$.
-				\todo
-				We see that $(a, b) \in R_{A / \sim}$.
-				We see that if $(a, b) \in \sim$, then $(a, b) \in R_{A / \sim}$.
+				Let $(a_0, a_1)$ be an arbitrary element of $\sim$.
+				By the definition of equivalence classes, we see that $a_1 \in \sim [a_0]$.
+				By the definition of reflexive relations, we see that $a_0 \in \sim [a_0]$.
+				By the definition of set quotients, we see that $\sim [a_0] \in A / \sim$.
+				By the definition of equivalence relations induced by partitions, we see that $(a_0, a_1) \in R_{A / \sim}$.
+				By the definition of subsets, since $(a_0, a_1) \in \sim$ implies $(a_0, a_1) \in R_{A / \sim}$, we see that $\sim \subseteq R_{A / \sim}$.
 
-				Consider the case where $(a, b) \in R_{A / \sim}$.
-				\todo
-				We see that $(a, b) \in \sim$.
-				We see that if $(a, b) \in R_{A / \sim}$, then $(a, b) \in \sim$.
+				Let $(b_0, b_1)$ be an arbitrary element of $R_{A / \sim}$.
+				By the definition of equivalence relations induced by partitions, there exists a particular element $B \in A / \sim$ so that $b_0 \in B$ and $b_1 \in B$.
+				By the definition of set quotients, we see that there exists a particular element $b_2 \in A$ so that $B = \sim [b_2]$.
+				By substitution, we see that $b_0 \in \sim [b_2]$ and $b_1 \in \sim [b_2]$.
+				By the definition of equivalence classes, we see that $(b_2, b_0) \in \sim$ and $(b_2, b_1) \in \sim$.
+				By the definition of symmetric relations, we see that $(b_0, b_2) \in \sim$.
+				By the definition of transitive relations, we see that $(b_0, b_1) \in \sim$.
+				By the definition of subsets, since $(b_0, b_1) \in R_{A / \sim}$ implies $(b_0, b_1) \in \sim$, we see that $R_{A / \sim} \subseteq \sim$.
 
-				We see that $(a, b) \in R_{A / \sim}$ if and only if $(a, b) \in \sim$.
-				\todo
-				We see that $R_{A / \sim} = \sim$.
-				By substitution, we see that $(F \circ G)(\sim) = Id_{\T_A}(\sim)$.
-				Therefore, By the definition of function equality, since the domain and co-domain of $G \circ F$ and $Id_{E(A)}$ are the same and  $(G \circ F)(\sim) = Id_{E(A)}(\sim)$ for all elements $\sim \in E(A)$, we see that $(F \circ G) = Id_{\T_A}$.
+				By the definition of set equality, we see that $R_{A / \sim} = \sim$.
+				By substitution, we see that $(G \circ F)(\sim) = \id{E(A)}(\sim)$.
+				Therefore, by the definition of function equality, since the domain and co-domain of $G \circ F$ and $\id{E(A)}$ are the same and  $(G \circ F)(\sim) = \id{E(A)}(\sim)$ for all elements $\sim \in E(A)$, we see that $(G \circ F) = \id{E(A)}$.
 			\end{proof}
 		\end{enumerate}
 	\end{problem}

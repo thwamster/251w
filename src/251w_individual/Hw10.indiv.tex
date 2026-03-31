@@ -26,13 +26,30 @@
 	\title{
 		Math 251W: Foundations of Advanced Mathematics \\
 		\textmd{Homework \#10: Portfolio Problems \S 5.2 \& 5.3}}
-	\author{Carmen Beltran \and Brendan Butler \and Teddy Wachtler}
+	\author{Teddy Wachtler}
 	\date{\today}
 
 	\maketitle
 
 	\begin{problem}[manual-num=55]
-		\todo
+		\begin{proposition}
+			Let $n, q \in \N$, and let $a, b \in \Z$.
+			Suppose $a \equiv b (\bmod{n}),$ and $q|n$.
+			Prove that $a \equiv b (\bmod{q})$.
+		\end{proposition}
+
+		\begin{proof}
+			Let $n$ and $q$ be arbitrary natural numbers.
+			Let $a$ and $b$ be arbitrary integers.
+			Suppose $a \equiv b (\bmod{n})$ and $q | n$.
+			By the definition of modular congruence, we see that there exists a particular integer $c$ so that $a - b = cn$.
+			By the definition of divides, we see that there exists a particular integer $d$ so that $n = qd$.
+			By substitution, we see that $a - b = cqd$.
+			By the closure of the integers, there exists a particular integer $e$ so that $e = cd$.
+			By substitution, we see that $a - b = eq$.
+			By the definition of modular congruence, we see that $a \equiv b (\bmod{q})$.
+			Therefore, we see that for all natural numbers $n$ and $q$, and for all integers $a$ and $b$, if $a \equiv b(\bmod{n})$ and $q|n$, then $a \equiv b (\bmod{q})$.
+		\end{proof}
 	\end{problem}
 
 \end{document}
