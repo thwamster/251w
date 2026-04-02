@@ -105,16 +105,18 @@
 				By the definition of set quotients, we see that there exists a particular element $c_1 \in A$ so that $c_0 \in \sim [c_1]$.
 				Since $\sim$ is an equivalence relation on $A$, we see that $c_0 \in A$.
 				By the definition of subsets, since $c_0 \in \bigcup_{P \in A / \sim} P$ implies $c_0 \in A$, we see that $\bigcup_{P \in A / \sim} P \subseteq A$.
-				Let $d$ be an arbitrary element of $A$.
-				By the definition of set quotients, we see that there exists a particular element $P_d \in A / \sim$ so that $P_d = \sim [d]$.
-				By the definition of reflexive relations, we see that $d \in \sim [d]$.
-				By substitution, we see that $d \in P_d$.
-				By the definition of indexed union, since there exists a particular element $P_d \in A / \sim$ so that $d \in P_d$, we see that $d \in \bigcup_{P \in A / \sim} P$.
-				By the definition of subsets, since $d \in A$ implies $d \in \bigcup_{P \in A / \sim} P$, we see that $A \subseteq \bigcup_{P \in A / \sim} P$.
+				Let $c_2$ be an arbitrary element of $A$.
+				By the definition of set quotients, we see that there exists a particular element $Q_c \in A / \sim$ so that $Q_c = \sim [c_2]$.
+				By the definition of reflexive relations, we see that $c_2 \in \sim [c_2]$.
+				By substitution, we see that $c_2 \in Q_c$.
+				By the definition of indexed union, since there exists a particular element $Q_c \in A / \sim$ so that $c_2 \in Q_c$, we see that $c_2 \in \bigcup_{P \in A / \sim} P$.
+				By the definition of subsets, since $c_2 \in A$ implies $c_2 \in \bigcup_{P \in A / \sim} P$, we see that $A \subseteq \bigcup_{P \in A / \sim} P$.
 				By the definition of set equality, we see that $\bigcup_{P \in A / \sim} P = A$.
 				By the definition of exhaustive families of sets, we see that $A / \sim$ is exhaustive.
 
 				By the definition of partitions, since $A / \sim$ contains no empty subsets, is pairwise disjoint, and is exhaustive, we see that $A / \sim$ is a partition.
+				By substitution, since $A / \sim = F(\sim)$, we see that $F(\sim)$ is a partition.
+				By the definition of $\T_A$, we see that $F(\sim) \in T_A$.
 				Therefore, we see that $F: E(A) \rightarrow \T_A$ is well-defined.
 			\end{proof}
 
@@ -125,6 +127,7 @@
 				We ask whether $G : \T_A \rightarrow E(A)$ is well-defined.
 				Let $\W$ be an arbitrary partition in $\T_A$.
 				Let $R_\W$ be the relation on $A$ induced by $W$.
+				We ask whether $R_\W$ is an equivalence relation.
 
 				Let $a$ be an arbitrary element in $A$.
 				By the definition of partitions, we see that there exists a particular element $P_a \in W$ so that $a \in P_a$.
@@ -136,10 +139,9 @@
 				By the definition of $R_\W$, we see that $(b_1, b_0) \in R_\W$.
 				By the definition of symmetric relations, we see that $R_\W$ is symmetric.
 
-				We ask whether $R_\W$ is transitive.
 				Let $c_0, c_1$, and $c_2$ be arbitrary elements of $A$ so that $(c_0, c_1) \in R_\W$ and $(c_1, c_2) \in R_\W$.
-				By the definition of $R_\W$, we see that there exists a unique element $P_c \in \W$ so that $c_0 \in P_c$ and so that $c_1 \in P_c$.
-				By the definition of $R_\W$, we see that there exists a unique element $Q_c \in \W$ so that $c_1 \in Q_c$ and so that $c_2 \in Q_c$.
+				By the definition of $R_\W$, we see that there exists a element $P_c \in \W$ so that $c_0 \in P_c$ and so that $c_1 \in P_c$.
+				By the definition of $R_\W$, we see that there exists a element $Q_c \in \W$ so that $c_1 \in Q_c$ and so that $c_2 \in Q_c$.
 				By the definition of partitions, since $\W$ is pairwise disjoint, $c_1 \in P_c$, and $c_1 \in Q_c$, we see that $P_c = Q_c$.
 				By substitution, we see that $c_2 \in P_c$.
 				By the definition of $R_\W$, since $c_0 \in P_c$ and $c_2 \in P_c$, we see that $(c_0, c_2) \in R_\W$.
@@ -164,24 +166,42 @@
 				By the definition of function composition and substitution, we see that
 				$(F \circ G)(\W) = F(G(\W)) = F(R_\W) = A / R_\W$.
 
-				Let $A_0$ be an arbitrary element of $A / R_\W$.
-				By the definition of set quotients, we see that there exists a particular element $a_0 \in A$ so that $A_0 = R_\W [a_0]$.
-				By the definition of partitions, since $\W$ is exhaustive, we see that there exists a particular element $P_0 \in \W$ so that $a_0 \in P_0$.
-				By the definition of $R_\W$, we see that there exists a unique element $R_\W [a_0] \in \W$.
+				Let $a_0$ be an arbitrary element of $A$.
+				By the definition of quotient sets, we see that $R_\W [a_0]$ is an arbitrary element in $A / R_\W$.
 				By the definition of reflexive relations, we see that $a_0 \in R_\W [a_0]$.
-				By the definition of partitions, since $\W$ is pairwise disjoint, $a_0 \in P_0$, $a_0 \in R_\W [a_0]$, we see that $P_0 = R_\W [a_0]$.
-				By substitution, we see that $A_0 = P_0$.
-				By substitution, we see that $A_0 \in \W$.
-				By the definition of subsets, since $A_0 \in A / R_\W$ implies $A_0 \in \W$, we see that $A / R_\W \subseteq \W$.
+				By the definition of partitions, since $\W$ is exhaustive, we see that there exists a particular element $P_a \in \W$ so that $a_0 \in P_a$.
+				Let $a_1$ be an arbitrary element of $R_\W [a_0]$.
+				By the definition of equivalence classes, we see that $(a_0, a_1) \in R_\W$.
+				By the definition of $R_\W$, we see that there exists an element $Q_a \in \W$ so that $a_0 \in Q_a$ and $a_1 \in Q_a$.
+				By the definition of pairwise disjoint sets, since $a_0 \in P_a$, we see that $P_a = Q_a$.
+				By substitution, we see that $a_1 \in P_a$.
+				By the definition of subsets, since $a_1 \in R_\W [a_0]$ implies $a_1 \in P_a$, we see that $R_\W [a_0] \subseteq P_a$.
+				Let $a_p$ be an arbitrary element of $P_a$.
+				By the definition of $R_\W$, since $a_0 \in P_a$, we see that $(a_0, a_p) \in R_\W$.
+				By the definition of the equivalence class, we see that $a_p \in R_\W [a_0]$.
+				By the definition of subsets, since $a_p \in P_a$ implies $a_p \in R_\W [a_0]$, we see that $P_a \subseteq R_\W [a_0]$.
+				By the definition of set equality, we see that $R_\W [a_0] = P_a$.
+				By substitution, we see that $R_\W [a_0] \in \W$.
+				By the definition of subsets, since $R_\W [a_0] \in A / R_\W$ implies $R_\W [a_0] \in \W$, we see that $A / R_\W \subseteq \W$.
 
-				Let $A_1$ be an arbitrary element of $\W$.
-				By the definition of partitions, since $\W$ contains no empty subsets, there exists a particular element $a_1 \in A_1$.
-				By the definition of $\W$, since $A_1 \in \W$, we see that $a_1 \in A$.
-				By the definition of $R_\W$, we see that there exists a unique element $R_\W [a_1] \in \W$.
-				By the definition of reflexive relations, we see that $a_1 \in R_\W [a_1]$.
-				By the definition of partitions, since $\W$ is pairwise disjoint, $a_1 \in A_1$, and $a_1 \in R_\W [a_1]$, we see that $A_1 = R_\W [a_1]$.
-				By the definition of set quotients, we see that $A_1 \in A / R_\W$.
-				By the definition of subsets, since $A_1 \in \W$ implies $A_1 \in A / R_\W$, we see that $\W \subseteq A / R_\W$.
+				Let $P_b$ be an arbitrary element of $\W$.
+				By the definition of partitions, since $\W$ contains no empty subsets, there exists a particular element $b_0 \in P_b$.
+				By the definition of $\W$, since $P_b \in \W$, we see that $b_0 \in A$.
+				By the definition of quotient sets, we see that there exists a particular element $R_\W [b_0] \in A / R_\W$.
+				Let $b_1$ be an arbitrary element of $R_\W [b_0]$.
+				By the definition of equivalence classes, we see that $(b_0, b_1) \in R_\W$.
+				By the definition of $R_\W$, we see that there exists an element $Q_b \in \W$ so that $b_0 \in Q_b$ and $b_1 \in Q_b$.
+				By the definition of pairwise disjoint sets, since $b_0 \in P_b$, we see that $P_b = Q_b$.
+				By substitution, we see that $b_1 \in P_b$.
+				By the definition of subsets, since $b_1 \in R_\W [b_0]$ implies $b_1 \in P_b$, we see that $R_\W [b_0] \subseteq P_b$.
+				Let $b_p$ be an arbitrary element of $P_b$.
+				By the definition of $R_\W$, since $b_0 \in P_b$, we see that $(b_0, b_p) \in R_\W$.
+				By the definition of the equivalence class, we see that $b_p \in R_\W [b_0]$.
+				By the definition of subsets, since $b_p \in P_b$ implies $b_p \in R_\W [b_0]$, we see that $P_b \subseteq R_\W [b_0]$.
+				By the definition of set equality, we see that $R_\W [b_0] = P_b$.
+				By substitution, we see that $P_b = R_\W [b_0]$.
+				By substitution, we see that $P_b \in A / R_\W$.
+				By the definition of subsets, since $P_b \in \W$ implies $P_b \in A / R_\W$, we see that $\W \subseteq A / R_\W$.
 
 				By the definition of set equality, we see that $A / R_\W = \W$.
 				By substitution, we see that $(F \circ G)(\W) = \id{\T_A}(\W)$.
@@ -209,8 +229,8 @@
 				By the definition of subsets, since $(a_0, a_1) \in \sim$ implies $(a_0, a_1) \in R_{A / \sim}$, we see that $\sim \subseteq R_{A / \sim}$.
 
 				Let $(b_0, b_1)$ be an arbitrary element of $R_{A / \sim}$.
-				By the definition of equivalence relations induced by partitions, there exists a particular element $B \in A / \sim$ so that $b_0 \in B$ and $b_1 \in B$.
-				By the definition of set quotients, we see that there exists a particular element $b_2 \in A$ so that $B = \sim [b_2]$.
+				By the definition of equivalence relations induced by partitions, there exists a particular element $P_b \in A / \sim$ so that $b_0 \in P_b$ and $b_1 \in P_b$.
+				By the definition of set quotients, we see that there exists a particular element $b_2 \in A$ so that $P_b = \sim [b_2]$.
 				By substitution, we see that $b_0 \in \sim [b_2]$ and $b_1 \in \sim [b_2]$.
 				By the definition of equivalence classes, we see that $(b_2, b_0) \in \sim$ and $(b_2, b_1) \in \sim$.
 				By the definition of symmetric relations, we see that $(b_0, b_2) \in \sim$.
