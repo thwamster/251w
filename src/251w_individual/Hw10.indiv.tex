@@ -7,6 +7,7 @@
 \newkeytheorem{problem}
 \newtheorem*{proposition}{Proposition}
 \newcommand{\todo}{\textcolor{red}{TO-DO.} }
+\newcommand{\temp}{\textcolor{red}{TEMPORARY.} }
 
 \newcommand{\set}[1]{\left\{#1\right\}}
 \newcommand{\powset}{{\cal P}}
@@ -31,11 +32,56 @@
 
 	\maketitle
 
+	\begin{problem}[manual-num=54]
+		Let $n$ be an arbitrary natural number.
+		Let $a, b, c$, and $d$ be arbitrary integers.
+
+		\begin{enumerate}
+			\item[(3)]
+			Prove $a \equiv b (\bmod n)$ and $c \equiv d (\bmod n)$, implies $ac \equiv bd (\bmod n)$ or provide a counterexample.
+
+			\begin{proof}
+				Suppose $a \equiv b (\bmod n)$ and $c \equiv d (\bmod n)$.
+				By the definition of modular congruence, we see that there exists particular integers $e$ and $f$ so that $a - b = en$ and $c - d = fn$.
+				By subtraction and substitution, we see that $a = en + b$ and $c = fn + d$.
+				By multiplication and substitution, we see that $ac = (en + b)(fn + d)$.
+				By the distributive property, we see that $ac = efn^2 + ben + dfn + bd$.
+				By subtraction and substitution, we see that $ac - bd = efn^2 + ben + dfn$.
+				By the distributive property, we see that $ac - bd = n(efn + be + df)$.
+				By the closure of the integers, there exists a particular integer $g$ so that $g = efn + be + df$.
+				By substitution, we see that $ac - bd = gn$.
+				By the definition of modular congruence, we see that $ac \equiv bd (\bmod n)$.
+				Therefore, for all natural numbers $n$ and integers $a, b, c$, and $d$, we see that $a \equiv b (\bmod n)$ and $c \equiv d (\bmod n)$, implies $ac \equiv bd (\bmod n)$.
+			\end{proof}
+
+			\item[(6)]
+			Prove $a^2 \equiv b^2 (\bmod n)$ implies $a \equiv b (\bmod n)$ or provide a counterexample.
+
+			\begin{proof}[Counterexample]
+				Take the case where $a = 1, b = 2$, and $n = 3$.
+				We ask whether $a^2 \equiv b^2 (\bmod n)$.
+				By the definition of modular congruence, we ask whether there exists a particular integer $c$ so that $a^2 - b^2 = cn$.
+				By substitution and simplification, we see that $(1)^2 - (2)^2 = c(3) = 1 - 4 = -3 = 3c$.
+				By division and substitution, we see that $c = -1$.
+				By the definition of modular congruence, since $c$ is an integer, we see that $a^2 \equiv b^2 (\bmod n)$.
+				We ask whether $a \equiv b (\bmod n)$.
+				By the definition of modular congruence, we ask whether there exists a particular integer $d$ so that $a - b = dn$.
+				By substitution and simplification, we see that $(1) - (2) = d(3) = -1 = 3d$.
+				By division and substitution, we see that $d = \frac{-1}{3}$.
+				By the definition of modular congruence, since $d$ is not an integer, we see that $a \not \equiv b (\bmod n)$.
+				Therefore, for all natural numbers $n$ and integers $a$ and $b$, we see that $a^2 \equiv b^2 (\bmod n)$ does not necessarily imply $a \equiv b (\bmod n)$.
+			\end{proof}
+		\end{enumerate}
+	\end{problem}
+
+	\newpage
+
 	\begin{problem}[manual-num=55]
 		\begin{proposition}
-			Let $n, q \in \N$, and let $a, b \in \Z$.
-			Suppose $a \equiv b (\bmod{n}),$ and $q|n$.
-			Prove that $a \equiv b (\bmod{q})$.
+			Let $n$ and $q$ be arbitrary natural numbers.
+			Let $a$ and $b$ be arbitrary integers.
+			Suppose $a \equiv b (\bmod{n})$ and $q|n$.
+			Prove $a \equiv b (\bmod{q})$.
 		\end{proposition}
 
 		\begin{proof}

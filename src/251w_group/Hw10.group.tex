@@ -30,33 +30,11 @@
 
 	\title[Math 251W: Homework \#10]{
 		Math 251W: Foundations of Advanced Mathematics \\
-		\textmd{Homework \#10: Portfolio Problems \S 5.2 \& 5.3}}
+		\textmd{Homework \#10: Portfolio Problems \S 5.2-5.3}}
 	\author{Carmen Beltran \and Brendan Butler \and Teddy Wachtler}
 	\date{\today}
 
 	\maketitle
-
-	\begin{problem}[manual-num=55]
-		\temp
-		\begin{proposition}
-			Let $n, q \in \N$, and let $a, b \in \Z$.
-			Suppose $a \equiv b (\bmod{n}),$ and $q|n$.
-			Prove that $a \equiv b (\bmod{q})$.
-		\end{proposition}
-
-		\begin{proof}
-			Let $n$ and $q$ be arbitrary natural numbers.
-			Let $a$ and $b$ be arbitrary integers.
-			Suppose $a \equiv b (\bmod{n})$ and $q | n$.
-			By the definition of modular congruence, we see that there exists a particular integer $c$ so that $a - b = cn$.
-			By the definition of divides, we see that there exists a particular integer $d$ so that $n = qd$.
-			By substitution, we see that $a - b = cqd$.
-			By the closure of the integers, there exists a particular integer $e$ so that $e = cd$.
-			By substitution, we see that $a - b = eq$.
-			By the definition of modular congruence, we see that $a \equiv b (\bmod{q})$.
-			Therefore, we see that for all natural numbers $n$ and $q$, and for all integers $a$ and $b$, if $a \equiv b(\bmod{n})$ and $q|n$, then $a \equiv b (\bmod{q})$.
-		\end{proof}
-	\end{problem}
 
 	\begin{problem}[manual-num=56]
 		Let $A$ be a non-empty set.
@@ -77,7 +55,7 @@
 				Let $P_a$ be an arbitrary set in $A / \sim$.
 				By the definition of set quotients, we see that there exists a particular element $a \in A$ so that $P_a = \sim [a]$.
 				By the definition of reflexive relations, we see that $a \in \sim[a]$.
-				By the substitution, we see that $a \in P_a$.
+				By substitution, we see that $a \in P_a$.
 				By the definition of the empty set, we see that $P_a \neq \emptyset$.
 				Since $P_a \in A / \sim$ implies $P_a \neq \emptyset$, we see that $A / \sim$ contains no empty subsets.
 
@@ -93,9 +71,9 @@
 				By the definition of transitive relations, we see that $(b_q, b_p) \in \sim$.
 				By the definition of transitive relations, we see that $(b_q, b_0) \in \sim$.
 				By the definition of equivalence classes, we see that $b_0 \in \sim [b_q]$.
-				By the definition of set quotients, we see that $b_0 \in Q_b$.
+				By substitution, we see that $b_0 \in Q_b$.
 				By the definition of subsets, since $b_0 \in P_b$ implies $b_0 \in Q_b$, we see that $P_b \subseteq Q_b$.
-				Analogously, we see that $Q_b \subseteq P_b$.
+				Analogously, exchanging $P_b$ for $Q_b$ and $b_p$ for $b_q$, we see that $Q_b \subseteq P_b$.
 				By the definition of set equality, we see that $P_b = Q_b$.
 				By the contrapositive, since $P_b \cap Q_b \neq \emptyset$ implies $P_b = Q_b$, $P_b \neq Q_b$ implies $P_b \cap Q_b = \emptyset$.
 				By the definition of pairwise disjoint sets, we see that $A / \sim$ is pairwise disjoint.
@@ -116,7 +94,7 @@
 
 				By the definition of partitions, since $A / \sim$ contains no empty subsets, is pairwise disjoint, and is exhaustive, we see that $A / \sim$ is a partition.
 				By substitution, since $A / \sim = F(\sim)$, we see that $F(\sim)$ is a partition.
-				By the definition of $\T_A$, we see that $F(\sim) \in T_A$.
+				By the definition of $\T_A$, we see that $F(\sim) \in \T_A$.
 				Therefore, we see that $F: E(A) \rightarrow \T_A$ is well-defined.
 			\end{proof}
 

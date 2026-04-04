@@ -1,0 +1,99 @@
+% Program: PortfolioCh4S1-2.tex
+% Author: Carmen Beltran, Brendan Butler, Teddy Wachtler
+%
+% Description: Portfolio Assignment 7: Sections 4.1 and 4.2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass{article}
+\usepackage[dvips]{graphicx}
+\usepackage{a4wide}
+\usepackage{amsmath}
+\usepackage{euscript}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsopn}
+
+\theoremstyle{definition}
+\newtheorem*{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+
+\renewcommand{\qed}{\blacksquare}
+\newcommand{\powset}{{\cal P}}
+\newcommand{\img}{_{*}}
+\newcommand{\pimg}{^{*}}
+
+\newcommand{\vv}{\ensuremath{\vec{v}}}
+\newcommand{\vu}{\ensuremath{\vec{u}}}
+\newcommand{\vw}{\ensuremath{\vec{w}}}
+\newcommand{\vx}{\ensuremath{\vec{x}}}
+\newcommand{\vy}{\ensuremath{\vec{y}}}
+\newcommand{\vb}{\ensuremath{\vec{b}}}
+\newcommand{\vo}{\ensuremath{\vec{0}}}
+\newcommand{\va}{\ensuremath{\vec{a}}}
+\newcommand{\ve}{\ensuremath{\vec{e}}}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+	\begin{center}
+		\Large{Math 251W: Foundations of Advanced Mathematics}
+
+		\normalsize Portfolio problems from section 3.4
+
+		\hfill Name: Carmen Beltran, Brendan Butler, Teddy Wachtler
+		\hrule
+		\vspace{0.4cm}
+		\vspace{0.75cm}
+	\end{center}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	\vspace{1cm}
+	\noindent Problem 4.1.8
+	\vspace{0.3cm}
+
+	\underline{proposition:}
+	$A, B\subseteq X, \chi_A = \chi_B$ iff $A = B$.
+
+	\vspace{.2cm}
+	\fbox{proof} (Direct)
+	\vspace{.15cm}
+
+    Let $A, B$, and $X$ be arbitrary sets so that $A, B \subseteq X$.
+    Let $\chi_A : X \rightarrow \{0, 1\}$ be the characteristic function of the subset $A$ in $X$.
+    Let $\chi_B : X \rightarrow \{0, 1\}$ be the characteristic function of the subset $B$ in $X$.
+    We ask whether $\chi_A = \chi_B$ if and only if $A = B$.
+
+    Consider the case where $\chi_A = \chi_B$.
+    Let $a$ be an arbitrary element in $A$.
+    By the definition of the characteristic function, $\chi_A(a) = 1$.
+    Since $\chi_A = \chi_B$, we see that $\chi_B(a) = 1$.
+    By the definition of the characteristic function, we see that $a \in B$.
+    By the definition of subsets, since $a$ was an arbitrary element of $A$, we see that $A \subseteq B$.
+    Let $b$ be an arbitrary element in $B$.
+    By symmetry, we see $\chi_B(b) = 1$, $\chi_A(b) = 1$, $b \in A$ and $B \subseteq A$.
+    Therefore, by the definition of set equality, since $A \subseteq B$ and $B \subseteq A$, we see that if $\chi_A = \chi_B$, then $A = B$.
+
+    Consider the case where $A = B$.
+    Let $x$ be an arbitrary element in $X$.
+    By the definition of the characteristic function, we see that $\chi_A(x) = 1$ if and only if $x \in A$, and, $\chi_A(x) = 0$ if and only if $x \not \in A$.
+    Similarly, we see that $\chi_B(x) = 1$ if and only if $x \in B$.
+    By the definition of set equality, we see that $x \in A$ if and only if $x \in B$.
+    Therefore, we see that $\chi_A(x) = \chi_B(x)$.
+    Therefore, since $x$ was an arbitrary element of $X$, we see that if $A = B$ then $\chi_A = \chi_B$.
+
+    Therefore, since if $\chi_A = \chi_B$ then $A = B$, and if $A = B$ then $\chi_A = \chi_B$, we see $\chi_A = \chi_B$ if and only if $A = B$.
+    Therefore, for all sets $A, B$, and $X$, if $A, B \subseteq X$, then $\chi_A = \chi_B$ if and only if $A = B$. 
+	$\qed$.
+
+	\vspace{1cm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}
