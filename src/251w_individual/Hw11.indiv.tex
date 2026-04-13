@@ -1,0 +1,106 @@
+\documentclass{amsart}
+
+\usepackage{keytheorems}
+\usepackage{amsthm}
+\usepackage{color}
+
+\newkeytheorem{problem}
+\newtheorem*{proposition}{Proposition}
+\newcommand{\todo}{\textcolor{red}{TO-DO.} }
+\newcommand{\temp}{\textcolor{red}{TEMPORARY.} }
+
+\newcommand{\set}[1]{\left\{#1\right\}}
+\newcommand{\powset}{{\cal P}}
+\newcommand{\img}{_{*}}
+\newcommand{\pimg}{^{*}}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+
+\numberwithin{equation}{section}
+
+\begin{document}
+
+	\title[Math 251W: Homework \#11]{
+		Math 251W: Foundations of Advanced Mathematics \\
+		\textmd{Homework \#11: Portfolio Problems \S 6.3}}
+	\author{Teddy Wachtler}
+	\date{\today}
+
+	\maketitle
+
+	\begin{problem}[manual-num=58]
+		\begin{proposition}
+			Prove that $4 | 10^n - 6^n$ for all natural numbers $n$.
+		\end{proposition}
+
+		\begin{proof}
+			We ask whether $4 | 10^n - 6^n$ for all natural numbers $n$.
+			We will show this to be true through induction.
+
+			Take the case where $n = 1$.
+			By substitution and simplification, we see that $10^{1} - 6^{1} = 10 - 6 = 4$.
+			By the definition of divides, we see that $4 | 10^1 - 6^1$.
+			By substitution, we see that $4 | 10^n - 6^n$ for $n = 1$.
+
+			Let $k$ be an arbitrary natural number so that $4 | 10^n - 6^n$ for $n = k$.
+			Take the case where $n = k + 1$.
+			By substitution, we see that $4 | 10^{k} - 6^{k}$.
+			By the definition of divides, we see that there exists a particular integer $q$ so that $10^k - 6^k = 4q$.
+			By algebra, we see:
+			\begin{align*}
+				10(10^k - 6^k) &= 10(4q) \\
+				10 \cdot 10^k - 10 \cdot 6^k &= 40q \\
+				10 \cdot 10^k - 6 \cdot 6^k - 4 \cdot 6^k &= 40q \\
+				10^{k + 1} - 6^{k + 1} - 4 \cdot 6^k &= 40q \\
+				10^{k + 1} - 6^{k + 1} &= 40q + 4 \cdot 6^k \\
+				10^{k + 1} - 6^{k + 1} &= 4(10q + 6^k). \\
+			\end{align*}
+			By the closure of the integers, we see that there exists a particular integer $q_1$ so that $q_1 = 10q + 6^k$.
+			By substitution, we see that $10^{k + 1} - 6^{k + 1} = 4q_1$.
+			By the definition of divides, we see that $4 | 10^(k + 1) - 6^(k + 1)$.
+			By substitution, we see that $4 | 10^n - 6^n$ for $n = k + 1$.
+
+			Therefore, by induction, we see that $4 | 10^n - 6^n$ for all natural numbers $n$.
+
+		\end{proof}
+	\end{problem}
+
+	\newpage
+
+	\begin{problem}[manual-num=59]
+		\begin{proposition}
+			Prove that $\sum_{i=1}^{n} \frac{1}{i(i+1)} = \frac{n}{n+1}$ for all natural numbers $n$.
+
+		\end{proposition}
+
+		\begin{proof}
+			We ask whether $\sum_{i = 1}^{n} \frac{1}{i \cdot (i + 1)} = \frac{n}{n + 1}$ for all natural numbers $n$.
+			We will show this to be true through induction.
+
+			Take the case where $n = 1$.
+			By the definition of summations, we see that $\sum_{i = 1}^{1} \frac{1}{i \cdot (i + 1)} = \frac{1}{1 \cdot (1 + 1)} = \frac{1}{1 + 1}$.
+			By substitution, we see that $\sum_{i = 1}^{n} \frac{1}{i \cdot (i + 1)} = \frac{n}{n + 1}$ for $n = 1$.
+
+			Let $k$ be an arbitrary natural number so that $\sum_{i = 1}^{n} \frac{1}{i \cdot (i + 1)} = \frac{n}{n + 1}$ for $n = k$.
+			Take the case where $n = k + 1$.
+			By substitution, we see that $\sum_{i = 1}^{k} \frac{1}{i \cdot (i + 1)} = \frac{k}{k + 1}$.
+			By algebra, we see:
+			\begin{align*}
+				\sum_{i = 1}^{k} \frac{1}{i \cdot (i + 1)} + \frac{1}{(k + 1) \cdot ((k + 1) + 1)} &= \frac{k}{k + 1} + \frac{1}{(k + 1) \cdot ((k + 1) + 1)} \\
+				\sum_{i = 1}^{k + 1} \frac{1}{i \cdot (i + 1)} &= \frac{(k) \cdot (k + 2)}{(k + 1) \cdot(k + 2)} + \frac{1}{(k + 1) \cdot (k + 2)} \\
+				\sum_{i = 1}^{k + 1} \frac{1}{i \cdot (i + 1)} &= \frac{(k) \cdot (k + 2) + 1}{(k + 1) \cdot (k + 2)} \\
+				\sum_{i = 1}^{k + 1} \frac{1}{i \cdot (i + 1)} &= \frac{k^2 + 2k + 1}{(k + 1) \cdot (k + 2)} \\
+				\sum_{i = 1}^{k + 1} \frac{1}{i \cdot (i + 1)} &= \frac{(k + 1) \cdot (k + 1)}{(k + 1) \cdot (k + 2)} \\
+				\sum_{i = 1}^{k + 1} \frac{1}{i \cdot (i + 1)} &= \frac{(k + 1)}{k + 2} = \frac{(k + 1)}{(k + 1) + 1}.
+			\end{align*}
+			By substitution, we see that $\sum_{i = 1}^{n} \frac{1}{i \cdot (i + 1)} = \frac{n}{n + 1}$ for $n = k + 1$.
+
+			Therefore, by induction, we see that $\sum_{i = 1}^{n} \frac{1}{i \cdot (i + 1)} = \frac{n}{n + 1}$ for all natural numbers $n$.
+		\end{proof}
+	\end{problem}
+
+\end{document}
