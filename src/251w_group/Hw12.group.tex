@@ -139,13 +139,14 @@
 		\end{proof}
 	\end{problem}
 
+	\newpage
 	\begin{problem}[manual-num=74]
 		\begin{proposition}
 			Use strong induction to prove that every natural number can be written as a sum of distinct powers of 2.
 		\end{proposition}
 
 		\begin{proof}
-			Let $P(n)$ be the statement that for a natural number $n$, there exists a finitely supported sequence $(S^n_i)_{i = 0}^\infty$ of elements of $\set{0, 1}$ so that $n = \sum_{i = 0}^\infty 2^i \cdot S^n_i$.
+			Let $P(n)$ be the statement that for a natural number $n$, there exists a finitely supported sequence $(S^n_i)_{i = 0}^\infty$ of elements of $\set{0, 1}$ so that $S^n_i = 0$ for all $i > \log_2(n)$ and $n = \sum_{i = 0}^\infty 2^i \cdot S^n_i$.
 			We ask whether $P(n)$ for all natural numbers $n$.
 			We will show this to be true through strong induction.
 
@@ -159,7 +160,7 @@
 
 			Take the case where $k + 1$ is even.
 			By the definition of parity, we see that $\frac{1}{2}(k + 1) \in \N$.
-			Since $\frac{1}{2}(k + 1) \leq k$, we see that there exists a finitely supported sequence $(S^{\frac{1}{2}(k + 1)}_i)_{i = 0}^\infty$ of elements of $\set{0, 1}$ so that $\frac{1}{2}(k + 1) = \sum_{i = 0}^\infty 2^i \cdot S^{\frac{1}{2}(k + 1)}_i$.
+			Since $k \geq 1$ and $\frac{1}{2}(k + 1) \leq k$, we see that there exists a finitely supported sequence $(S^{\frac{1}{2}(k + 1)}_i)_{i = 0}^\infty$ that fulfills $P(\frac{1}{2}(k + 1))$.
 			Let $(S^{k + 1}_i)_{i = 0}^\infty$ be the finitely supported sequence defined by $S^{k + 1}_0 = 0$ and $S^{k + 1}_i = S^{\frac{1}{2}(k + 1)}_{i - 1}$ for all $i \in \N^+$.
 			By algebra, we see that:
 			\begin{align*}
@@ -173,7 +174,7 @@
 			By substitution, we see that $P(k + 1)$ if $k + 1$ is even.
 
 			Take the case where $k + 1$ is odd.
-			Since $P(k)$, we see that there exists a finitely supported sequence $(S^k_i)_{i = 0}^\infty$ of elements of $\set{0, 1}$ so that $k = \sum_{i = 0}^\infty 2^i \cdot S^k_i$.
+			Since $P(k)$, we see that there exists a finitely supported sequence $(S^k_i)_{i = 0}^\infty$ that fulfills $P(k)$.
 			By the definition of parity, since $k + 1$ is odd, we see that $k$ is even.
 			Since $\sum_{i = 0}^\infty 2^i \cdot S^k_i$ is even, $2^i$ is even for all $i > 0$, $2^0$ is odd, and the sum of an even and an odd is odd, we see that $2^0 \cdot S^k_0 = 0$.
 			Let $(S^{k + 1}_i)_{i = 0}^\infty$ be the finitely supported sequence defined by $S^{k + 1}_0 = 1$ and $S^{k + 1}_i = S^k_i$ for all $i \in \N^+$.
@@ -186,7 +187,7 @@
 			\end{align*}
 			By substitution, we see that $P(k + 1)$ if $k + 1$ is odd.
 
-			Since $k + 1$ must be even or odd, we see that $P(k + 1)$ in either case.
+			Since $k + 1$ must be even or odd, and $P(k + 1)$ in either case, we see that $P(k + 1)$.
 			Therefore, by induction, we see that $P(n)$ for all natural numbers $n$.
 		\end{proof}
 	\end{problem}

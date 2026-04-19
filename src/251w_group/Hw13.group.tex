@@ -13,6 +13,10 @@
 \newcommand{\powset}{{\cal P}}
 \newcommand{\img}{_{*}}
 \newcommand{\pimg}{^{*}}
+\newcommand{\abs}[1]{\left|#1\right|}
+\newcommand{\ceil}[1]{\lceil #1 \rceil}
+\newcommand{\floor}[1]{\lfloor #1 \rfloor}
+\newcommand{\half}{\frac{1}{2}}
 
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\Z}{\mathbb{Z}}
@@ -32,13 +36,66 @@
 
 	\maketitle
 
+	\begin{problem}[manual-num=65]
+		\temp
+		\begin{proposition}
+			Prove that for all sets $A, B$, and $X$ so that $X \subseteq A$ and functions $f : A \rightarrow B$, $f$ being injective implies $|X| = |f \img (X)|$.
+		\end{proposition}
+
+		\begin{proof}
+			Let $A, B$, and $X$ be arbitrary sets so that $X \subseteq A$.
+			Let $f : A \rightarrow B$ be an arbitrary injective function.
+			Let $g : X \rightarrow f \img (X)$ be the function defined by $g(x) = f(x)$.
+
+			Let $x_0$ be an arbitrary element of $X$.
+			By substitution, we see that $g(x_0) = f(x_0)$.
+			By the definition of $f \img (X)$, since $x_0 \in X$, we see that $f(x_0) \in f \img (X)$.
+			By substitution, we see that $g(x_0) \in f \img (X)$.
+			By the definition of $g$, we see that $g$ is well-defined.
+
+			Let $x_1$ and $x_2$ be arbitrary elements of $X$ so that $g(x_1) = g(x_2)$.
+			By substitution, we see that $f(x_1) = f(x_2)$.
+			By the definition of injective functions, since $f$ is injective, we see that $x_1 = x_2$.
+			By the definition of injective functions, we see that $g$ is injective.
+
+			Let $y$ be an arbitrary element in $f \img (X)$.
+			By the definition of $f \img (X)$, there exists a particular element $x_3 \in X$ so that $f(x_3) = y$.
+			By substitution, since $g(x) = f(x)$, we see that $g(x_3) = y$.
+			By the definition of surjective functions, we see that $g$ is surjective.
+
+			By the definition of bijective functions, since $g$ is injective and surjective, we see that $g$ is bijective.
+			Since there exists a bijective function between $X$ and $f \img (X)$, we see that $\abs{X} = \abs{f \img (X)}$.
+			Therefore, we see that for all sets $A, B$, and $X$ so that $X \subseteq A$ and functions $f : A \rightarrow B$, $f$ being injective implies $|X| = |f \img (X)|$.
+		\end{proof}
+	\end{problem}
+
 	\begin{problem}[manual-num=64]
 		\begin{proposition}
 			Prove that the set of all integers that are a multiple of 5 has the same cardinality as the set of all integers.
 		\end{proposition}
 
 		\begin{proof}
-			\todo
+			Let $X$ be the particular set defined by $X = \set{5x : x \in \Z}$.
+			Let $f : \Z \rightarrow X$ be the function defined by $f(x) = 5x$.
+
+			Let $x_0$ be an arbitrary element of $\Z$.
+			By substitution, we see that $f(x_0) = 5x_0$.
+			By the definition of $X$, we see that $f(x_0) \in X$.
+			By the definition of $f$, we see that $f$ is well-defined.
+
+			Let $x_1$ and $x_2$ be arbitrary elements of $\Z$ so that $f(x_1) = f(x_2)$.
+			By substitution, we see that $5x_1 = 5x_2$.
+			By division and substitution, we see that $x_1 = x_2$.
+			By the definition of injective functions, we see that $f$ is injective.
+
+			Let $y$ be an arbitrary element in $X$.
+			By the definition of $X$, we see that there exists $x_3 \in \Z$ so that $y = 5x_3$.
+			By substitution, we see that $f(x_3) = 5x_3 = y$.
+			By the definition of surjective functions, we see that $f$ is surjective.
+
+			By the definition of bijective functions, since $f$ is injective and surjective, we see that $f$ is bijective.
+			Since there exists a bijective function between $\Z$ and $X$, we see that $\abs{\Z} = \abs{X}$.
+			Therefore, for the set $X = \set{5x : x \in \Z}$, we see that $\abs{\Z} = \abs{X}$.
 		\end{proof}
 	\end{problem}
 
@@ -46,23 +103,94 @@
 		\begin{proposition}
 			Let $a, b, c, d \in \R$.
 			Suppose $a < b$ and $c < d$.
-			Use the Schroeder-Bernstein Theorem to prove that  $[a, b) \sim [c, d]$.
+			Use the Schroeder-Bernstein Theorem to prove that $\abs{[a, b)} = \abs{[c, d]}$.
 		\end{proposition}
 
 		\begin{proof}
-			\todo
+			Let $a, b, c$, and $d$ be arbitrary real numbers.
+			Suppose $a < b$ and $c < d$.
+
+			Let $f : [a, b) \rightarrow [c, d]$ be the function defined by $f(x) = \frac{(x - a)(d - c)}{(b - a)} + c$.
+			Since $f$ is strictly increasing, we see that $f(a) \leq f(x) < f(b)$ for all $x \in [a, b)$.
+			By algebra, for all $x \in [a, b)$, we see that:
+			\begin{align*}
+				f(a) &\leq f(x) < f(b) \\
+				\frac{0 \cdot (d - c)}{(b - a)} + c &\leq f(x) < (d - c) + c \\
+				c &\leq f(x) < d \\
+				c &\leq f(x) \leq d.
+			\end{align*}
+			Since $f(x) \in [c, d]$ for all $x \in [a, b)$, we see that $f$ is well-defined.
+			Let $x_1$ and $x_2$ be arbitrary elements of $[a, b)$ so that $f(x_1) = f(x_2)$.
+			By algebra, we see that:
+			\begin{align*}
+				f(x_1) &= f(x_2) \\
+				\frac{(x_1 - a)(d - c)}{(b - a)} + c &= \frac{(x_2 - a)(d - c)}{(b - a)} + c \\
+				(x_1 - a)(d - c) &= (x_2 - a)(d - c) \\
+				(x_1 - a) &= (x_2 - a) \quad \text{(since $c < d$ implies $d - c \neq 0)$} \\
+				x_1 &= x_2.
+			\end{align*}
+			By the definition of injective functions, we see that $f$ is injective.
+
+			Let $g : [c, d] \rightarrow [a, b)$ be the function defined by $g(y) = \frac{(y - c)(b - a)}{2 \cdot (d - c)} + a$.
+			Since $g$ is strictly increasing, we see that $g(c) \leq g(y) \leq g(d)$ for all $y \in [c, d]$.
+			By algebra, for all $y \in [c, d]$, we see that:
+			\begin{align*}
+				g(c) &\leq g(y) \leq g(d) \\
+				\frac{0 \cdot (b - a)}{2(d - c)} + a &\leq g(y) \leq \frac{(b - a)}{2} + a \\
+				a &\leq g(y) \leq \frac{a + b}{2}. \\
+				a &\leq g(y) < b \quad \text{(since $a < b$ implies $\frac{a + b}{2} < b$)}.
+			\end{align*}
+			Since $g(y) \in [a, b)$ for all $y \in [c, d]$, we see that $g$ is well-defined.
+			Let $y_1$ and $y_2$ be arbitrary elements of $[c, d]$ so that $g(y_1) = g(y_2)$.
+			By algebra, we see that:
+			\begin{align*}
+				g(y_1) &= g(y_2) \\
+				\frac{(y_1 - c)(b - a)}{2(d - c)} + a &= \frac{(y_2 - c)(b - a)}{2(d - c)} + a \\
+				(y_1 - c)(b - a) &= (y_2 - c)(b - a) \\
+				(y_1 - c) &= (y_2 - c) \quad \text{(since $a < b$ implies $b - a \neq 0$)} \\
+				y_1 &= y_2.
+			\end{align*}
+			By the definition of injective functions, we see that $g$ is injective.
+
+			By the Schroeder-Bernstein Theorem, since there exists injective functions $f : [a, b) \rightarrow [c, d]$ and $g : [c, d] \rightarrow [a, b)$, we see that $\abs{[a, b)} = \abs{[c, d]}$.
+			Therefore, for all real numbers $a, b, c$, and $d$, we see that $a < b$ and $c < d$ implies $\abs{[a, b)} = \abs{[c, d]}$.
 		\end{proof}
 	\end{problem}
 
 	\begin{problem}[manual-num=67]
 		\begin{proposition}
-			Let $X$ be a set.
-			Suppose $X$ is countably infinite.
-			Prove that there is a function $f : X \rightarrow X$  that is injective, but not surjective.
+			Let $X$ be an arbitrary countably infinite set.
+			Prove that there exists a function $f : X \rightarrow X$  that is injective but not surjective.
 		\end{proposition}
 
 		\begin{proof}
-			\todo
+			Let $X$ be an arbitrary countably infinite set.
+			By the definition of countably infinite sets, we see that $X = \set{x_n : n \in \N^+}$ and that there exists a bijective function $g : \N^+ \rightarrow X$ defined by $g(n) = x_n$.
+			Let $f : X \rightarrow X$ be the function defined by $f(x_n) = g(n + 1)$.
+
+			Let $a$ be an arbitrary positive natural number.
+			By the definition of $X$, we see that $x_a$ is an arbitrary element of $X$.
+			By substitution, we see that $f(x_a) = g(a + 1)$.
+			Since $g$ is bijective, we see that $g(a + 1)$ is a unique element in $X$.
+			By the definition of $f$, we see that $f$ is well-defined.
+
+			Let $b$ and $c$ be arbitrary positive natural numbers.
+			By the definition of $X$, we see that $x_b$ and $x_c$ are arbitrary elements of $X$.
+			Suppose $f(x_b) = f(x_c)$.
+			By substitution, we see that $g(b + 1) = g(c + 1)$.
+			Since $g$ is bijective, we see that $b + 1 = c + 1$.
+			By subtraction, we see that $b = c$.
+			By substitution, we see that $x_b = x_c$.
+			By the definition of injective functions, we see that $f$ is injective.
+
+			By way of contradiction, suppose there exists a positive natural number $d$ so that $f(x_d) = x_1$.
+			By substitution, we see that $g(d + 1) = g(1)$.
+			Since $g$ is bijective, we see that $d + 1 = 1$.
+			By subtraction, we see that $d = 0$.
+			Since $0$ is not a positive natural number, we see that $f(x_n) \neq x_1$ for all positive natural numbers $n$ and elements $x_n \in X$.
+			By the definition of surjective functions, we see that $f$ is not surjective.
+
+			Therefore, we see that for all countably infinite sets $X$, there exists a function $f : X \rightarrow X$ that is injective but not surjective.
 		\end{proof}
 	\end{problem}
 

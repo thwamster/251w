@@ -13,6 +13,9 @@
 \newcommand{\powset}{{\cal P}}
 \newcommand{\img}{_{*}}
 \newcommand{\pimg}{^{*}}
+\newcommand{\abs}[1]{\left|#1\right|}
+\newcommand{\ceil}[1]{\lceil #1 \rceil}
+\newcommand{\floor}[1]{\lfloor #1 \rfloor}
 
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\Z}{\mathbb{Z}}
@@ -26,7 +29,7 @@
 
 	\title[Math 251W: Homework \#13]{
 		Math 251W: Foundations of Advanced Mathematics \\
-		\textmd{Homework \#12: Portfolio Problems \S 6.5}}
+		\textmd{Homework \#13: Portfolio Problems \S 6.5}}
 	\author{Teddy Wachtler}
 	\date{\today}
 
@@ -38,7 +41,29 @@
 		\end{proposition}
 
 		\begin{proof}
-			\todo
+			Let $A, B$, and $X$ be arbitrary sets so that $X \subseteq A$.
+			Let $f : A \rightarrow B$ be an arbitrary injective function.
+			Let $g : X \rightarrow f \img (X)$ be the function defined by $g(x) = f(x)$.
+
+			Let $x_0$ be an arbitrary element of $X$.
+			By substitution, we see that $g(x_0) = f(x_0)$.
+			By the definition of $f \img (X)$, since $x_0 \in X$, we see that $f(x_0) \in f \img (X)$.
+			By substitution, we see that $g(x_0) \in f \img (X)$.
+			By the definition of $g$, we see that $g$ is well-defined.
+
+			Let $x_1$ and $x_2$ be arbitrary elements of $X$ so that $g(x_1) = g(x_2)$.
+			By substitution, we see that $f(x_1) = f(x_2)$.
+			By the definition of injective functions, since $f$ is injective, we see that $x_1 = x_2$.
+			By the definition of injective functions, we see that $g$ is injective.
+
+			Let $y$ be an arbitrary element in $f \img (X)$.
+			By the definition of $f \img (X)$, there exists a particular element $x_3 \in X$ so that $f(x_3) = y$.
+			By substitution, since $g(x) = f(x)$, we see that $g(x_3) = y$.
+			By the definition of surjective functions, we see that $g$ is surjective.
+
+			By the definition of bijective functions, since $g$ is injective and surjective, we see that $g$ is bijective.
+			Since there exists a bijective function between $X$ and $f \img (X)$, we see that $\abs{X} = \abs{f \img (X)}$.
+			Therefore, we see that for all sets $A, B$, and $X$ so that $X \subseteq A$ and functions $f : A \rightarrow B$, $f$ being injective implies $|X| = |f \img (X)|$.
 		\end{proof}
 	\end{problem}
 
