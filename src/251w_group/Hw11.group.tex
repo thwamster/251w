@@ -32,91 +32,20 @@
 
 	\maketitle
 
-	\begin{problem}[manual-num=58]
-		\temp
-		\begin{proposition}
-			Prove that $4 | 10^n - 6^n$ for all natural numbers $n$.
-		\end{proposition}
-
-		\begin{proof}
-			We ask whether $4 | 10^n - 6^n$ for all natural numbers $n$.
-			We will show this to be true through induction.
-
-			Take the case where $n = 1$.
-			By substitution and simplification, we see that $10^{1} - 6^{1} = 10 - 6 = 4$.
-			By the definition of divides, we see that $4 | 10^1 - 6^1$.
-			By substitution, we see that $4 | 10^n - 6^n$ for $n = 1$.
-
-			Let $k$ be an arbitrary natural number so that $4 | 10^n - 6^n$ for $n = k$.
-			Take the case where $n = k + 1$.
-			By substitution, we see that $4 | 10^{k} - 6^{k}$.
-			By the definition of divides, we see that there exists a particular integer $q$ so that $10^k - 6^k = 4q$.
-			By algebra, we see:
-			\begin{align*}
-				10(10^k - 6^k) &= 10(4q) \\
-				10 \cdot 10^k - 10 \cdot 6^k &= 40q \\
-				10 \cdot 10^k - 6 \cdot 6^k - 4 \cdot 6^k &= 40q \\
-				10^{k + 1} - 6^{k + 1} - 4 \cdot 6^k &= 40q \\
-				10^{k + 1} - 6^{k + 1} &= 40q + 4 \cdot 6^k \\
-				10^{k + 1} - 6^{k + 1} &= 4(10q + 6^k). \\
-			\end{align*}
-			By the closure of the integers, we see that there exists a particular integer $q_1$ so that $q_1 = 10q + 6^k$.
-			By substitution, we see that $10^{k + 1} - 6^{k + 1} = 4q_1$.
-			By the definition of divides, we see that $4 | 10^(k + 1) - 6^(k + 1)$.
-			By substitution, we see that $4 | 10^n - 6^n$ for $n = k + 1$.
-
-			Therefore, by induction, we see that $4 | 10^n - 6^n$ for all natural numbers $n$.
-
-		\end{proof}
-	\end{problem}
-
-	\begin{problem}[manual-num=59]
-		\temp
-		\begin{proposition}
-			Prove that $\sum_{i=1}^{n} \frac{1}{i(i+1)} = \frac{n}{n+1}$ for all natural numbers $n$.
-
-		\end{proposition}
-
-		\begin{proof}
-			We ask whether $\sum_{i = 1}^{n} \frac{1}{i \cdot (i + 1)} = \frac{n}{n + 1}$ for all natural numbers $n$.
-			We will show this to be true through induction.
-
-			Take the case where $n = 1$.
-			By the definition of summations, we see that $\sum_{i = 1}^{1} \frac{1}{i \cdot (i + 1)} = \frac{1}{1 \cdot (1 + 1)} = \frac{1}{1 + 1}$.
-			By substitution, we see that $\sum_{i = 1}^{n} \frac{1}{i \cdot (i + 1)} = \frac{n}{n + 1}$ for $n = 1$.
-
-			Let $k$ be an arbitrary natural number so that $\sum_{i = 1}^{n} \frac{1}{i \cdot (i + 1)} = \frac{n}{n + 1}$ for $n = k$.
-			Take the case where $n = k + 1$.
-			By substitution, we see that $\sum_{i = 1}^{k} \frac{1}{i \cdot (i + 1)} = \frac{k}{k + 1}$.
-			By algebra, we see:
-			\begin{align*}
-				\sum_{i = 1}^{k} \frac{1}{i \cdot (i + 1)} + \frac{1}{(k + 1) \cdot ((k + 1) + 1)} &= \frac{k}{k + 1} + \frac{1}{(k + 1) \cdot ((k + 1) + 1)} \\
-				\sum_{i = 1}^{k + 1} \frac{1}{i \cdot (i + 1)} &= \frac{(k) \cdot (k + 2)}{(k + 1) \cdot(k + 2)} + \frac{1}{(k + 1) \cdot (k + 2)} \\
-				\sum_{i = 1}^{k + 1} \frac{1}{i \cdot (i + 1)} &= \frac{(k) \cdot (k + 2) + 1}{(k + 1) \cdot (k + 2)} \\
-				\sum_{i = 1}^{k + 1} \frac{1}{i \cdot (i + 1)} &= \frac{k^2 + 2k + 1}{(k + 1) \cdot (k + 2)} \\
-				\sum_{i = 1}^{k + 1} \frac{1}{i \cdot (i + 1)} &= \frac{(k + 1) \cdot (k + 1)}{(k + 1) \cdot (k + 2)} \\
-				\sum_{i = 1}^{k + 1} \frac{1}{i \cdot (i + 1)} &= \frac{(k + 1)}{k + 2} = \frac{(k + 1)}{(k + 1) + 1}.
-			\end{align*}
-			By substitution, we see that $\sum_{i = 1}^{n} \frac{1}{i \cdot (i + 1)} = \frac{n}{n + 1}$ for $n = k + 1$.
-
-			Therefore, by induction, we see that $\sum_{i = 1}^{n} \frac{1}{i \cdot (i + 1)} = \frac{n}{n + 1}$ for all natural numbers $n$.
-		\end{proof}
-	\end{problem}
-
 	\begin{problem}[manual-num=57]
 		\begin{proposition}
 			Prove that $7n < 2^n$ for all natural numbers $n$ so that $n \geq 6$.
 		\end{proposition}
 
 		\begin{proof}
-			We ask whether $X$ for all natural numbers $n$.
+			We ask whether $7n < 2^n$ for all natural numbers $n$.
 			We will show this to be true through induction.
 
 			Take the case where $n = 6$.
 			By substitution, we see that $7(6) = 42 < 2^6 = 64$.
 			By substitution, we see that $7n < 2^n$ for $n = 6$.
 
-			Let $k$ be an arbitrary natural number so that $k \geq 6$ and $7n < 2^n$ for $n = k$.
+			Let $k$ be an arbitrary natural number. Suppose $k \geq 6$ and $7n < 2^n$ for $n = k$.
 			Take the case where $n = k + 1$.
 			Since $k \geq 6$, we see that $1 \leq k$.
 			By algebra, we see that:
@@ -140,14 +69,14 @@
 
 	\begin{problem}[manual-num=61]
 		\begin{proposition}
-			Prove that for all sets $A$ and $B$ and functions $f : A \rightarrow B$, $f \pimg (\bigcup_{i=1}^{n} W_i) =\bigcup_{i=1}^{n} f \pimg (W_i)$ for all natural numbers $n$, where $W_i \subseteq B$ for all $i \leq n$.
+			Prove that for all sets $A$ and $B$ and functions $f : A \rightarrow B$, $f \pimg (\bigcup_{i=1}^{n} W_i) =\bigcup_{i=1}^{n} f \pimg (W_i)$ for all natural numbers $n$, where $W_i \subseteq B$ for all natural numbers $i \leq n$.
 		\end{proposition}
 
 		\begin{proof}
 			Let $A$ and $B$ be arbitrary sets.
 			Let $f : A \rightarrow B$ be an arbitrary function.
 			Let $n$ be an arbitrary natural number.
-			Let $W$ be a family of sets indexed by $i$ so that $W_i \subseteq B$ for all $i \leq n$.
+			Let $W$ be a family of sets indexed by $i$ so that $W_i \subseteq B$ for all natural numbers $i \leq n$.
 
 			Let $x_0$ be an arbitrary element of $f \pimg (\bigcup_{i=1}^{n} W_i)$.
 			By the definition of pre-images, we see that $f(x_0) \in \bigcup_{i=1}^{n} W_i$.
@@ -164,7 +93,7 @@
 			By the definition of subsets, since $x_1 \in \bigcup_{i=1}^{n} f \pimg (W_i)$ implies $x_1 \in f \pimg (\bigcup_{i=1}^{n} W_i)$, we see that $\bigcup_{i=1}^{n} f \pimg (W_i) \subseteq f \pimg (\bigcup_{i=1}^{n} W_i)$.
 
 			By the definition of set equality, we see that $f \pimg (\bigcup_{i=1}^{n} W_i) = \bigcup_{i=1}^{n} f \pimg (W_i)$.
-			Therefore, for all sets $A$ and $B$ and functions $f : A \rightarrow B$, $f \pimg (\bigcup_{i=1}^{n} W_i) =\bigcup_{i=1}^{n} f \pimg (W_i)$ for all natural numbers $n$, where $W_i \subseteq B$ for all $i \leq n$.
+			Therefore, for all sets $A$ and $B$ and functions $f : A \rightarrow B$, $f \pimg (\bigcup_{i=1}^{n} W_i) =\bigcup_{i=1}^{n} f \pimg (W_i)$ for all natural numbers $n$, where $W_i \subseteq B$ for all natural numbers $i \leq n$.
 		\end{proof}
 	\end{problem}
 
@@ -179,10 +108,10 @@
 
 			Take the case where $n = 1$.
 			By the definition of the Fibonacci series and algebra, we see that:
-			$\sum_{i = 1}^{1} F_i = F_1 = 1 = 2 - 1 = F_{n + 2} - 1$.
+			$\sum_{i = 1}^{1} F_i = F_1 = 1 = 2 - 1 = F_3 - 1$.
 			By substitution, we see that $\sum_{i = 1}^{n} F_i = F_{n + 2} - 1$ for $n = 1$.
 
-			Let $k$ be an arbitrary natural number so that $\sum_{i = 1}^{n} F_i = F_{n + 2} - 1$ for $n = k$.
+			Let $k$ be an arbitrary natural number. Suppose $\sum_{i = 1}^{n} F_i = F_{n + 2} - 1$ for $n = k$.
 			Take the case where $n = k + 1$.
 			By substitution, we see that $\sum_{i = 1}^{k} F_i = F_{k + 2} - 1$.
 			By the definition of the Fibonacci series and algebra, we see that:
@@ -208,7 +137,7 @@
 			By the definition of the Fibbonaci series, we see that $\sum_{i = 1}^{1} F_i^2 = F_1^2 = 1^2 = F_1 \cdot F_{1 + 1}$.
 			By substitution, we see that $\sum_{i = 1}^{n} F_i^2 = F_n \cdot F_{n + 1}$ for $n = 1$.
 
-			Let $k$ be an arbitrary natural number so that $\sum_{i = 1}^{n} F_i^2 = F_n \cdot F_{n + 1}$ for $n = k$.
+			Let $k$ be an arbitrary natural number. Suppose $\sum_{i = 1}^{n} F_i^2 = F_n \cdot F_{n + 1}$ for $n = k$.
 			Take the case where $n = k + 1$.
 			By substitution, we see that $\sum_{i = 1}^{k} F_i^2 = F_k \cdot F_{k + 1}$.
 			\begin{align*}

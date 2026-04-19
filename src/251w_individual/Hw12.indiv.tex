@@ -14,6 +14,9 @@
 \newcommand{\img}{_{*}}
 \newcommand{\pimg}{^{*}}
 \newcommand{\limn}{\displaystyle \lim_{n \rightarrow \infty}}
+\newcommand{\abs}[1]{\left|#1\right|}
+\newcommand{\ceil}[1]{\lceil #1 \rceil}
+\newcommand{\floor}[1]{\lfloor #1 \rfloor}
 
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\Z}{\mathbb{Z}}
@@ -35,11 +38,27 @@
 
 	\begin{problem}[manual-num=70]
 		\begin{proposition}
-			Use the definition of a limit to prove $\limn \frac{3n+1}{57+2n} = \frac{3}{2}$.
+			Use the definition of a limit to prove $\limn \frac{3n + 1}{57 + 2n} = \frac{3}{2}$.
 		\end{proposition}
 
 		\begin{proof}
-			\todo
+			We ask whether $\limn \frac{3n + 1}{2n + 57} = \frac{3}{2}$.
+			Let $\epsilon$ be an arbitrary real number so that $\epsilon > 0$.
+			Let $N$ be the particular natural number $\ceil{\frac{169}{4 \epsilon}}$.
+			Let $n$ be an arbitrary natural number so that $n > N$.
+			By algebra, we see that:
+			\begin{align*}
+				\abs{\frac{3n + 1}{2n + 57} - \frac{3}{2}}
+				&= \abs{\frac{2 \cdot (3n + 1) - 3 \cdot (2n + 57)}{2 \cdot (2n + 57)}} \\
+				&= \abs{\frac{6n + 2 - 6n - 171}{4n + 114}} \\
+				&= \abs{\frac{-169}{4n + 114}} \\
+				&= \frac{169}{4n + 114} \\
+				&< \frac{169}{4n} \\
+				&< \frac{169}{4N} \\
+				&\leq \frac{169}{4 \cdot \frac{169}{4 \epsilon}} \\
+				&= \epsilon
+			\end{align*}
+			Therefore, by the definition of limits, since for all $\epsilon > 0$ there exists $N \in \N$ so that $n > N$ implies $\abs{\frac{3n + 1}{2n + 57} - \frac{3}{2}} < \epsilon$, we see that $\limn \frac{3n + 1}{2n + 57} = \frac{3}{2}$.
 		\end{proof}
 	\end{problem}
 
